@@ -190,8 +190,8 @@ Licence URI: http://www.os-templates.com/template-terms
      
 
 <!--       TABLE STARTS -->
-<h1>Courses Completed.</h1>
-
+<h1>Courses Completed</h1>
+ </div>
 <?php
   $sql = "select * from course where rollno=$rn";
   $results=mysqli_query($conn,$sql);
@@ -304,7 +304,7 @@ echo "</td><td><a href='my_course.php?delcourse=$fn' onClick=\"return confirm('A
 
   
   
-      </div>
+     
 <!-- TABLE ENDS -->
       
     </div>

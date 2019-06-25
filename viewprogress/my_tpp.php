@@ -191,7 +191,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <!--       TABLE STARTS -->
 <h1>Technical Papers Presented.</h1>
-
+ </div>
 <?php
   $sql = "select * from tpp where rollno=$rn";
   $result=mysqli_query($conn,$sql);
@@ -275,7 +275,7 @@ echo "</td><td><a href='my_tpp.php?deltpp=$fn' onClick=\"return confirm('Are you
 </table>
 
   
-      </div>
+    
 <!-- TABLE ENDS -->
       
     </div>

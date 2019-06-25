@@ -191,7 +191,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <!--       TABLE STARTS -->
 <h1>Competitions  </h1>
-
+ </div>
 <?php
 $pageno=1;
 $total_pages=1;
@@ -309,7 +309,7 @@ echo "</td><td><a href='my_competition.php?delcomp=$fn' onClick=\"return confirm
 ?>
 </table>
 
-      </div>
+     
 <!-- TABLE ENDS -->
       
     </div>

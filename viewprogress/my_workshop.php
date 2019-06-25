@@ -191,6 +191,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <!--       TABLE STARTS -->
 <h1>Workshops attended</h1>
+</div>
 <?PHP
 
 $sql = "select * from workshop where rollno=$rn";
@@ -290,7 +291,7 @@ echo "</td><td><a href='my_workshop.php?delws=$fn' onClick=\"return confirm('Are
       </div>
 <!-- TABLE ENDS -->
       
-    </div>
+    
 
  
    

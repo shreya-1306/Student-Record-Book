@@ -191,7 +191,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <!--       TABLE STARTS -->
 <h1>Other Activities</h1>
-
+ </div>
 <?php
   $sql = "select * from other where rollno=$rn";
   $results=mysqli_query($conn,$sql);
@@ -304,7 +304,7 @@ echo "</td><td><a href='my_other.php?deloa=$fn'  onClick=\"return confirm('Are y
 
   
   
-      </div>
+    
 <!-- TABLE ENDS -->
       
     </div>
