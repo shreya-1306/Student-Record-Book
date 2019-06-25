@@ -30,7 +30,6 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" type="text/css" href="analysisdesign.css"> 
-<link rel="stylesheet" type="text/css" href="layout/styles/login.css"> 
 <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
 
 
@@ -108,36 +107,28 @@ Licence URI: http://www.os-templates.com/template-terms
 <div  >
   <main class="hoc container clear"> 
 
-
+<h3>Graphical Analysis</h3>
 
     <!-- main body -->
     <!-- ################################################################################################ -->
-    <div class="section" id="pageintro" class="hoc clear">
+
      
 
 <!--       TABLE STARTS -->
-<div class="graph_buttons">
-    <h2 style=" margin-top: -111px; font-size: 30px; padding-bottom: 26px;">Graphical Analysis</h2>
 
-  <button class="button"  id="clickws" onclick="ws()">Workshops</button>
-  <button class="button"   id="clicktpp"  onclick="tppf()">Technical Papers </button>
-  <button class="button"   id="clickcourse"  onclick="coursesf()">Courses</button>
-  <button class="button"  id="clicksports"  onclick="sportsf()">Sports</button>
-  <button class="button"   id="clickoa"  onclick="other_activitiesf()">Other Activities</button>
-  <button class="button"  id="clickcomp"  onclick="competitionsf()">Competitions</button>
-  </div>
-  <!--
-<div class="graph_buttons">
-    <h2 style=" margin-top: -111px; font-size: 30px; padding-bottom: 26px;">Graphical Analysis</h2>
+<table style="background-color: transparent; border-color: transparent;">
+  <tr style="background-color: transparent; border-color: transparent;">
+  <td style="border-color: transparent;"> <input type="submit" value="Workshop" id="clickws"    onclick="ws();"/></td>
+    <td style="border-color: transparent;"><input type="submit" value="TPP" id="clicktpp"    onclick="tppf();"/></td>
+   
+<td style="border-color: transparent;"><input type="submit" value="Courses" id="clickcourse"    onclick="coursesf();" /></td>
+    <td style="border-color: transparent;"> <input type="submit" value="Sports" id="clicksports"    onclick="sportsf();" /></td>
+<td style="border-color: transparent;"><input type="submit" value="Other Activity" id="clickoa"    onclick="other_activitiesf();" /></td>
+    <td style="border-color: transparent;"> <input type="submit" value="Competition" id="clickcomp"    onclick="competitionsf();" /></td>
+</tr>
+</table>
 
-  <button class="button"  id="clickws" onclick="ws()">Workshops</button>
-  <button class="button"   id="clicktpp"  onclick="tppf()">Technical Papers </button>
-  <button class="button"   id="clickcourse"  onclick="coursesf()">Courses</button>
-  <button class="button"  id="clicksports"  onclick="sportsf()">Sports</button>
-  <button class="button"   id="clickoa"  onclick="other_activitiesf()">Other Activities</button>
-  <button class="button"  id="clickcomp"  onclick="competitionsf()">Competitions</button>
-  </div>
--->
+
    <div class="results2">
        <div id="graph_container" style="width: 50%;height: 50%;margin-left: 11px;margin-top: 45px;"></div>
 
@@ -383,7 +374,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <!-- TABLE ENDS -->
       
-    </div>
+    
 
    
   </main>
