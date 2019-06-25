@@ -46,7 +46,7 @@ File: Layout CSS
 /* Content */
 .container .content{}
 
-.sectiontitle{display:block; max-width:60%; margin:0 auto 80px; text-align:center; margin-left: 10px;}
+.sectiontitle{display:block; max-width:60%; margin:0 auto 80px; text-align:center; margin-left: 100px;}
 /* .sectiontitle *{margin:0;} */
 
 .services{text-align:center;}
