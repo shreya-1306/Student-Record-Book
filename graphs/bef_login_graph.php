@@ -151,6 +151,9 @@ window.onclick = function(event) {
   </form> 
 </div> 
 
+      <h3>Graphical Analysis</h3>
+
+
       <!-- ################################################################################################ -->
 
      <!--  table starts -->
@@ -160,7 +163,7 @@ window.onclick = function(event) {
 
 <!-- <font color="white" align="center" style="margin-left:220px" size="75px" > Overall </font> -->
 <center>
-
+<!--
  <div class="graph_buttons">
     <h2 style=" margin-top: -111px; font-size: 30px; padding-bottom: 26px;">Graphical Analysis</h2>
 
@@ -171,10 +174,22 @@ window.onclick = function(event) {
   <button class="gbutton"   id="clickoa"  onclick="other_activitiesf()">Other Activities</button>
   <button class="gbutton"  id="clickcomp"  onclick="competitionsf()">Competitions</button>
   </div>
+-->
 
+<table style="background-color: transparent; border-color: transparent;">
+  <tr style="background-color: transparent; border-color: transparent;">
+  <td style="border-color: transparent;"> <input type="submit" value="Workshop" id="clickws"    onclick="ws();"/></td>
+    <td style="border-color: transparent;"><input type="submit" value="TPP" id="clicktpp"    onclick="tppf();"/></td>
+   
+<td style="border-color: transparent;"><input type="submit" value="Courses" id="clickcourse"    onclick="coursesf();" /></td>
+    <td style="border-color: transparent;"> <input type="submit" value="Sports" id="clicksports"    onclick="sportsf();" /></td>
+<td style="border-color: transparent;"><input type="submit" value="Other Activity" id="clickoa"    onclick="other_activitiesf();" /></td>
+    <td style="border-color: transparent;"> <input type="submit" value="Competition" id="clickcomp"    onclick="competitionsf();" /></td>
+</tr>
+</table>
 
    <div class="results2">
-       <div id="graph_container" style="width: 50%;height: 50%;margin-left: 11px;margin-top: 45px;"></div>
+       <div id="graph_container" style="width: 500px;height: 300px;margin-left: 9px;margin-top: 45px;"></div>
 
 
       <script  >
