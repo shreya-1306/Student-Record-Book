@@ -141,6 +141,7 @@ if ($result->num_rows > 0)
   <center>
   <div class="fieldset1" style="margin-left: 10px;">
 <span style="color: white; font-size: 30px;">TPP</span><br><br>
+</div>
   <table border="3" solid white  >
 
         <tr><th>ROLL NO</th><th>TITLE</th><th>AUTHOR</th><th>PRESENTED AT</th></span></tr>
@@ -187,7 +188,7 @@ $conn->close();
     
  <br><br>
 
-</div>
+
     
 
 <!-- TABLE ENDS -->

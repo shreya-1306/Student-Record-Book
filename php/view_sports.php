@@ -131,6 +131,7 @@ Licence URI: http://www.os-templates.com/template-terms
   <input type="submit" name="button" />
   </form>
 </center> 
+</div>
   <center>
 
 
@@ -272,7 +273,7 @@ $conn->close();
   </center>
     
 
-</div><?php }?>
+<?php }?>
 
 <!-- TABLE ENDS -->
       
