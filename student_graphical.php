@@ -1,0 +1,409 @@
+<!-- background image not seen -->
+<?php
+session_start();
+require("functions.php");
+ 
+
+  if(isset($_SESSION['username'])){
+
+  $usersData = getUsersData(getId($_SESSION['username']));
+ 
+   
+
+}
+?>
+
+<!DOCTYPE html>
+<!--
+Template Name: Basend
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+
+
+<html lang="">
+<head>
+<title>Record Book</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="analysisdesign.css"> 
+<script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+
+
+
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay"   > 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="#">Departmental Record Book</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="home.php">Home</a></li>
+          <li><a class="drop" href="#">Add Activity</a>
+            <ul>
+              <li><a href="workshop.php">Workshop</a></li>
+              <li><a href="course.php">Course</a></li>
+              <li><a href="tpp.php">TPP</a></li>
+              <li><a href="competition.php">Competition</a></li>
+              <li><a href="sports.php">Sports</a></li>
+              <li><a href="other_activity.php">Other Activity</a></li>
+            </ul>
+          </li>
+          <li><a class="drop" href="#">View Progress</a>
+            <ul>
+              <li><a href="viewprogress/my_workshop.php">Workshop</a></li>
+              <li><a href="viewprogress/my_course.php">Course</a></li>
+              <li><a href="viewprogress/my_tpp.php">TPP</a></li>
+              <li><a href="viewprogress/my_competition.php">Competition</a></li>
+              <li><a href="viewprogress/my_sports.php">Sports</a></li>
+              <li><a href="viewprogress/my_other.php">Other Activity</a></li>
+            </ul>
+          </li>
+            <li><a class="drop" href="#">Analysis</a>
+            <ul>
+              <li><a href="student_analysis.php">Tabular</a></li>
+              <li><a href="student_graphical.php">Graphical</a></li>
+            </ul>
+          </li>
+          <li><a class="drop" href="#">Other</a>
+            <ul>
+              <li><a class="drop" href="#">View</a>
+              <ul>
+                  <li><a href="php/view_workshop.php">Workshop</a></li>
+                  <li><a href="php/view_course.php">Course</a></li>
+                  <li><a href="php/view_tpp.php">TPP</a></li>
+                   <li><a href="php/view_competition.php">Competition</a></li>
+                  <li><a href="php/view_sports.php">Sports</a></li>
+                  <li><a href="php/view_otheractivity.php">Other Activity</a></li>
+                </ul>
+                </li>
+              <li><a href="feedback_s.php">Contact Us</a></li>
+              <li><a href="contact_after.php">Help</a></li>
+              <li><a href="changepass.php">Change Password</a></li>
+              <li><a href="logout.php">Logout</a></li>
+            </ul>
+          </li>
+         
+     
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+
+<div  >
+  <main class="hoc container clear"> 
+
+
+
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="section" id="pageintro" class="hoc clear">
+     
+
+<!--       TABLE STARTS -->
+
+<div class="graph_buttons">
+    <h2 style=" margin-top: -111px; font-size: 30px; padding-bottom: 26px;">Graphical Analysis</h2>
+
+  <button class="button"  id="clickws" onclick="ws()">Workshops</button>
+  <button class="button"   id="clicktpp"  onclick="tppf()">Technical Papers </button>
+  <button class="button"   id="clickcourse"  onclick="coursesf()">Courses</button>
+  <button class="button"  id="clicksports"  onclick="sportsf()">Sports</button>
+  <button class="button"   id="clickoa"  onclick="other_activitiesf()">Other Activities</button>
+  <button class="button"  id="clickcomp"  onclick="competitionsf()">Competitions</button>
+  </div>
+
+   <div class="results2">
+       <div id="graph_container" style="width: 50%;height: 50%;margin-left: 11px;margin-top: 45px;"></div>
+
+
+      <script  >
+
+
+              
+                    var wsvar;
+                    var tppvar;
+                    var coursevar;
+                    var sportsvar;
+                    var oavar;
+                    var compvar;
+
+          function ws() {
+            document.getElementById("graph_container").innerHTML = "";
+            
+            wsvar = setTimeout(workshop, 0);
+          }
+
+          function tppf() {
+            document.getElementById("graph_container").innerHTML = "";
+            
+            tppvar = setTimeout(tpp, 0);
+          }
+          function coursesf(){
+            document.getElementById("graph_container").innerHTML = "";
+             coursevar = setTimeout(courses, 0);
+
+          }
+          function sportsf(){
+            document.getElementById("graph_container").innerHTML = "";
+             sportsvar = setTimeout(sports, 0);
+
+          }
+          function other_activitiesf(){
+            document.getElementById("graph_container").innerHTML = "";
+             oavar = setTimeout(other_activities, 0);
+
+          }
+           function competitionsf(){
+            document.getElementById("graph_container").innerHTML = "";
+             compvar = setTimeout(competitions, 0);
+
+          }
+    
+    
+
+          function workshop(){
+
+
+
+           anychart.onDocumentReady(function() {
+ 
+        // set the data
+        //Workshops
+        var fe_ws=<?php echo json_encode(getcount(1,2,1));?>;
+        var se_ws=<?php echo json_encode(getcount(3,4,1));?>;
+        var te_ws=<?php echo json_encode(getcount(5,6,1));?>;
+        var be_ws=<?php echo json_encode(getcount(7,8,1));?>;
+
+        var data = {
+            header: ["YEAR", "NUMBER"],
+            rows: [
+              ["FE", fe_ws],
+              ["SE", se_ws],
+              ["TE", te_ws],
+              ["BE", be_ws]
+        ]};
+ 
+        // create the chart
+       var chart = anychart.column();
+      chart.data(data);
+      chart.title("Workshops Attended ");
+      chart.container("graph_container");
+      chart.draw();
+            });
+        } 
+
+          
+            function tpp(){
+
+        
+        //TPP
+              anychart.onDocumentReady(function() {
+         
+                // set the data
+                var fe_ws=<?php echo json_encode(getcount(1,2,3));?>;
+                var se_ws=<?php echo json_encode(getcount(3,4,3));?>;
+                var te_ws=<?php echo json_encode(getcount(5,6,3));?>;
+                var be_ws=<?php echo json_encode(getcount(7,8,3));?>;
+
+                var data = {
+                    header: ["YEAR", "NUMBER"],
+                    rows: [
+                      ["FE", fe_ws],
+                      ["SE", se_ws],
+                      ["TE", te_ws],
+                      ["BE", be_ws]
+                ]};
+         
+                // create the chart
+               var chart = anychart.column();
+              chart.data(data);
+              chart.title("Technical Papers Presented");
+              chart.container("graph_container");
+              chart.draw();
+                    });
+        }
+
+              function courses(){
+         //courses
+        anychart.onDocumentReady(function() {
+   
+          // set the data
+          var fe_cs=<?php echo json_encode(getcount(1,2,2));?>;
+          var se_cs=<?php echo json_encode(getcount(3,4,2));?>;
+          var te_cs=<?php echo json_encode(getcount(5,6,2));?>;
+          var be_cs=<?php echo json_encode(getcount(7,8,2));?>;
+
+          var data = {
+              header: ["YEAR", "NUMBER"],
+              rows: [
+                ["FE", fe_cs],
+                ["SE", se_cs],
+                ["TE", te_cs],
+                ["BE", be_cs]
+          ]};
+   
+          // create the chart
+         var chart = anychart.column();
+        chart.data(data);
+       
+        chart.title("Courses Studied ");
+        chart.container("graph_container");
+      chart.draw();
+              });
+        }
+
+              function competitions(){
+        
+                            //competition
+          anychart.onDocumentReady(function() {
+     
+            // set the data
+            var fe_ws=<?php echo json_encode(getcount(1,2,5));?>;
+            var se_ws=<?php echo json_encode(getcount(3,4,5));?>;
+            var te_ws=<?php echo json_encode(getcount(5,6,5));?>;
+            var be_ws=<?php echo json_encode(getcount(7,8,5));?>;
+
+            var data = {
+                header: ["YEAR", "NUMBER"],
+                rows: [
+                  ["FE", fe_ws],
+                  ["SE", se_ws],
+                  ["TE", te_ws],
+                  ["BE", be_ws]
+            ]};
+     
+            // create the chart
+           var chart = anychart.column();
+          chart.data(data);
+          chart.title("Competition Participation ");
+          chart.container("graph_container");
+          chart.draw();
+                });
+        }
+
+              function sports(){
+         
+                          //Sports
+          anychart.onDocumentReady(function() {
+     
+            // set the data
+            var fe_ws=<?php echo json_encode(getcount(1,2,4));?>;
+            var se_ws=<?php echo json_encode(getcount(3,4,4));?>;
+            var te_ws=<?php echo json_encode(getcount(5,6,4));?>;
+            var be_ws=<?php echo json_encode(getcount(7,8,4));?>;
+
+            var data = {
+                header: ["YEAR", "NUMBER"],
+                rows: [
+                  ["FE", fe_ws],
+                  ["SE", se_ws],
+                  ["TE", te_ws],
+                  ["BE", be_ws]
+            ]};
+     
+            // create the chart
+           var chart = anychart.column();
+          chart.data(data);
+          chart.title("Sports Played ");
+          chart.container("graph_container");
+          chart.draw();
+                });
+        }
+
+              function other_activities(){
+          //Other activities
+          anychart.onDocumentReady(function() {
+     
+            // set the data
+            var fe_ws=<?php echo json_encode(getcount(1,2,6));?>;
+            var se_ws=<?php echo json_encode(getcount(3,4,6));?>;
+            var te_ws=<?php echo json_encode(getcount(5,6,6));?>;
+            var be_ws=<?php echo json_encode(getcount(7,8,6));?>;
+
+            var data = {
+                header: ["YEAR", "NUMBER"],
+                rows: [
+                  ["FE", fe_ws],
+                  ["SE", se_ws],
+                  ["TE", te_ws],
+                  ["BE", be_ws]
+            ]};
+     
+            // create the chart
+           var chart = anychart.column();
+          chart.data(data);
+          chart.title("Other Activities ");
+          chart.container("graph_container");
+          chart.draw();
+                });
+        }
+                   
+
+
+
+
+
+                    
+
+                  
+
+
+
+                    
+                    </script>
+
+                    </div>
+
+
+<!-- TABLE ENDS -->
+      
+    </div>
+
+   
+  </main>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    
+
+</div>
+
+</div><!--  background image tag -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>

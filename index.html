@@ -1,0 +1,252 @@
+<!-- id01 is student login 
+id02 is admin login 
+id03 is forgot password-student
+id03 is forgot password-admin 
+
+------------------------
+4 pages for before login 
+
+index.html
+null_analysis.php
+graphs/bef_login_graph.php
+contact_before.html
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="">
+<script> 
+  
+var modal = document.getElementById('id01'); 
+window.onclick = function(event) { 
+    if (event.target == modal) { 
+        modal.style.display = "none"; 
+    } 
+} 
+
+var modal2 = document.getElementById('id02'); 
+window.onclick = function(event) { 
+    if (event.target == modal2) { 
+        modal2.style.display = "none"; 
+    } 
+} 
+
+var modal3 = document.getElementById('id03'); 
+window.onclick = function(event) { 
+    if (event.target == modal3) { 
+        modal3.style.display = "none"; 
+    } 
+} 
+
+var modal4 = document.getElementById('id04'); 
+window.onclick = function(event) { 
+    if (event.target == modal4) { 
+        modal4.style.display = "none"; 
+    } 
+} 
+</script> 
+
+<head>
+<title>Record Book</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="layout/styles/login.css"> 
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" > 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="index.html">Departmental Record Book</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="index.html">Home</a></li>
+        <!--   <li><a class="drop" href="#">Pages</a>
+            <ul>
+              <li><a href="pages/gallery.html">Gallery</a></li>
+              <li><a href="pages/full-width.html">Full Width</a></li>
+              <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+              <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+              <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+            </ul>
+          </li> -->
+          <li><a class="drop" href="#">Analysis</a>
+            <ul>
+              <li><a href="null_analysis.php">Tabular</a></li>
+           <!--    <li><a class="drop" href="#">Level 2 + Drop</a>
+                <ul>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                  <li><a href="#">Level 3</a></li>
+                </ul>
+              </li> -->
+              <li><a href="graphs/bef_login_graph.php">Graphical</a></li>
+            </ul>
+          </li>
+          <li><a   onclick="document.getElementById('id02').style.display='block'" style="width:auto;" href="#">Admin</a></li>
+          <li><a href="contact_before.html">Help</a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <section id="pageintro" class="hoc clear">
+    <div> 
+      <!-- ################################################################################################ -->
+      <h2 style="font-size: 2em;" class="heading">Department of Computer Engineering</h2>
+      <p style="font-size: 1.4rem;">K. J.  Somaiya  College  Of  Engineering,  Vidyavihar  </p>
+      <footer><a class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a></footer>
+      <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>  -->
+
+  
+<div id="id01" class="modal"> 
+    
+  <form class="modal-content animate" method="POST"  action="php/registered_user.php"> 
+    <div class="imgcontainer"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span> 
+        <img src="images/demo/avatar.png" alt="Avatar" class="avatar">
+      
+    </div> 
+   
+  
+    <div class="container"> 
+      <label style="color: black;"><b>Username</b></label> 
+      <input type="text" name="uname"  placeholder="SVV id" required> 
+  
+      <label style="color: black;"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" style="color:black"  name="pword"  required> 
+          
+      <button type="submit">Login</button> 
+     <!--  <input type="checkbox" checked="checked"> Remember me  -->
+    </div> 
+  
+    <div class="container" style="background-color:#f1f1f1"> 
+
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
+      
+      <span class="psw"><a  onclick="document.getElementById('id03').style.display='block' ; document.getElementById('id01').style.display='none' " style="width:auto;">Forgot password?/New User?</a></span> 
+    </div> 
+  </form> 
+</div> 
+
+
+<!-- ADMIN MODAL -->
+<div id="id02" class="modal"> 
+    
+  <form class="modal-content animate" method="POST"  action="php/registered_admin.php"> 
+    <div class="imgcontainer"> 
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span> 
+        <img src="images/demo/avatar.png" alt="Avatar" class="avatar">
+      
+    </div> 
+   
+  
+    <div class="container"> 
+      <label style="color: black;"><b>Username</b></label> 
+      <input type="text" name="uname"  placeholder="SVV id" required> 
+  
+      <label style="color: black;"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" style="color:black"  name="pword"  required> 
+          
+      <button type="submit">Login</button> 
+     <!--  <input type="checkbox" checked="checked"> Remember me  -->
+    </div> 
+  
+    <div class="container" style="background-color:#f1f1f1"> 
+
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button> 
+      
+      <span class="psw"><a onclick="document.getElementById('id04').style.display='block' ; document.getElementById('id02').style.display='none' " style="width:auto;">Forgot password?/New User?</a></span> 
+    </div> 
+  </form> 
+</div> 
+
+
+<!-- Forgot password - student Modal -->
+
+<div id="id03" class="modal"> 
+    
+  <form class="modal-content animate" method="POST"  action="php/forgot_student.php"> 
+    <div class="imgcontainer"> 
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">×</span> 
+        <img src="images/demo/avatar.png" alt="Avatar" class="avatar">
+      
+    </div> 
+   
+  
+    <div class="container"> 
+      <label style="color: black;"><b>Username</b></label> 
+      <input type="text" name="svv"  placeholder="SVV id" required> 
+  
+      <button type="submit">Email Password</button> 
+     <!--  <input type="checkbox" checked="checked"> Remember me  -->
+    </div> 
+  
+    <div class="container" style="background-color:#f1f1f1"> 
+
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button> 
+      
+    </div> 
+  </form> 
+</div> 
+
+<!-- Forgot password - admin Modal -->
+
+<div id="id04" class="modal"> 
+    
+  <form class="modal-content animate" method="POST"  action="php/forgot_admin.php"> 
+    <div class="imgcontainer"> 
+      <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">×</span> 
+        <img src="images/demo/avatar.png" alt="Avatar" class="avatar">
+      
+    </div> 
+   
+  
+    <div class="container"> 
+      <label style="color: black;"><b>Username</b></label> 
+      <input type="text" name="svv"  placeholder="SVV id" required> 
+  
+      <button type="submit">Email Password</button> 
+     <!--  <input type="checkbox" checked="checked"> Remember me  -->
+    </div> 
+  
+    <div class="container" style="background-color:#f1f1f1"> 
+
+      <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button> 
+      
+    </div> 
+  </form> 
+</div> 
+ </div>
+
+
+
+
+      <!-- ################################################################################################ -->
+   
+  </section>
+  <!-- ################################################################################################ -->
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
