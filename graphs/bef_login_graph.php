@@ -160,16 +160,18 @@ window.onclick = function(event) {
 
 <!-- <font color="white" align="center" style="margin-left:220px" size="75px" > Overall </font> -->
 <center>
+
  <div class="graph_buttons">
     <h2 style=" margin-top: -111px; font-size: 30px; padding-bottom: 26px;">Graphical Analysis</h2>
 
-  <button class="button"  id="clickws" onclick="ws()">Workshops</button>
-  <button class="button"   id="clicktpp"  onclick="tppf()">Technical Papers </button>
-  <button class="button"   id="clickcourse"  onclick="coursesf()">Courses</button>
-  <button class="button"  id="clicksports"  onclick="sportsf()">Sports</button>
-  <button class="button"   id="clickoa"  onclick="other_activitiesf()">Other Activities</button>
-  <button class="button"  id="clickcomp"  onclick="competitionsf()">Competitions</button>
+  <button class="gbutton"  id="clickws" onclick="ws()">Workshops</button>
+  <button class="gbutton"   id="clicktpp"  onclick="tppf()">Technical Papers </button>
+  <button class="gbutton"   id="clickcourse"  onclick="coursesf()">Courses</button>
+  <button class="gbutton"  id="clicksports"  onclick="sportsf()">Sports</button>
+  <button class="gbutton"   id="clickoa"  onclick="other_activitiesf()">Other Activities</button>
+  <button class="gbutton"  id="clickcomp"  onclick="competitionsf()">Competitions</button>
   </div>
+
 
    <div class="results2">
        <div id="graph_container" style="width: 50%;height: 50%;margin-left: 11px;margin-top: 45px;"></div>
