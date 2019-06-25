@@ -190,49 +190,56 @@ Licence URI: http://www.os-templates.com/template-terms
      
 
 <!--       TABLE STARTS -->
-<h1>Workshops attended</h1>
-<?PHP
+<h1>Competitions  </h1>
 
-$sql = "select * from workshop where rollno=$rn";
-$result=mysqli_query($conn,$sql);
-if ($result->num_rows > 0)
-{  
-
-?>
-
-
-      <div class="scrollable">
-        <table>
-          <thead>
-            <tr>
-            <th>ROLL NO</th>
-            <th>NAME</th>
-            <th>CONDUCTED BY</th>
-            <th>START DATE</th>
-            <th>END DATE</th>
-            <th>CERTIFICATE</th>
-            <th>OPTIONAL IMAGE</th>
-            <th>DELETE</th>
-            </tr>
-          </thead>
-          <tbody>
-              
 <?php
-  while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+$pageno=1;
+$total_pages=1;
+  $sql = "select * from competition where rollno=$rn";
+  $results=mysqli_query($conn,$sql);
+   if ($results->num_rows > 0)
+{  
+//   if (isset($_GET['pageno'])) {
+//             $pageno = $_GET['pageno'];
+//         } else {
+//             $pageno = 1;
+//         }
+//         $no_of_records_per_page = 5;
+//         $offset = ($pageno-1) * $no_of_records_per_page;
+// $total_pages_sqls = "SELECT COUNT(*) FROM competition";
+//         $results = mysqli_query($conn,$total_pages_sqls);
+//         $total_rows = mysqli_fetch_array($results)[0];
+//         $total_pages = ceil($total_rows / $no_of_records_per_page);
+
+//         $sql = "SELECT * FROM competition where rollno= $rn LIMIT $offset, $no_of_records_per_page";
+//         $results = mysqli_query($conn,$sql);
+  ?>
+
+    <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
+
+      <tr><th>ROLL NO</th><th>NAME</th><th>CONDUCTED BY</th><th>POSITION</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
+
+<?php
+  while ($line = mysqli_fetch_array($results, MYSQLI_ASSOC)) {
 
   
 
       
   echo "<tr><td > <span style='color:#000000;'>  ". $line['rollno']."
-      </td><td>  <span style='color:#000000;'> ". $line['namew']."
-      </td><td>  <span style='color:#000000;'> ". $line['con_by']."
-      </td><td>  <span style='color:#000000;'> ". $line['start_date']."
-      </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
-      </td><td> ";
-  
+    </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
+    </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
+
+     </td><td>  <span style='color:#000000;'> ". $line['position']."
+
+
+
+    </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
+    </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
+    </td><td>  ";
+
 
       $fn =$line['filename'];
-      $files= scandir("../uploads/workshop");
+      $files= scandir("../uploads/competition");
       for($a =2;$a <count($files);$a++){
 
         if($fn==$files[$a])
@@ -244,7 +251,7 @@ if ($result->num_rows > 0)
        
 
         <p>
-          <a style='color:#000000;' href="../uploads/workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+          <a style='color:#000000;' href="../uploads/competition/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
 
         <?php 
@@ -253,8 +260,9 @@ if ($result->num_rows > 0)
 
       }
 	  echo "</td><td>";
-	   $fn1 =$line['filename1'];
-      $files= scandir("../uploads/opt_workshop");
+	  
+      $fn1 =$line['filename1'];
+      $files= scandir("../uploads/opt_competition");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -266,7 +274,7 @@ if ($result->num_rows > 0)
        
 
         <p>
-          <a style='color:#000000;' href="../uploads/opt_workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+          <a style='color:#000000;' href="../uploads/opt_competition/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
 
         <?php 
@@ -274,19 +282,33 @@ if ($result->num_rows > 0)
 
 
       }
-echo "</td><td><a href='my_workshop.php?delws=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
-}
-}
-  
+echo "</td><td><a href='my_competition.php?delcomp=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\"><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
+
+   }   
+     
+?>
+<!-- 
+ <a href="?pageno=1"><font color="white" size="4"><- First</font></a>
+        
+    &nbsp&nbsp&nbsp&nbsp&nbsp;
+            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>"><font color="white" size="4">Prev</font></a>
+       &nbsp&nbsp&nbsp&nbsp&nbsp;
+       
+            <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>"><font color="white" size="4">Next</font></a>
+      &nbsp&nbsp&nbsp&nbsp&nbsp;
+       <a href="?pageno=<?php echo $total_pages; ?>"><font color="white" size="4">Last -></font></a> -->
+	   
+	   <?php
+  }
   else
   {
     echo "<center><font size='3' color='white'> NO ENTRIES FOUND </font></center>";
   }
-?>
+  
 
-         
-          </tbody>
-        </table>
+?>
+</table>
+
       </div>
 <!-- TABLE ENDS -->
       
