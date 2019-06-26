@@ -13,6 +13,9 @@ contact_before.html
 
 -->
 
+
+<!-- Changed this after cloning -->
+
 <?php
 require("../functions.php");
 ?>

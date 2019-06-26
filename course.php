@@ -1,4 +1,6 @@
 <!-- background image not seen -->
+
+<!-- Changed this after cloning -->
 <?php
 session_start();
 require("functions.php");
