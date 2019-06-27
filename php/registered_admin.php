@@ -46,7 +46,7 @@ $message="";
 	}
 	else
 	{
-		echo "<script>window.location='../admin.html';alert('Invalid User Name or Password !!')</script>";
+		echo "<script>window.location='../index.html';alert('Invalid User Name or Password !!')</script>";
 	}
 
 ?>
