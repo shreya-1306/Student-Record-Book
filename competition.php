@@ -1,4 +1,5 @@
 <!-- background image not seen -->
+<!-- This change was done by Shiv and Mukta varma.-->
 <?php
 session_start();
 require("functions.php");
