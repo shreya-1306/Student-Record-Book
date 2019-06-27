@@ -1,9 +1,5 @@
 <!-- background image not seen -->
-<!-- This change was done by Shiv and Mukta varma.
 
-This change was done by Brooklyn Nine Nine.
-
--->
 <?php
 session_start();
 require("functions.php");
