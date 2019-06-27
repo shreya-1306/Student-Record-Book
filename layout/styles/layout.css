@@ -525,3 +525,51 @@ input[type=text],input[type=date],input[type=password], select, textarea {
 	background-color:red;
 
 }
+
+
+.logo1
+{
+	margin-top: -25px;
+    width: 62px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 15px;
+    padding: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+    transition: transform .2s;
+    
+
+    
+    
+}
+
+.logo1:hover {
+    transform: scale(1.2);
+    } /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+
+
+
+
+.logo2
+{
+
+	width: 47px;
+    max-width: 100%;
+    height: auto;
+    margin-top: -24px;
+    padding-right: 9px;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+    margin-left: -64px;
+    
+}
+
+.logo2:hover {
+    transform: scale(1.2);
+    } /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+

@@ -35,7 +35,11 @@ Licence URI: http://www.os-templates.com/template-terms
     <header id="header" class="hoc clear"> 
       <!-- ################################################################################################ -->
       <div id="logo" class="fl_left">
-        <h1><a href="#">Departmental Record Book</a></h1>
+      <h1>
+            <img   class ="logo2"  height="80" width="80" src="../../images/demo/logo2.png">   
+            <a href="index.html">Departmental Record Book</a>
+            <img   class ="logo1"  height="80" width="80" src="../../images/demo/logo1.png"> 
+          </h1>
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
