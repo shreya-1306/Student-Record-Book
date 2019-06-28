@@ -47,7 +47,8 @@ window.onclick = function(event) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" type="text/css" href="../layout/styles/login.css"> 
-<link rel="stylesheet" type="text/css" href="analysisdesign.css"> 
+ 
+
 
   <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
 
@@ -157,41 +158,22 @@ window.onclick = function(event) {
     </div> 
   </form> 
 </div> 
+<div class="box">
+ <h3>Graphical Analysis</h3>
 
-      <h3>Graphical Analysis</h3>
 
-
-      <!-- ################################################################################################ -->
-
-     <!--  table starts -->
-   
-
-  
-
-<!-- <font color="white" align="center" style="margin-left:220px" size="75px" > Overall </font> -->
 <center>
-<!--
- <div class="graph_buttons">
-    <h2 style=" margin-top: -111px; font-size: 30px; padding-bottom: 26px;">Graphical Analysis</h2>
 
-  <button class="gbutton"  id="clickws" onclick="ws()">Workshops</button>
-  <button class="gbutton"   id="clicktpp"  onclick="tppf()">Technical Papers </button>
-  <button class="gbutton"   id="clickcourse"  onclick="coursesf()">Courses</button>
-  <button class="gbutton"  id="clicksports"  onclick="sportsf()">Sports</button>
-  <button class="gbutton"   id="clickoa"  onclick="other_activitiesf()">Other Activities</button>
-  <button class="gbutton"  id="clickcomp"  onclick="competitionsf()">Competitions</button>
-  </div>
--->
 
 <table style="background-color: transparent; border-color: transparent;">
   <tr style="background-color: transparent; border-color: transparent;">
-  <td style="border-color: transparent;"> <input type="submit" value="Workshop" id="clickws"    onclick="ws();"/></td>
-    <td style="border-color: transparent;"><input type="submit" value="TPP" id="clicktpp"    onclick="tppf();"/></td>
+<td style="border-color: transparent;"> <button type="button"  id="clickws"    onclick="ws()" class="button1">Workshop</button></td>
+    <td style="border-color: transparent;"><button type="button" id="clicktpp"    onclick="tppf()"class="button1">TPP</button></td>
    
-<td style="border-color: transparent;"><input type="submit" value="Courses" id="clickcourse"    onclick="coursesf();" /></td>
-    <td style="border-color: transparent;"> <input type="submit" value="Sports" id="clicksports"    onclick="sportsf();" /></td>
-<td style="border-color: transparent;"><input type="submit" value="Other Activity" id="clickoa"    onclick="other_activitiesf();" /></td>
-    <td style="border-color: transparent;"> <input type="submit" value="Competition" id="clickcomp"    onclick="competitionsf();" /></td>
+<td style="border-color: transparent;"><button type="button"  id="clickcourse"    onclick="coursesf()"class="button1" >Courses</button></td>
+    <td style="border-color: transparent;"> <button type="button"  id="clicksports"    onclick="sportsf()" class="button1">Sports</button></td>
+<td style="border-color: transparent;"><button type="button" id="clickoa"    onclick="other_activitiesf()"class="button1" >Other Activity</button></td>
+    <td style="border-color: transparent;"> <button type="button"  id="clickcomp"    onclick="competitionsf()"class="button1" >Competition</button></td>
 </tr>
 </table>
 
@@ -455,6 +437,7 @@ window.onclick = function(event) {
 
 
       <!-- ################################################################################################ -->
+   </div>
    </div>
   </section>
   <!-- ################################################################################################ -->
