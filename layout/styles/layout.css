@@ -265,7 +265,7 @@ td{border-width:0 1px;}
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{
-	background-image:url('../../images/demo/backgrounds/01.jpg');
+	background-image:url('../../images/demo/backgrounds/03.jpg');
 	
 	background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -571,5 +571,6 @@ input[type=text],input[type=date],input[type=password], select, textarea {
 .logo2:hover {
     transform: scale(1.2);
     } /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
 
 

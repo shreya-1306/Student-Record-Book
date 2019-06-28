@@ -6,7 +6,21 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc; 
     box-sizing: border-box; 
 } 
-  
+.box {
+	 width: 1100px;
+  padding: 10px;
+  border: 0px solid black;
+  margin-top: -100px;
+  margin-left: -200px;
+}  
+.box1 {
+	 width: 1100px;
+  padding: 10px;
+  border: 0px solid black;
+  margin-top: 50px;
+  margin-left: 0px;
+}  
+
   
 button { 
     background-color: #4CAF50; 
@@ -29,6 +43,28 @@ button:hover {
     background-color: #f44336; 
 } 
   
+  .button1 {
+ 
+ 
+  padding: 10px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+ background-color: #008CBA;
+  color: white;
+width: 150px;
+border-radius: 4px;
+   -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+}
+.button1:hover {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
   
 .imgcontainer { 
     text-align: center; 
