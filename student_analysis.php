@@ -120,26 +120,26 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <!-- <font color="white" align="center" style="margin-left:220px" size="75px" > Overall </font> -->
 <center>
-<h2 style=" margin-top: -111px; font-size: 30px; padding-bottom: 26px;" >Tabular Analysis</h2>
+<h2 style=" margin-top: -30px; font-size: 30px; padding-bottom: 26px;" >Tabular Analysis</h2>
 
 </center>
   
 
   
-  <table style="margin-top:20px" border="4" solid white>
+  <table>
     <tr>
-      <th> <span style='color:#AFA;'>Categories      </th>
-      <th>First Year</th>
-      <th> Second Year</th>
+      <th style="color:white;"> Categories      </th>
+      <th style="color:white;">First Year</th>
+      <th style="color:white;"> Second Year</th>
          
-      <th>Third Year</th>
-      <th>Fourth Year</th>
+      <th style="color:white;">Third Year</th>
+      <th style="color:white;">Fourth Year</th>
     </tr>
     
     <tr>
     
     
-      <th>Workshops</th>
+      <th style="color:white;">Workshops</th>
       <td>
          <?php 
   
@@ -174,7 +174,7 @@ echo $ct;
 </td>
     </tr>
     <tr>
-      <th>Courses</th>
+      <th style="color:white;">Courses</th>
       <td>
          <?php 
  
@@ -209,7 +209,7 @@ echo $ct;
     
 
   <tr>
-      <th>TPP</th>
+      <th style="color:white;">TPP</th>
       
       <td>
          <?php 
@@ -246,7 +246,7 @@ echo $ct;
 
 </tr>
   <tr>
-      <th>Sports</th>
+      <th style="color:white;">Sports</th>
       <td>
          <?php 
   
@@ -278,7 +278,7 @@ echo $ct;
 
 </tr>
   <tr>
-      <th>Competitions</th>
+      <th style="color:white;">Competitions</th>
       <td>
          <?php 
   
@@ -312,7 +312,7 @@ echo $ct;
 
 
   <tr>
-      <th>Other Activities</th>
+      <th style="color:white;">Other Activities</th>
             <td>
          <?php 
   
