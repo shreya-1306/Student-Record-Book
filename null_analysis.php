@@ -103,6 +103,7 @@ window.onclick = function(event) {
     
   <form class="modal-content animate" method="POST"  action="php/registered_admin.php"> 
     <div class="imgcontainer"> 
+		<h3 style="color:black;">ADMIN LOGIN</h3><br>
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span> 
         <img src="images/demo/avatar.png" alt="Avatar" class="avatar">
       
@@ -168,20 +169,21 @@ window.onclick = function(event) {
   
 
   
-  <table style="margin-top:20px" border="4" solid white>
+
+<table>
     <tr>
-      <th> <span style='color:#AFA;'>Categories      </th>
-      <th>First Year</th>
-      <th> Second Year</th>
+      <th style="color:white;">Categories      </th>
+      <th style="color:white;">First Year</th>
+      <th style="color:white;"> Second Year</th>
          
-      <th>Third Year</th>
-      <th>Fourth Year</th>
+      <th style="color:white;">Third Year</th>
+      <th style="color:white;">Fourth Year</th>
     </tr>
     
     <tr>
     
     
-      <th>Workshops</th>
+      <th style="color:white;">Workshops</th>
       <td>
          <?php 
   
@@ -216,7 +218,7 @@ echo $ct;
 </td>
     </tr>
     <tr>
-      <th>Courses</th>
+      <th style="color:white;">Courses</th>
       <td>
          <?php 
  
@@ -251,7 +253,7 @@ echo $ct;
     
 
   <tr>
-      <th>TPP</th>
+      <th style="color:white;">TPP</th>
       
       <td>
          <?php 
@@ -288,7 +290,7 @@ echo $ct;
 
 </tr>
   <tr>
-      <th>Sports</th>
+      <th style="color:white;">Sports</th>
       <td>
          <?php 
   
@@ -320,7 +322,7 @@ echo $ct;
 
 </tr>
   <tr>
-      <th>Competitions</th>
+      <th style="color:white;">Competitions</th>
       <td>
          <?php 
   
@@ -354,7 +356,7 @@ echo $ct;
 
 
   <tr>
-      <th>Other Activities</th>
+      <th style="color:white;">Other Activities</th>
             <td>
          <?php 
   
@@ -385,6 +387,7 @@ echo $ct;
 ?></td>
 </tr>
 </table>
+
 </center>
 </div>
 
