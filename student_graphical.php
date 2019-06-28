@@ -29,7 +29,9 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-<link rel="stylesheet" type="text/css" href="analysisdesign.css"> 
+
+<link rel="stylesheet" type="text/css" href="layout/styles/login.css"> 
+ 
 <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
 
 
@@ -108,8 +110,10 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <div  >
   <main class="hoc container clear"> 
+<center>
+<h3 style="margin-top:100px;">Graphical Analysis</h3>
+<div class="box1">
 
-<h3>Graphical Analysis</h3>
 
     <!-- main body -->
     <!-- ################################################################################################ -->
@@ -120,20 +124,19 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <table style="background-color: transparent; border-color: transparent;">
   <tr style="background-color: transparent; border-color: transparent;">
-  <td style="border-color: transparent;"> <input type="submit" value="Workshop" id="clickws"    onclick="ws();"/></td>
-    <td style="border-color: transparent;"><input type="submit" value="TPP" id="clicktpp"    onclick="tppf();"/></td>
+ <td style="border-color: transparent;"> <button type="button"  id="clickws"    onclick="ws()" class="button1">Workshop</button></td>
+    <td style="border-color: transparent;"><button type="button" id="clicktpp"    onclick="tppf()"class="button1">TPP</button></td>
    
-<td style="border-color: transparent;"><input type="submit" value="Courses" id="clickcourse"    onclick="coursesf();" /></td>
-    <td style="border-color: transparent;"> <input type="submit" value="Sports" id="clicksports"    onclick="sportsf();" /></td>
-<td style="border-color: transparent;"><input type="submit" value="Other Activity" id="clickoa"    onclick="other_activitiesf();" /></td>
-    <td style="border-color: transparent;"> <input type="submit" value="Competition" id="clickcomp"    onclick="competitionsf();" /></td>
+<td style="border-color: transparent;"><button type="button"  id="clickcourse"    onclick="coursesf()"class="button1" >Courses</button></td>
+    <td style="border-color: transparent;"> <button type="button"  id="clicksports"    onclick="sportsf()" class="button1">Sports</button></td>
+<td style="border-color: transparent;"><button type="button" id="clickoa"    onclick="other_activitiesf()"class="button1" >Other Activity</button></td>
+    <td style="border-color: transparent;"> <button type="button"  id="clickcomp"    onclick="competitionsf()"class="button1" >Competition</button></td>
 </tr>
 </table>
 
 
    <div class="results2">
-       <div id="graph_container" style="width: 50%;height: 50%;margin-left: 11px;margin-top: 45px;"></div>
-
+      <div id="graph_container" style="width: 500px;height: 300px;margin-left: -10px;margin-top: 45px;"></div>
 
       <script  >
 
@@ -372,7 +375,8 @@ Licence URI: http://www.os-templates.com/template-terms
                     </script>
 
                     </div>
-
+					</div>
+</center>
 
 <!-- TABLE ENDS -->
       
