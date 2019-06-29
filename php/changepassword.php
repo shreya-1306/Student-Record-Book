@@ -12,11 +12,13 @@ $conn = new mysqli($servername, $u, $p, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 
-	} 
+  } 
+  
+  // <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
  $newpwd=$_POST['newpwd'];
  $cpwd=$_POST['cpwd'];
- 
+ $old_pwd = $_POST['old_pwd'];
 
   if(isset($_POST['newpwd'])) {
       $newpwd = $_POST["newpwd"];
