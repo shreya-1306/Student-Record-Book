@@ -1,4 +1,11 @@
- 
+<html>
+  <header>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+</header>
+<body>
+
 
 <html>
   <header>
@@ -47,7 +54,7 @@ $message="";
 	$count  = mysqli_num_rows($result);
 
 	if($count>0) {
-		$message = "Hey ".$_SESSION["username"];
+		// $message = "Hey ".$_SESSION["username"];
 		echo "<script>window.location='../admin_index.php'</script>";
 		
 		// echo $message;
@@ -67,5 +74,7 @@ $message="";
 	}
 
 ?>
+</BODY>
+</html>
 
 			

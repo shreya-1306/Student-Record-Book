@@ -1,3 +1,11 @@
+<html>
+  <header>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+</header>
+<body>
+
 <?php
 
 $dbh= new PDO("mysql:host=localhost;dbname=kjsce","root","");
@@ -13,10 +21,19 @@ echo "";
 
 
 if(isset($_POST['btn'])){
+
+	if(empty($_FILES['image']['name']))
+{
+$file1 ="Null";
+$data1 = "Null";
+$type1 = "Null";
+}
+else{
 	$file1 = $_FILES['image']['name'];
 $type1= $_FILES['image']['type'];
 	
-    $data1=file_get_contents($_FILES['image']['tmp_name']);
+	$data1=file_get_contents($_FILES['image']['tmp_name']);
+}
 	$name= $_FILES['certi']['name'];
 	
 	$type= $_FILES['certi']['type'];
@@ -32,12 +49,29 @@ $result1=mysqli_query($conn,$sql1);
 
 if ($result->num_rows > 0)  
 { 
-	echo "<script>window.location='../course.php';alert('Filename exists, incorrect filename')</script>";
+	// echo "<script>window.location='../course.php';alert('Filename exists, incorrect filename')</script>";
+	echo "<script>
+	swal({
+	  title: 'Error',
+	  text: 'Certificate exists, incorrect filename!',
+	  icon: 'warning',
+	  }).then(function() {
+	  window.location = '../course.php'});
+</script>";
    
 } 
 else if($result1->num_rows > 0)
 {
-	echo "<script>window.location='../course.php';alert('Image name exists, incorrect imagename')</script>";
+	// echo "<script>window.location='../course.php';alert('Image name exists, incorrect imagename')</script>";
+	echo "<script>
+	swal({
+	  title: 'Error',
+	  text: 'Image exists, incorrect imagename',
+	  icon: 'warning',
+	  }).then(function() {
+	  window.location = '../course.php'});
+</script>";
+
 }
 else 
 { 
@@ -61,12 +95,28 @@ $file2 =$_FILES["image"];
 	move_uploaded_file($file2["tmp_name"], "../uploads/opt_courses/".$file2["name"]);
 
 if($stmt->execute()){
-	 	   echo "<script>window.location='../course.php';alert('A new entry added !!')</script>";
+		 //    echo "<script>window.location='../course.php';alert('A new entry added !!')</script>";
+		 echo "<script>
+		 swal({
+		   title: 'Success!',
+		   text: 'A new entry has been added!',
+		   icon: 'success',
+		   }).then(function() {
+		   window.location = '../course.php'});
+	 </script>";
 }
 	else
 	{
-		print_r($stmt->errorInfo());
-		echo "<script>window.location='../course.php';alert('Some error try again')</script>";
+		//print_r($stmt->errorInfo());
+		// echo "<script>window.location='../course.php';alert('Some error try again')</script>";
+		echo "<script>
+        swal({
+          title: 'Error',
+          text: 'Try Again!',
+          icon: 'error',
+          }).then(function() {
+          window.location = '../course.php'});
+    </script>";
 	}
 	   
 	}
@@ -79,3 +129,5 @@ if($stmt->execute()){
 
 $dbh = null;
 ?>
+</body>
+</html>

@@ -284,7 +284,9 @@ $total_pages=1;
 
 
       }
-echo "</td><td><a href='my_competition.php?delcomp=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\"><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
+echo "</td><td><a href='my_competition.php?delcomp=$fn'
+ onClick=\"return confirm('Are you sure you want to delete this ?');\">
+ <button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
    }   
      

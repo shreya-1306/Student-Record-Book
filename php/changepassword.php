@@ -1,9 +1,10 @@
 <html>
   <header>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</header>
-</html>
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
+</header>
+<body>
 <?php
 session_start();
 
@@ -73,5 +74,8 @@ $hpw=md5($_POST['cpwd']);
 	$conn->close();
 
 ?>
+
+</BODY>
+</html>
 
 			

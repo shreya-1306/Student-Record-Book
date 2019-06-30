@@ -123,12 +123,12 @@ Licence URI: http://www.os-templates.com/template-terms
    <input type="text" name="name_comp" placeholder="Eg: Hackathon" required>
 
     <label for="cond_by">Conducted By:</label>
-    <input type="text" id="cond_by" name="con_by" placeholder="Eg: KJSCE" required>
+    <input type="text" id="cond_by" name="cond_by" placeholder="Eg: KJSCE" required>
 
 	<label for="position">Position:</label>
 	
     
-	<select>
+	<select  name="position">
   <option value="Participant" name="position">Participant</option>
   <option value="First" name="position">First</option>
   <option value="Second" name="position">Second</option>

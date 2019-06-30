@@ -1,4 +1,10 @@
+<html>
+  <header>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
+</header>
+<body>
 <?php
 
 $dbh= new PDO("mysql:host=localhost;dbname=kjsce","root","");
@@ -34,8 +40,16 @@ if(isset($_POST['btn'])){
 
 if ($result->num_rows > 0)  
 { 
-	echo "<script>window.location='../tpp.php';alert('Filename exists, incorrect filename')</script>";
+	// echo "<script>window.location='../tpp.php';alert('Filename exists, incorrect filename')</script>";
    
+	echo "<script>
+	swal({
+	  title: 'Error',
+	  text: 'Certificate exists, incorrect filename!',
+	  icon: 'warning',
+	  }).then(function() {
+	  window.location = '../tpp.php'});
+</script>";
 } 
 else 
 { 
@@ -53,9 +67,18 @@ $stmt = $dbh->prepare("insert into tpp (rollno,title,author,presented_at,filenam
 	move_uploaded_file($file["tmp_name"], "../uploads/tpp/".$file["name"]);
 
 
-	   echo "<script>window.location='../tpp.php';alert('A new entry added !!')</script>";
-	   } 
-}
+	//    echo "<script>window.location='../tpp.php';alert('A new entry added !!')</script>";
+	echo "<script>
+	swal({
+	  title: 'Success!',
+	  text: 'A new entry has been added!',
+	  icon: 'success',
+	  }).then(function() {
+	  window.location = '../tpp.php'});
+</script>";
+} 
+
+	}
 
     
 	
@@ -64,3 +87,7 @@ $stmt = $dbh->prepare("insert into tpp (rollno,title,author,presented_at,filenam
 
 $dbh = null;
 ?>
+</body>
+</html>
+
+

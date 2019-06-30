@@ -1,8 +1,11 @@
 <html>
   <header>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
 </header>
-</html>
+<body>
+
 <?php
 session_start();
 
@@ -71,5 +74,6 @@ if ($conn->connect_error) {
 	$conn->close();
 
 ?>
-
+</BODY>
+</html>
 			

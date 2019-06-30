@@ -1,8 +1,10 @@
 <html>
   <header>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
 </header>
-</html>
+<body>
 <?php
 session_start();
 
@@ -77,12 +79,28 @@ $mail->isHTML();
 
   try{
         $mail->Send();
-        echo "<script>swal('Check inbox to get password').then(function() {
-            window.location = '../index.html'});</script>";    } catch(Exception $e){
+        echo "<script>
+        swal({
+          title: 'Success!',
+          text: 'Check inbox to get password',
+          icon: 'success',
+          }).then(function() {
+          window.location = '../index.html'});
+    </script>"; } catch(Exception $e){
         //Something went bad
-        echo "Mailer Error: - " . $mail->ErrorInfo;
+        //echo "Mailer Error: - " . $mail->ErrorInfo;
+        echo "<script>
+        swal({
+          title: 'ERROR!',
+          text: 'Try Again!',
+          icon: 'error',
+          }).then(function() {
+          window.location = '../index.html'});
+    </script>";
     }
  
 
    
 ?>
+</BODY>
+</html>
