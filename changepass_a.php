@@ -20,8 +20,25 @@ Licence URI: http://www.os-templates.com/template-terms
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" type="text/css" href="faq.css"> 
 <link rel="stylesheet" type="text/css" href="layout/styles/login.css"> 
-<script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
- 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+        function validate(){
+
+            var a = document.getElementById("newpwd").value;
+            var b = document.getElementById("cpwd").value;
+            if (a!=b) {
+        
+    swal({
+      title: 'Try Again!',
+      text: 'Passwords do not match!',
+      icon: 'error',
+      })
+
+               return false;
+            }
+        }
+     </script>
 </head>
 <body id="top">
 <!-- ################################################################################################ -->

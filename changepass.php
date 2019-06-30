@@ -28,7 +28,13 @@ Licence URI: http://www.os-templates.com/template-terms
             var a = document.getElementById("newpwd").value;
             var b = document.getElementById("cpwd").value;
             if (a!=b) {
-               alert("Passwords do no match");
+        
+    swal({
+      title: 'Try Again!',
+      text: 'Passwords do not match!',
+      icon: 'error',
+      })
+
                return false;
             }
         }

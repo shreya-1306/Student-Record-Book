@@ -1,4 +1,27 @@
+ 
 
+<html>
+  <header>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <!-- <script src="../layout/scripts/sweetalert.min.js"></script>
+  <script src="../layout/scripts/sweetalert.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+  <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css ">-->
+  <!-- <script src="../layout/scripts/sweetalert.js"></script>
+  <link rel="stylesheet" href=" ../layout/styles/sweetalert.css  ">
+  <link rel="stylesheet" href=" ../layout/styles/bootstrap.css  ">
+  <script src="../layout/scripts/bootstrap.js"></script> -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+</header>
+
+
+</header>
+</html>
 <?php
 session_start();
 
@@ -15,7 +38,7 @@ if ($conn->connect_error) {
 
 	
 	} 
-	echo "Successful Connection"."<br>";
+	// echo "Successful Connection"."<br>";
 	
  $username=$_POST['uname'];
  $password=$_POST['pword'];
@@ -44,16 +67,24 @@ $message="";
 		$message = "Hey ".$_SESSION["username"];
 		echo "<script>window.location='../home.php'</script>";
 		
-		echo $message;
+		// echo $message;
 		
 	}
 	else
 	{
-		echo $hpsw;
+		// echo $hpsw;
 
-		echo "<script>window.location='../index.html';alert('Invalid User Name or Password !!')</script>";
+		//echo "<script>swal('Invaliddd!').then(function() {	window.location = '../index.html'})</script>";
+				echo "<script>
+				swal({
+					title: 'Invalid!',
+					text: 'Incorrect Username or Password!',
+					icon: 'error',
+				  }).then(function() {
+					window.location = '../index.html'});
+		</script>";
 	}
 
 ?>
-
-			
+<!-- 
+window.location=''; -->

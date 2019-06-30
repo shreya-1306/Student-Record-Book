@@ -1,3 +1,8 @@
+<html>
+  <header>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</header>
+</html>
 <?php
 session_start();
 
@@ -41,9 +46,9 @@ $row=mysqli_fetch_array($query);
 $sql = "UPDATE login_info SET hashed_psw='$hrp' where lusername='$email'";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Record updated successfully";
+    // echo "Record updated successfully";
 } else {
-    echo "Error updating record: " . mysqli_error($conn);
+    // echo "Error updating record: " . mysqli_error($conn);
 }
 
 
@@ -72,8 +77,8 @@ $mail->isHTML();
 
   try{
         $mail->Send();
-         echo "<script>window.location='../index.html';alert('Check inbox to get password')</script>";
-    } catch(Exception $e){
+        echo "<script>swal('Check inbox to get password').then(function() {
+            window.location = '../index.html'});</script>";    } catch(Exception $e){
         //Something went bad
         echo "Mailer Error: - " . $mail->ErrorInfo;
     }

@@ -1,4 +1,13 @@
+ 
 
+<html>
+  <header>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</header>
+
+
+</header>
+</html>
 <?php
 session_start();
 
@@ -15,7 +24,7 @@ if ($conn->connect_error) {
 
 	
 	} 
-	echo "Successful Connection"."<br>";
+	// echo "Successful Connection"."<br>";
 	
  $username=$_POST['uname'];
  $password=$_POST['pword'];
@@ -41,12 +50,20 @@ $message="";
 		$message = "Hey ".$_SESSION["username"];
 		echo "<script>window.location='../admin_index.php'</script>";
 		
-		echo $message;
+		// echo $message;
 		
 	}
 	else
 	{
-		echo "<script>window.location='../index.html';alert('Invalid User Name or Password !!')</script>";
+		// echo "<script>window.location='../index.html';alert('Invalid User Name or Password !!')</script>";
+		echo "<script>
+				swal({
+					title: 'Invalid!',
+					text: 'Incorrect Username or Password!',
+					icon: 'error',
+				  }).then(function() {
+					window.location = '../index.html'});
+		</script>";
 	}
 
 ?>

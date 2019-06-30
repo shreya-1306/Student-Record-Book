@@ -1,4 +1,8 @@
-
+<html>
+  <header>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</header>
+</html>
 <?php
 session_start();
 
@@ -41,9 +45,9 @@ $hrp=md5($randpass);
 $sql = "UPDATE admin_login SET hashed_psw='$hrp' where Username='$email'";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Record updated successfully";
+    // echo "Record updated successfully";
 } else {
-    echo "Error updating record: " . mysqli_error($conn);
+    // echo "Error updating record: " . mysqli_error($conn);
 }
 
 
@@ -70,23 +74,10 @@ $mail->isHTML();
   $mail->AddAddress($email.'@somaiya.edu');
  $mail->FromName = "Admin";
 
-
-
-
-
-  /*$mail->Send();
-   $mail = new PHPMailer(true);
-  if(!$mail->Send())
-  {
-   echo '<span style="color: white; font-size: 30px;">Mailer Error: Provide Correct svv Id.</span>';
-  }
-  else
-  {
-   echo '<span style="color: white; font-size: 30px;">E-mail has been sent successfully !! Check your inbox to recover your password.</span>';
-  }*/
   try{
         $mail->Send();
-         echo "<script>window.location='../index.html';alert('Check inbox to get password')</script>";
+         echo "<script>swal('Check inbox to get password').then(function() {
+            window.location = '../index.html'});</script>";
     } catch(Exception $e){
         //Something went bad
         echo "Mailer Error: - " . $mail->ErrorInfo;
