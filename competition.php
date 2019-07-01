@@ -115,7 +115,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <!--       FORM STARTS -->
 <div class="insert_form">
-  <form  action="php/ins_competitions.php" method="POST" enctype="multipart/form-data">
+  <form  onsubmit="return checkfiles()"action="php/ins_competitions.php" method="POST" enctype="multipart/form-data">
     <label for="rollno">Roll No:</label>
     <input type="text" id="rollno" name="rollno" value="<?php echo $usersData['rollno'];?>" readOnly>
 
@@ -236,5 +236,26 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script>
+function checkfiles()
+{
+  var sd=document.getElementById("start_date").value;
+  
+  var ed=document.getElementById("end_date").value;
+
+  if(sd>ed)
+  {
+
+    swal("Invalid End date.The end date should be after start date");
+    return false;
+  }
+  else{
+    swal("Wait.....");
+    return true;
+  }
+  return true;
+}
+</script>
+
 </body>
 </html>
