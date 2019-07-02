@@ -41,10 +41,10 @@ $type1= $_FILES['image']['type'];
 
    $sql = "select filename from other WHERE filename='$name'" ;
   
-  $sql1="select filename1 from other WHERE filename1='$file1'";
+//   $sql1="select filename1 from other WHERE filename1='$file1'";
   $result=mysqli_query($conn,$sql);
 
-$result1=mysqli_query($conn,$sql1);
+// $result1=mysqli_query($conn,$sql1);
 
 if ($result->num_rows > 0)  
 { 
@@ -57,18 +57,16 @@ if ($result->num_rows > 0)
 	  }).then(function() {
 	  window.location = '../other_activity.php'});
 </script>";
-} 
-else if($result1->num_rows > 0)
-{
+
 	// echo "<script>window.location='../other_activity.php';alert('Image name exists, incorrect imagename')</script>";
-	echo "<script>
-	swal({
-	  title: 'Error',
-	  text: 'Image exists, incorrect imagename',
-	  icon: 'warning',
-	  }).then(function() {
-	  window.location = '../other_activity.php'});
-</script>";
+// 	echo "<script>
+// 	swal({
+// 	  title: 'Error',
+// 	  text: 'Image exists, incorrect imagename',
+// 	  icon: 'warning',
+// 	  }).then(function() {
+// 	  window.location = '../other_activity.php'});
+// </script>";
 }
 else 
 { 

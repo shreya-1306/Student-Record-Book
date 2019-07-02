@@ -1,4 +1,4 @@
-<!-- background image not seen -->
+<!-- background image not seen-->
 <?php
 session_start();
 require("functions.php");
@@ -114,14 +114,13 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <!--       FORM STARTS -->
 <div class="insert_form">
-  <form onSubmit=" return validateForm()"  name="insertwork" action="php/ins_workshop.php" method="POST" enctype="multipart/form-data">
+  <form   action="php/ins_workshop.php" method="POST" enctype="multipart/form-data">
     <label for="rollno">Roll No:</label>
     <input type="text" id="rollno" name="rollno" value="<?php echo $usersData['rollno'];?>" readOnly>
 
     <label for="namew">Workshop/Seminar Name:</label>
     <input type="text" id="namew" name="namew" placeholder="Eg: Arduino Workshop" required>
-   
-   
+
     <label for="con_by">Conducted By:</label>
     <input type="text" id="con_by" name="con_by" placeholder="Eg: KJSCE" required>
 
@@ -142,7 +141,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
     
 
-    <input type="submit" value="Submit" name="btn">
+    <input onClick ="return checkfiles()" type="submit" value="Submit" name="btn">
   </form>
 </div>
 
@@ -226,39 +225,26 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
-<script>
-function validateForm() {
 
- // var x = document.forms["insertwork"]["fname"].value;
-  var s = document.forms["insertwork"]["start_date"].value;
-  var e = document.forms["insertwork"]["end_date"].value;
-  var o = document.forms["insertwork"]["certi"].value;
-  var t = document.forms["insertwork"]["image"].value;
-  var a=0,b=0,c=0,d=0;
-  if ((s<e))  {
-    a=1;
-  }
-  if(o==t){
-  b=1;
-  }
-  if(a==0)
-  {
-  alert("Dates Invalid");
-  return false;
-  }
-  if(b==0)
-  {
-  alert("File names not equal Invalid");
-  return false;
+<script>
+function checkfiles()
+{
+  var sd=document.getElementById("start_date").value;
   
-  }
-  if(a==1&&b==1)
+  var ed=document.getElementById("end_date").value;
+
+  if(sd>ed)
   {
-  alert("Wait...");
+
+    swal("Invalid End date.The end date should be after start date");
+    return false;
+  }
+  else{
+    swal("Wait.....");
+    return true;
+  }
   return true;
-  }
-  
 }
 </script>
 </body>
-</html>
+</html> 

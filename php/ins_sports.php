@@ -40,10 +40,10 @@ if(isset($_POST['btn'])){
 
    $sql = "select filename from sports WHERE filename='$name'" ;
   
-   $sql1="select filename1 from sports WHERE filename1='$file1'";
+//    $sql1="select filename1 from sports WHERE filename1='$file1'";
   
   $result=mysqli_query($conn,$sql);
-$result1=mysqli_query($conn,$sql1);
+// $result1=mysqli_query($conn,$sql1);
 
 
 if ($result->num_rows > 0)  
@@ -58,18 +58,16 @@ if ($result->num_rows > 0)
 	  }).then(function() {
 	  window.location = '../sports.php'});
 </script>";
-} 
-else if($result1->num_rows > 0)
-{
+
 	// echo "<script>window.location='../sports.php';alert('Image name exists, incorrect imagename')</script>";
-	echo "<script>
-	swal({
-	  title: 'Error',
-	  text: 'Image exists, incorrect imagename',
-	  icon: 'warning',
-	  }).then(function() {
-	  window.location = '../sports.php'});
-</script>";
+// 	echo "<script>
+// 	swal({
+// 	  title: 'Error',
+// 	  text: 'Image exists, incorrect imagename',
+// 	  icon: 'warning',
+// 	  }).then(function() {
+// 	  window.location = '../sports.php'});
+// </script>";
 }
 else 
 { 
