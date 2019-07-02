@@ -517,6 +517,8 @@ input[type=text],input[type=date],input[type=password], select, textarea {
 	height: 50px;
     width: 51px;
 	background-color:red;
+	border: 0px;
+    margin-left: 10px;
 
 }
 
