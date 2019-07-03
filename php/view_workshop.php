@@ -154,7 +154,7 @@ if ($result->num_rows > 0)
 
     <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
 
-        <tr><th>ROLL NO</th><th>NAME OF WORKSHOP</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th></span></tr>
+        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspWORKSHOP&nbsp&nbsp</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {

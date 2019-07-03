@@ -155,7 +155,7 @@ if ($result->num_rows > 0)
 
   ?>
   <table style="margin-top:40px" border="3" solid white>
-        <tr><th>ROLL NO</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>START DATE</th><th>END DATE</th></span></tr>
+        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspCOMPETITION&nbsp&nbsp</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 
         <?php
 
