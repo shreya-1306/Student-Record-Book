@@ -221,7 +221,7 @@ if ($result->num_rows > 0)
         } else {
             $pageno = 1;
         }
-        $no_of_records_per_page = 5;
+        $no_of_records_per_page = 10;
         $offset = ($pageno-1) * $no_of_records_per_page;
 $total_pages_sql = "SELECT COUNT(*) FROM workshop";
         $result = mysqli_query($conn,$total_pages_sql);
