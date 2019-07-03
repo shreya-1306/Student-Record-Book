@@ -118,7 +118,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM tpp";
   <table style="margin-top:40px;  margin-left: 12px;" border="3" solid white>
 
        
-        <tr><th>ROLL NO</th><th>TITLE</th><th>AUTHOR</th><th>PRESENTED AT</th><th>PAPER</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspTITLE&nbsp&nbspOF&nbsp&nbspPAPER&nbsp&nbsp</th><th>&nbsp&nbspAUTHORS&nbsp&nbsp</th><th>&nbsp&nbspPRESENTED/PUBLISHED&nbsp&nbspAT&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
         <?php
 
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
