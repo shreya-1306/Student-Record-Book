@@ -90,64 +90,62 @@ Licence URI: http://www.os-templates.com/template-terms
     
 
     <!--  TABLE START -->
-    <div >
-
     <form action="view_sports.php" method="POST">
-
+<div class="fieldset1">
   <center>
   
   
    
 <span style="color: white; font-size: 30px;">Sports</span><br><br>
- <font color="white">Search By Date : From</font><input style="width: 66%;" type="date" name="sdate" placeholder="Search.."><br>
+ <font color="white">Search By Date : From</font><input style="width: 700px;"   type="date" name="sdate" placeholder="Search.."><br>
   
- <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input style="width: 66%;" type="date" name="edate" placeholder="Search..">
+ <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input  style="width: 700px;"  type="date" name="edate" placeholder="Search..">
   
   
   
 <br><br><br>
   <center>
-  <input style="margin-left: -3px;" type="submit" name="button" />
+  <input type="submit" name="button" />
   </form>
   </center> 
-  
+     </div>
   <center>
 
 
+
+
+
+
 <?php
- $sd='1997-01-01';
- $ed='2045-12-31';
-if(isset($_POST['button']) && isset($_POST['sdate']) && isset($_POST['edate'])) {
+
+
+if(isset($_POST['button'])) {
     $sd=$_POST['sdate'];
 
 $ed=$_POST['edate'];
 $sql = "select * from sports WHERE start_date>='$sd' AND end_date<='$ed'";
+
 $result=mysqli_query($conn,$sql);
-//DATE QUERY
 if ($result->num_rows > 0)
 {  
 
-       // $result = mysqli_query($conn,$sql);
-  
-    ?>
 
-    <table style="margin-top: 40px;margin-left: 13px; max-width: 1063px;" border="3" solid white id="sports">
-
-       <tr><th>ROLL NO</th><th>NAME OF EVENT/TOURNAMENT</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+  ?>
+  <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
+        <tr><th>ROLL NO</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
-  while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
-    echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
-    </td><td>  <span style='color:#000000;'> ". $line['tour_name']."
+
+while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+    
+echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+</td><td> <span style='color:#000000;'>  ". $line['tour_name']."
     </td><td>  <span style='color:#000000;'> ". $line['place']."
-    
     </td><td>  <span style='color:#000000;'> ". $line['position']."
-    </td><td>  <span style='color:#000000;'> ". $line['start_date']."
+    </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
     </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
-  
-    
-      </td><td>";
+    </td><td>";
 
 
       $fn =$line['filename'];
@@ -160,14 +158,12 @@ if ($result->num_rows > 0)
 
         ?>
 
-       
-
         <p>
           <a href="../../uploads/sports/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/sports/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 
-      }
+     }
     }
     echo "</td><td>";
  $fn1 =$line['filename1'];
@@ -186,51 +182,34 @@ if ($result->num_rows > 0)
       }
     } 
 echo "</td></tr>";
-
-     
-         
-     
 }
+
 ?>
  <br><br>
- 
-
 
     <?php }
     
-
-else
+    else
 {
   echo "<br><br><br><br><center><style='margin: 1500px 5px 15px 20px'><font size='5' color='white'> NO ENTRIES FOUND </font></style></center>";
 }
-
-$conn->close()
-
+$conn->close();
 
 ?>
 
-
-
 </table>
-<br>
- 
-     
 
-  
+       <br><br>
+
 
   </center>
  
-     <?php
      
+     <?php 
       }
-
-      //DATE QUERY ENDS NORMAL QUERY STARTS
       else{
-       
         $sql = "select * from sports";
       
-  
-
 $result=mysqli_query($conn,$sql);
 if ($result->num_rows > 0)
 {  
@@ -239,37 +218,32 @@ if ($result->num_rows > 0)
         } else {
             $pageno = 1;
         }
-        $no_of_records_per_page = 5;
+        $no_of_records_per_page = 10;
         $offset = ($pageno-1) * $no_of_records_per_page;
-        $total_pages_sql = "SELECT COUNT(*) FROM sports";
+$total_pages_sql = "SELECT COUNT(*) FROM sports";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-        $sql = "SELECT * FROM sports order by rollno LIMIT $offset, $no_of_records_per_page";
+        $sql = "SELECT * from sports order by rollno LIMIT $offset, $no_of_records_per_page";
         $result = mysqli_query($conn,$sql);
-  
-    ?>
 
-    <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="sports">
-
-       <tr><th>ROLL NO</th><th>NAME OF EVENT/TOURNAMENT</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+  ?>
+  <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
+        <tr><th>ROLL NO</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
-  while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
-    
 
-      
-  echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
-      </td><td>  <span style='color:#000000;'> ". $line['tour_name']."
-      </td><td>  <span style='color:#000000;'> ". $line['place']."
-      
-      </td><td>  <span style='color:#000000;'> ". $line['position']."
-      </td><td>  <span style='color:#000000;'> ". $line['start_date']."
-      </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
+while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
-      </td><td>";
+echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+</td><td> <span style='color:#000000;'>  ". $line['tour_name']."
+    </td><td>  <span style='color:#000000;'> ". $line['place']."
+    </td><td>  <span style='color:#000000;'> ". $line['position']."
+    </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
+    </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
+    </td><td>";
 
 
       $fn =$line['filename'];
@@ -282,18 +256,16 @@ if ($result->num_rows > 0)
 
         ?>
 
-       
-
         <p>
           <a href="../../uploads/sports/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/sports/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 
-      }
-    }
+     }
+	  }
     echo "</td><td>";
  $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/opt_sports");
+      $files= scandir("../../uploads/sports");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -302,20 +274,18 @@ if ($result->num_rows > 0)
 
         ?>
  <p>
-          <a style='color:#000000;' target="_blank" href="../../uploads/opt_sports/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/opt_sports/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+          <a style='color:#000000;' href="../../uploads/sports/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
  <?php 
       }
-    } 
+	  } 
 echo "</td></tr>";
-
-     
-         
-     
 }
+
 ?>
  <br><br>
-   <div class="pagination_admin">
+ 
+<div class="pagination_admin">
 <a href="?pageno=1"><font color="white" size="4"><- First</font></a>
         
     &nbsp&nbsp&nbsp&nbsp&nbsp;
@@ -326,35 +296,24 @@ echo "</td></tr>";
       &nbsp&nbsp&nbsp&nbsp&nbsp;
        <a href="?pageno=<?php echo $total_pages; ?>"><font color="white" size="4">Last -></font></a>
        </div>
-
-
     <?php }
     
-
-else
+    else
 {
   echo "<br><br><br><br><center><style='margin: 1500px 5px 15px 20px'><font size='5' color='white'> NO ENTRIES FOUND </font></style></center>";
 }
-
-
-$conn->close()
-
+$conn->close();
 
 ?>
 
-
-
 </table>
-<br>
- 
-       <br>
+
+       <br><br>
 
 
-<button style="margin-left: 147px;" class="btn" onclick="self.location.href = '../download/download2.php';">Click Here To Download XLS File</button>
+<button  style="margin-left: 147px;" class="btn" onclick="self.location.href = '../download/download5.php';">Click Here To Download XLS File</button>
 
-  
-
-  </center></div><?php }?>
+  </center> <?php } ?>
 
     <!--  TABLE END -->
     <!-- ################################################################################################ -->

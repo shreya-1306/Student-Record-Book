@@ -18,6 +18,8 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
 <script type="text/javascript">
   $(document).ready(function() {
     $('#workshop').DataTable();
@@ -90,27 +92,25 @@ Licence URI: http://www.os-templates.com/template-terms
     
 
     <!--  TABLE START -->
-    <div >
-
     <form action="view_workshop.php" method="POST">
-
+<div class="fieldset1">
   <center>
   
   
    
 <span style="color: white; font-size: 30px;">Workshops</span><br><br>
- <font color="white">Search By Date : From</font><input style="width: 66%;" type="date" name="sdate" placeholder="Search.."><br>
+ <font color="white">Search By Date : From</font><input style="width: 700px;"   type="date" name="sdate" placeholder="Search.."><br>
   
- <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input style="width: 66%;" type="date" name="edate" placeholder="Search..">
+ <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input style="width: 700px;"   type="date" name="edate" placeholder="Search..">
   
   
   
 <br><br><br>
   <center>
-  <input style="margin-left: -3px;" type="submit" name="button" />
+  <input type="submit" name="button" />
   </form>
   </center> 
-  
+  </div>
   <center>
 
 
@@ -131,7 +131,7 @@ if ($result->num_rows > 0)
   
     ?>
 
-    <table style="margin-top: 40px;margin-left: 13px; max-width: 1063px;" border="3" solid white id="workshop">
+    <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="workshop">
 
        <tr><th>ROLL NO</th><th>NAME OF WORKSHOP</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
@@ -239,7 +239,7 @@ if ($result->num_rows > 0)
         } else {
             $pageno = 1;
         }
-        $no_of_records_per_page = 5;
+        $no_of_records_per_page = 10;
         $offset = ($pageno-1) * $no_of_records_per_page;
         $total_pages_sql = "SELECT COUNT(*) FROM workshop";
         $result = mysqli_query($conn,$total_pages_sql);
@@ -291,7 +291,7 @@ if ($result->num_rows > 0)
     }
     echo "</td><td>";
  $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/opt_workshop");
+      $files= scandir("../../uploads/workshop");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -300,7 +300,7 @@ if ($result->num_rows > 0)
 
         ?>
  <p>
-          <a style='color:#000000;' target="_blank" href="../../uploads/opt_workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/opt_workshop/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+          <a style='color:#000000;' href="../../uploads/workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
  <?php 
       }
@@ -352,7 +352,7 @@ $conn->close()
 
   
 
-  </center></div><?php }?>
+  </center><?php }?>
 
     <!--  TABLE END -->
     <!-- ################################################################################################ -->

@@ -90,148 +90,10 @@ Licence URI: http://www.os-templates.com/template-terms
     
 
     <!--  TABLE START -->
-    <div >
-
-    <form action="view_tpp.php" method="POST">
-
-  <center>
-  
-  
-   
-<span style="color: white; font-size: 30px;">Technical Papers Presented.</span><br><br>
- <font color="white">Search By Date : From</font><input style="width: 66%;" type="date" name="sdate" placeholder="Search.."><br>
-  
- <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input style="width: 66%;" type="date" name="edate" placeholder="Search..">
-  
-  
-  
-<br><br><br>
-  <center>
-  <input style="margin-left: -3px;" type="submit" name="button" />
-  </form>
-  </center> 
-  
-  <center>
-
-
-<?php
- $sd='1997-01-01';
- $ed='2045-12-31';
-if(isset($_POST['button']) && isset($_POST['sdate']) && isset($_POST['edate'])) {
-    $sd=$_POST['sdate'];
-
-$ed=$_POST['edate'];
-$sql = "select * from tpp";
-$result=mysqli_query($conn,$sql);
-//DATE QUERY
-if ($result->num_rows > 0)
-{  
-
-       // $result = mysqli_query($conn,$sql);
-  
-    ?>
-
-    <table style="margin-top: 40px;margin-left: 13px; max-width: 1063px;" border="3" solid white id="tpp">
-
-       <tr><th>ROLL NO</th><th>TITLE OF PAPER</th><th>AUTHORS</th><th>PRESENTED/PUBLISHED AT</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
-
-        <?php
-  while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-
     
-
-   
-      
-  echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
-  </td><td> <span style='color:#000000;'>  ". $line['title']."
-  </td><td>  <span style='color:#000000;'> ". $line['author']."
-  </td><td>  <span style='color:#000000;'> ". $line['presented_at']."
-    
-      </td><td>";
-
-
-
-      $fn =$line['filename'];
-      $files= scandir("../../uploads/tpp");
-      for($a =2;$a <count($files);$a++){
-
-        if($fn==$files[$a])
-        {
-
-
-        ?>
-
-       
-
-        <p>
-          <a href="../../uploads/tpp/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/tpp/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
-        </p>
-
-        <?php 
-      }
-    }
-    echo "</td><td>";
- $fn1 =$line['paper'];
-      $files= scandir("../../uploads/tpp");
-      for($a =2;$a <count($files);$a++){
-
-        if($fn1==$files[$a])
-        {
-
-
-        ?>
- <p>
-          <a style='color:#000000;' href="../../uploads/tpp/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-        </p>
- <?php 
-      }
-    } 
-echo "</td></tr>";
-
-     
-         
-     
-}
-?>
- <br><br>
- 
-
-
-    <?php }
-    
-
-else
-{
-  echo "<br><br><br><br><center><style='margin: 1500px 5px 15px 20px'><font size='5' color='white'> NO ENTRIES FOUND </font></style></center>";
-}
-
-$conn->close()
-
-
-?>
-
-
-
-</table>
-<br>
- 
-     
-
-  
-
-  </center>
- 
-     <?php
-     
-      }
-
-      //DATE QUERY ENDS NORMAL QUERY STARTS
-      else{
-       
+<?php 
         $sql = "select * from tpp";
       
-  
-
 $result=mysqli_query($conn,$sql);
 if ($result->num_rows > 0)
 {  
@@ -240,36 +102,33 @@ if ($result->num_rows > 0)
         } else {
             $pageno = 1;
         }
-        $no_of_records_per_page = 5;
+        $no_of_records_per_page = 10;
         $offset = ($pageno-1) * $no_of_records_per_page;
-        $total_pages_sql = "SELECT COUNT(*) FROM tpp";
+$total_pages_sql = "SELECT COUNT(*) FROM tpp";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-        $sql = "SELECT * FROM tpp order by rollno LIMIT $offset, $no_of_records_per_page";
+        $sql = "SELECT * from tpp order by rollno LIMIT $offset, $no_of_records_per_page";
         $result = mysqli_query($conn,$sql);
-  
-    ?>
 
-    <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="tpp">
+  ?>
+    <center>
+      <div class="fieldset1" style="margin-left: -2px;">
+  <table style="margin-top:40px;  margin-left: 12px;" border="3" solid white>
 
-    <tr><th>ROLL NO</th><th>TITLE OF PAPER</th><th>AUTHORS</th><th>PRESENTED/PUBLISHED AT</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
-
+       
+        <tr><th>ROLL NO</th><th>TITLE</th><th>AUTHOR</th><th>PRESENTED AT</th><th>PAPER</th></span></tr>
         <?php
-  while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
+while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
-
-      
-  echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
-  </td><td> <span style='color:#000000;'>  ". $line['title']."
-  </td><td>  <span style='color:#000000;'> ". $line['author']."
-  </td><td>  <span style='color:#000000;'> ". $line['presented_at']."
-    
-      </td><td>";
-
-
+echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+    </td><td>  <span style='color:#000000;'> ". $line['title']."
+    </td><td>  <span style='color:#000000;'> ". $line['author']."
+    </td><td>  <span style='color:#000000;'> ". $line['presented_at']." 
+    </td><td>";
+	
       $fn =$line['filename'];
       $files= scandir("../../uploads/tpp");
       for($a =2;$a <count($files);$a++){
@@ -283,37 +142,20 @@ if ($result->num_rows > 0)
        
 
         <p>
-          <a href="../../uploads/tpp/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/tpp/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+           <a href="../../uploads/tpp/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/tpp/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 
       }
-    }
-    echo "</td><td>";
- $fn1 =$line['paper'];
-      $files= scandir("../../uploads/opt_tpp");
-      for($a =2;$a <count($files);$a++){
-
-        if($fn1==$files[$a])
-        {
 
 
-        ?>
- <p>
-          <a style='color:#000000;' target="_blank" href="../../uploads/opt_tpp/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/opt_tpp/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
-        </p>
- <?php 
       }
-    } 
 echo "</td></tr>";
-
-     
-         
-     
 }
+
 ?>
  <br><br>
-   <div class="pagination_admin">
+    <div class="pagination_admin">
 <a href="?pageno=1"><font color="white" size="4"><- First</font></a>
         
     &nbsp&nbsp&nbsp&nbsp&nbsp;
@@ -325,7 +167,6 @@ echo "</td></tr>";
        <a href="?pageno=<?php echo $total_pages; ?>"><font color="white" size="4">Last -></font></a>
        </div>
 
-
     <?php }
     
 
@@ -333,26 +174,24 @@ else
 {
   echo "<br><br><br><br><center><style='margin: 1500px 5px 15px 20px'><font size='5' color='white'> NO ENTRIES FOUND </font></style></center>";
 }
-
-
-$conn->close()
-
+$conn->close();
 
 ?>
 
-
-
 </table>
-<br>
+
+    
+
  
-       <br>
+       <br><br>
 
 
-<button style="margin-left: 147px;" class="btn" onclick="self.location.href = '../download/download2.php';">Click Here To Download XLS File</button>
 
-  
+<button  style="margin-left: 147px;" class="btn" onclick="self.location.href = '../download/download6.php';">Click Here To Download XLS File</button>
+</div>
 
-  </center></div><?php }?>
+  </center>
+
 
     <!--  TABLE END -->
     <!-- ################################################################################################ -->

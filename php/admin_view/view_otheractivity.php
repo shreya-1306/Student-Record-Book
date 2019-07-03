@@ -90,64 +90,59 @@ Licence URI: http://www.os-templates.com/template-terms
     
 
     <!--  TABLE START -->
-    <div >
-
     <form action="view_otheractivity.php" method="POST">
-
+<div class="fieldset1">
   <center>
   
   
    
-<span style="color: white; font-size: 30px;">Other Activities.</span><br><br>
- <font color="white">Search By Date : From</font><input style="width: 66%;" type="date" name="sdate" placeholder="Search.."><br>
+<span style="color: white; font-size: 30px;">Other Activities</span><br><br>
+ <font color="white">Search By Date : From</font><input style="width: 700px;"   type="date" name="sdate" placeholder="Search.."><br>
   
- <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input style="width: 66%;" type="date" name="edate" placeholder="Search..">
+ <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input style="width: 700px;"   type="date" name="edate" placeholder="Search..">
   
   
   
 <br><br><br>
   <center>
-  <input style="margin-left: -3px;" type="submit" name="button" />
+  <input type="submit" name="button" />
   </form>
   </center> 
-  
+     </div>
   <center>
 
 
+
+
 <?php
- $sd='1997-01-01';
- $ed='2045-12-31';
-if(isset($_POST['button']) && isset($_POST['sdate']) && isset($_POST['edate'])) {
+
+
+
+if(isset($_POST['button'])) {
     $sd=$_POST['sdate'];
 
 $ed=$_POST['edate'];
 $sql = "select * from other WHERE start_date>='$sd' AND end_date<='$ed'";
 $result=mysqli_query($conn,$sql);
-//DATE QUERY
 if ($result->num_rows > 0)
-{  
+{ 
 
-       // $result = mysqli_query($conn,$sql);
-  
-    ?>
 
-    <table style="margin-top: 40px;margin-left: 13px; max-width: 1063px;" border="3" solid white id="other">
+  ?>
+  <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
+         <tr><th>ROLL NO</th><th>NAME OF ACTIVITY</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
-       <tr><th>ROLL NO</th><th>NAME OF ACTIVITIES</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
-        <?php
-  while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-
+  <?php
+while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
+echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+    </td><td>  <span style='color:#000000;'> ". $line['name_act']."
+    </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
+    </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
+    </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
+    </td><td>";
 
-      
-  echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
-      </td><td>  <span style='color:#000000;'> ". $line['name_act']."
-      </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
-      </td><td>  <span style='color:#000000;'> ". $line['start_date']."
-      </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
-    
-      </td><td>";
 
 
       $fn =$line['filename'];
@@ -163,7 +158,7 @@ if ($result->num_rows > 0)
        
 
         <p>
-          <a href="../../uploads/other_activity/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/other_activity/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+           <a href="../../uploads/other_activity/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/other_activity/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 
@@ -186,52 +181,41 @@ if ($result->num_rows > 0)
       }
     } 
 echo "</td></tr>";
-
-     
-         
-     
 }
+
 ?>
  <br><br>
  
 
-
-    <?php }
+    <?php 
     
+
+    
+    }
 
 else
 {
   echo "<br><br><br><br><center><style='margin: 1500px 5px 15px 20px'><font size='5' color='white'> NO ENTRIES FOUND </font></style></center>";
 }
-
-$conn->close()
-
+$conn->close();
 
 ?>
 
-
-
 </table>
-<br>
- 
-     
 
-  
+       <br><br>
+
+
+
 
   </center>
- 
-     <?php
+ <?php
+     
      
       }
-
-      //DATE QUERY ENDS NORMAL QUERY STARTS
       else{
-       
         $sql = "select * from other";
-      
-  
-
-$result=mysqli_query($conn,$sql);
+      $result=mysqli_query($conn,$sql);
 if ($result->num_rows > 0)
 {  
   if (isset($_GET['pageno'])) {
@@ -239,35 +223,32 @@ if ($result->num_rows > 0)
         } else {
             $pageno = 1;
         }
-        $no_of_records_per_page = 5;
+        $no_of_records_per_page = 10;
         $offset = ($pageno-1) * $no_of_records_per_page;
-        $total_pages_sql = "SELECT COUNT(*) FROM other";
+$total_pages_sql = "SELECT COUNT(*) FROM other";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-        $sql = "SELECT * FROM other order by rollno LIMIT $offset, $no_of_records_per_page";
+        $sql = "select * from other order by rollno LIMIT $offset, $no_of_records_per_page";
         $result = mysqli_query($conn,$sql);
-  
-    ?>
 
-    <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="other">
 
-       <tr><th>ROLL NO</th><th>NAME OF ACTIVITY</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+  ?>
+  <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
+         <tr><th>ROLL NO</th><th>NAME OF ACTIVITY</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
-        <?php
-  while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
+  <?php
+while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
+echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+    </td><td>  <span style='color:#000000;'> ". $line['name_act']."
+    </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
+    </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
+    </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
+    </td><td>";
 
-      
-  echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
-      </td><td>  <span style='color:#000000;'> ". $line['name_act']."
-      </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
-      </td><td>  <span style='color:#000000;'> ". $line['start_date']."
-      </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
-    
-      </td><td>";
 
 
       $fn =$line['filename'];
@@ -283,15 +264,15 @@ if ($result->num_rows > 0)
        
 
         <p>
-          <a href="../../uploads/other_activity/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/other_activity/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+           <a href="../../uploads/other_activity/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/other_activity/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 
       }
-    }
+	  }
     echo "</td><td>";
  $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/opt_other_activity");
+      $files= scandir("../../uploads/other_activity");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -300,17 +281,14 @@ if ($result->num_rows > 0)
 
         ?>
  <p>
-          <a style='color:#000000;' target="_blank" href="../../uploads/opt_other_activity/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/opt_other_activity/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+          <a style='color:#000000;' href="../../uploads/other_activity/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
  <?php 
       }
-    } 
+	  } 
 echo "</td></tr>";
-
-     
-         
-     
 }
+
 ?>
  <br><br>
    <div class="pagination_admin">
@@ -325,34 +303,30 @@ echo "</td></tr>";
        <a href="?pageno=<?php echo $total_pages; ?>"><font color="white" size="4">Last -></font></a>
        </div>
 
-
-    <?php }
+    <?php 
     
+
+    
+    }
 
 else
 {
   echo "<br><br><br><br><center><style='margin: 1500px 5px 15px 20px'><font size='5' color='white'> NO ENTRIES FOUND </font></style></center>";
 }
-
-
-$conn->close()
-
+$conn->close();
 
 ?>
 
-
-
 </table>
-<br>
- 
-       <br>
+
+       <br><br>
 
 
-<button style="margin-left: 147px;" class="btn" onclick="self.location.href = '../download/download2.php';">Click Here To Download XLS File</button>
 
-  
+<button  style="margin-left: 147px;" class="btn" onclick="self.location.href = '../download/download4.php';">Click Here To Download XLS File</button>
 
-  </center></div><?php }?>
+  </center><?php }?>
+
 
     <!--  TABLE END -->
     <!-- ################################################################################################ -->
