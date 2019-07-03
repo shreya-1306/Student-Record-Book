@@ -219,7 +219,7 @@ $total_pages=1;
 
     <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
 
-      <tr><th>ROLL NO</th><th>NAME</th><th>CONDUCTED BY</th><th>POSITION</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
+      <tr><th>ROLL NO</th><th>NAME</th><th>CONDUCTED BY</th><th>POSITION</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
 
 <?php
   while ($line = mysqli_fetch_array($results, MYSQLI_ASSOC)) {

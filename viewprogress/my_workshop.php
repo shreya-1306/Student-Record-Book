@@ -211,8 +211,8 @@ if ($result->num_rows > 0)
             <th>ROLL NO</th>
             <th>NAME</th>
             <th>CONDUCTED BY</th>
-            <th>START DATE</th>
-            <th>END DATE</th>
+            <th>START&nbsp&nbspDATE</th>
+            <th>END&nbsp&nbspDATE</th>
             <th>CERTIFICATE</th>
             <th>OPTIONAL IMAGE</th>
             <th>DELETE</th>
