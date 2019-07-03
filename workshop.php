@@ -232,29 +232,64 @@ function validateForm() {
  // var x = document.forms["insertwork"]["fname"].value;
   var s = document.forms["insertwork"]["start_date"].value;
   var e = document.forms["insertwork"]["end_date"].value;
-  var o = document.forms["insertwork"]["certi"].value;
-  var t = document.forms["insertwork"]["image"].value;
+  var certi = document.forms["insertwork"]["certi"].value;
+  var image = document.forms["insertwork"]["image"].value;
+  
+  //checking the certi contains pdf jpg or png
+  if(certi.includes("pdf")){
+   var n = certi.indexOf("pdf");
+  }
+  else
+	  if(certi.includes("jpg")){
+   var n = certi.indexOf("jpg");
+  }
+  else
+	  if(certi.includes("png")){
+   var n = certi.indexOf("png");
+  }
+  
+  
+  //checking if image is jpg or png
+  if(image.includes("jpg")){
+   var q =image.indexOf("jpg");
+  }
+  else
+	  if(image.includes("png")){
+   var q= image.indexOf("png");
+  }
+  
+  
+   //Names of files without extensions
+   var o=certi.substring(0,n-1);
+   var t=image.substring(0,q-1);
+  
   var a=0,b=0,c=0,d=0;
+  //Checking if start date less than end date 
   if ((s<e))  {
     a=1;
   }
-  if(o==t){
+  //Checking if file names are equal if image not equal to null
+  if((t!=""&&o==t)||t==""){
   b=1;
   }
+  
+  //if dates are invalid 
   if(a==0)
   {
   alert("Dates Invalid");
   return false;
   }
+  //If file names not equal
   if(b==0)
   {
   alert("File names not equal Invalid");
   return false;
   
   }
+  
   if(a==1&&b==1)
   {
-  alert("Wait...");
+  //alert("Wait...");
   return true;
   }
   
