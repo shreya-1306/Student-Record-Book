@@ -133,7 +133,7 @@ if ($result->num_rows > 0)
 
     <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="workshop">
 
-       <tr><th>ROLL NO</th><th>NAME OF WORKSHOP</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>NAME OF WORKSHOP</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspCERTIFICATE&nbsp&nbsp</th><th>&nbsp&nbspIMAGE&nbsp&nbsp</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -253,7 +253,7 @@ if ($result->num_rows > 0)
 
     <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="workshop">
 
-       <tr><th>ROLL NO</th><th>NAME OF WORKSHOP</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>NAME OF WORKSHOP</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspCERTIFICATE&nbsp&nbsp</th><th>&nbsp&nbspIMAGE&nbsp&nbsp</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
