@@ -133,21 +133,22 @@ if ($result->num_rows > 0)
 
     <table style="margin-top: 40px;margin-left: 13px; max-width: 1063px;" border="3" solid white id="tpp">
 
-       <tr><th>ROLL NO</th><th>NAME OF PAPER</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+       <tr><th>ROLL NO</th><th>TITLE OF PAPER</th><th>AUTHORS</th><th>PRESENTED/PUBLISHED AT</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
     
 
+   
       
   echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
-         <tr><td> <span style='color:#000000;'>  ". $line['title']."
-      </td><td>  <span style='color:#000000;'> ". $line['author']."
-      </td><td>  <span style='color:#000000;'> ". $line['presented_at']."
-
+  </td><td> <span style='color:#000000;'>  ". $line['title']."
+  </td><td>  <span style='color:#000000;'> ". $line['author']."
+  </td><td>  <span style='color:#000000;'> ". $line['presented_at']."
     
       </td><td>";
+
 
 
       $fn =$line['filename'];
@@ -170,7 +171,7 @@ if ($result->num_rows > 0)
       }
     }
     echo "</td><td>";
- $fn1 =$line['filename1'];
+ $fn1 =$line['paper'];
       $files= scandir("../../uploads/tpp");
       for($a =2;$a <count($files);$a++){
 
@@ -253,7 +254,7 @@ if ($result->num_rows > 0)
 
     <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="tpp">
 
-       <tr><th>ROLL NO</th><th>NAME OF PAPER</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+    <tr><th>ROLL NO</th><th>TITLE OF PAPER</th><th>AUTHORS</th><th>PRESENTED/PUBLISHED AT</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -262,7 +263,7 @@ if ($result->num_rows > 0)
 
       
   echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
-  <tr><td> <span style='color:#000000;'>  ". $line['title']."
+  </td><td> <span style='color:#000000;'>  ". $line['title']."
   </td><td>  <span style='color:#000000;'> ". $line['author']."
   </td><td>  <span style='color:#000000;'> ". $line['presented_at']."
     
@@ -289,7 +290,7 @@ if ($result->num_rows > 0)
       }
     }
     echo "</td><td>";
- $fn1 =$line['filename1'];
+ $fn1 =$line['paper'];
       $files= scandir("../../uploads/opt_tpp");
       for($a =2;$a <count($files);$a++){
 
