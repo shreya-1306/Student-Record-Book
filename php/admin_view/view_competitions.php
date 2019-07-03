@@ -20,7 +20,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <link href="../../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <script type="text/javascript">
   $(document).ready(function() {
-    $('#workshop').DataTable();
+    $('#competition').DataTable();
 } );
 </script>
 </head>
@@ -92,13 +92,13 @@ Licence URI: http://www.os-templates.com/template-terms
     <!--  TABLE START -->
     <div >
 
-    <form action="view_workshop.php" method="POST">
+    <form action="view_competitions.php" method="POST">
 
   <center>
   
   
    
-<span style="color: white; font-size: 30px;">Workshops</span><br><br>
+<span style="color: white; font-size: 30px;">Competitions</span><br><br>
  <font color="white">Search By Date : From</font><input style="width: 66%;" type="date" name="sdate" placeholder="Search.."><br>
   
  <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input style="width: 66%;" type="date" name="edate" placeholder="Search..">
@@ -121,7 +121,7 @@ if(isset($_POST['button']) && isset($_POST['sdate']) && isset($_POST['edate'])) 
     $sd=$_POST['sdate'];
 
 $ed=$_POST['edate'];
-$sql = "select * from workshop WHERE start_date>='$sd' AND end_date<='$ed'";
+$sql = "select * from competition WHERE start_date>='$sd' AND end_date<='$ed'";
 $result=mysqli_query($conn,$sql);
 //DATE QUERY
 if ($result->num_rows > 0)
@@ -131,9 +131,9 @@ if ($result->num_rows > 0)
   
     ?>
 
-    <table style="margin-top: 40px;margin-left: 13px; max-width: 1063px;" border="3" solid white id="workshop">
+    <table style="margin-top: 40px;margin-left: 13px; max-width: 1063px;" border="3" solid white id="competition">
 
-       <tr><th>ROLL NO</th><th>NAME OF WORKSHOP</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+       <tr><th>ROLL NO</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -143,7 +143,7 @@ if ($result->num_rows > 0)
       
   echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
       </td><td>  <span style='color:#000000;'> ". $line['namew']."
-      </td><td>  <span style='color:#000000;'> ". $line['con_by']."
+      </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
       </td><td>  <span style='color:#000000;'> ". $line['start_date']."
       </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
     
@@ -151,7 +151,7 @@ if ($result->num_rows > 0)
 
 
       $fn =$line['filename'];
-      $files= scandir("../../uploads/workshop");
+      $files= scandir("../../uploads/competition");
       for($a =2;$a <count($files);$a++){
 
         if($fn==$files[$a])
@@ -163,7 +163,7 @@ if ($result->num_rows > 0)
        
 
         <p>
-          <a href="../../uploads/workshop/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/workshop/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+          <a href="../../uploads/competition/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/competition/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 
@@ -171,7 +171,7 @@ if ($result->num_rows > 0)
     }
     echo "</td><td>";
  $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/workshop");
+      $files= scandir("../../uploads/competition");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -180,7 +180,7 @@ if ($result->num_rows > 0)
 
         ?>
  <p>
-          <a style='color:#000000;' href="../../uploads/workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+          <a style='color:#000000;' href="../../uploads/competition/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
  <?php 
       }
@@ -227,7 +227,7 @@ $conn->close()
       //DATE QUERY ENDS NORMAL QUERY STARTS
       else{
        
-        $sql = "select * from workshop";
+        $sql = "select * from competition";
       
   
 
@@ -241,19 +241,19 @@ if ($result->num_rows > 0)
         }
         $no_of_records_per_page = 5;
         $offset = ($pageno-1) * $no_of_records_per_page;
-        $total_pages_sql = "SELECT COUNT(*) FROM workshop";
+        $total_pages_sql = "SELECT COUNT(*) FROM competition";
         $result = mysqli_query($conn,$total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-        $sql = "SELECT * FROM workshop order by rollno LIMIT $offset, $no_of_records_per_page";
+        $sql = "SELECT * FROM competition order by rollno LIMIT $offset, $no_of_records_per_page";
         $result = mysqli_query($conn,$sql);
   
     ?>
 
-    <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="workshop">
+    <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="competition">
 
-       <tr><th>ROLL NO</th><th>NAME OF WORKSHOP</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+       <tr><th>ROLL NO</th><th>NAME OF competition</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -262,8 +262,8 @@ if ($result->num_rows > 0)
 
       
   echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
-      </td><td>  <span style='color:#000000;'> ". $line['namew']."
-      </td><td>  <span style='color:#000000;'> ". $line['con_by']."
+      </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
+      </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
       </td><td>  <span style='color:#000000;'> ". $line['start_date']."
       </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
     
@@ -271,7 +271,7 @@ if ($result->num_rows > 0)
 
 
       $fn =$line['filename'];
-      $files= scandir("../../uploads/workshop");
+      $files= scandir("../../uploads/competition");
       for($a =2;$a <count($files);$a++){
 
         if($fn==$files[$a])
@@ -283,7 +283,7 @@ if ($result->num_rows > 0)
        
 
         <p>
-          <a href="../../uploads/workshop/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/workshop/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+          <a href="../../uploads/competition/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/competition/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 
@@ -291,7 +291,7 @@ if ($result->num_rows > 0)
     }
     echo "</td><td>";
  $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/opt_workshop");
+      $files= scandir("../../uploads/opt_competition");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -300,7 +300,7 @@ if ($result->num_rows > 0)
 
         ?>
  <p>
-          <a style='color:#000000;' target="_blank" href="../../uploads/opt_workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/opt_workshop/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+          <a style='color:#000000;' target="_blank" href="../../uploads/opt_competition/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/opt_competition/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
  <?php 
       }

@@ -98,7 +98,7 @@ Licence URI: http://www.os-templates.com/template-terms
   
   
    
-<span style="color: white; font-size: 30px;">Workshops</span><br><br>
+<span style="color: white; font-size: 30px;">Sports</span><br><br>
  <font color="white">Search By Date : From</font><input style="width: 66%;" type="date" name="sdate" placeholder="Search.."><br>
   
  <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input style="width: 66%;" type="date" name="edate" placeholder="Search..">
