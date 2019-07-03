@@ -224,7 +224,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM sports";
 
   ?>
   <table style="margin-top:40px" border="3" solid white>
-        <tr><th>ROLL NO</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START DATE</th><th>END DATE</th></span></tr>
+        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspTOURNAMENT&nbsp&nbsp</th><th>&nbsp&nbspPLACE&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 
         <?php
 
