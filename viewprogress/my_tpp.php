@@ -214,9 +214,9 @@ Licence URI: http://www.os-templates.com/template-terms
 //         $sql = "SELECT * FROM tpp where rollno= $rn LIMIT $offset, $no_of_records_per_page";
 //         $result = mysqli_query($conn,$sql);
   ?>
-<table style="margin-top:40px; margin-left: 20px" border="3" solid white>
+<table style="margin-top:40px; margin-left: 105px" border="3" solid white>
 
-     <tr><th>ROLL NO</th><th>TITLE</th><th>AUTHOR</th><th>PRESENTED AT</th><th>PAPER</th><th>DELETE</th></span></tr>
+     <tr><th>ROLL NO</th><th>TITLE</th><th>&nbsp&nbspAUTHOR&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbspPRESENTED&nbsp&nbspAT&nbsp&nbsp&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbspPAPER&nbsp&nbsp&nbsp&nbsp</th><th>DELETE</th></span></tr>
 
 <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
