@@ -25,19 +25,39 @@ Licence URI: http://www.os-templates.com/template-terms
 <script>
         function validate(){
 
-            var a = document.getElementById("newpwd").value;
-            var b = document.getElementById("cpwd").value;
-            if (a!=b) {
-        
-    swal({
-      title: 'Try Again!',
-      text: 'Passwords do not match!',
-      icon: 'error',
-      })
+var a = document.getElementById("newpwd").value;
+var b = document.getElementById("cpwd").value;
+if (a!=b) {
 
-               return false;
-            }
-        }
+swal({
+title: 'Try Again!',
+text: 'Passwords do not match!',
+icon: 'error',
+})
+
+   return false;
+}
+else
+{
+if(a.length<8)
+{
+  swal({
+title: 'Password length too small!',
+text: 'The length of the password must be greater than 8 characters',
+icon: 'error',
+})
+return false;
+}
+else
+{
+  return true;
+}
+}
+
+return true;
+
+
+}
      </script>
 </head>
 <body id="top">

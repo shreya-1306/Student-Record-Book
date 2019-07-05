@@ -118,7 +118,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM tpp";
   <table style="margin-top:40px;  margin-left: 12px;" border="3" solid white>
 
        
-       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspTITLE&nbsp&nbspOF&nbsp&nbspPAPER&nbsp&nbsp</th><th>&nbsp&nbspAUTHORS&nbsp&nbsp</th><th>&nbsp&nbspPRESENTED/PUBLISHED&nbsp&nbspAT&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspTITLE&nbsp&nbspOF&nbsp&nbspPAPER&nbsp&nbsp</th><th>&nbsp&nbspAUTHORS&nbsp&nbsp</th><th>&nbsp&nbspPRESENTED/PUBLISHED&nbsp&nbspAT&nbsp&nbsp</th><th>CERTIFICATE</th></span></tr>
         <?php
 
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -142,7 +142,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
        
 
         <p>
-           <a href="../../uploads/tpp/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/tpp/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+           <a href="../../uploads/tpp/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/tp?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 
@@ -153,7 +153,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
 echo "</td></tr>";
 }
 
-?>
+?>a
  <br><br>
     <div class="pagination_admin">
 <a href="?pageno=1"><font color="white" size="4"><- First</font></a>

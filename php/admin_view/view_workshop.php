@@ -171,7 +171,7 @@ if ($result->num_rows > 0)
     }
     echo "</td><td>";
  $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/workshop");
+      $files= scandir("../../uploads/opt_workshop");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -180,7 +180,7 @@ if ($result->num_rows > 0)
 
         ?>
  <p>
-          <a style='color:#000000;' href="../../uploads/workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+          <a style='color:#000000;' href="../../uploads/workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>;
         </p>
  <?php 
       }

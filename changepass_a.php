@@ -37,6 +37,26 @@ Licence URI: http://www.os-templates.com/template-terms
 
                return false;
             }
+            else
+          {
+            if(a.length<8)
+            {
+              swal({
+      title: 'Password length too small!',
+      text: 'The length of the password must be greater than 8 characters',
+      icon: 'error',
+      })
+      return false;
+            }
+            else
+            {
+              return true;
+            }
+          }
+
+   return true;
+
+
         }
      </script>
 </head>
