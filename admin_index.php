@@ -89,10 +89,15 @@ Licence URI: http://www.os-templates.com/template-terms
 
 
     <!--Slide show started-->
+    <h2 style="font-size: 28px;margin-left: 492px;" class="heading">Student Achievements</h2>
+   <div class="w3-content w3-section" style=" max-width: 481px;margin-left: 432px;
     <div class="w3-content w3-section" style=" max-width:500px;margin-left: 226px;" >
   <img class="mySlides" src="slideshow/1.jpg" style="width:400%">
   <img class="mySlides" src="slideshow/2.jpg" style="width:400%">
-  <img class="mySlides" src="slideshow/3.jpg" style="width:400%">
+  <img class="mySlides" src="slideshow/3.jpeg" style="width:400%">
+  <img class="mySlides" src="slideshow/4.jpg" style="width:400%">
+  <img class="mySlides" src="slideshow/5.jpeg" style="width:400%">
+  <img class="mySlides" src="slideshow/6.jpeg" style="width:400%">
 </div>
     
 

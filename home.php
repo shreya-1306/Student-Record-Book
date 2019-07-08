@@ -141,7 +141,15 @@ $dir_path = "student_images/";
     
   </main>
 </div>
-
+<h2 style="font-size: 28px;margin-left: 492px;" class="heading">Student Achievements</h2>
+   <div class="w3-content w3-section" style=" max-width: 481px;margin-left: 432px;margin-top: -1px;" >
+  <img class="mySlides" src="slideshow/1.jpg" style="width:400%">
+  <img class="mySlides" src="slideshow/2.jpg" style="width:400%">
+  <img class="mySlides" src="slideshow/3.jpeg" style="width:400%">
+  <img class="mySlides" src="slideshow/4.jpg" style="width:400%">
+  <img class="mySlides" src="slideshow/5.jpeg" style="width:400%">
+  <img class="mySlides" src="slideshow/6.jpeg" style="width:400%">
+</div>
 </div><!--  background image tag -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -164,5 +172,23 @@ $dir_path = "student_images/";
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script>
+
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script> 
 </body>
 </html>
