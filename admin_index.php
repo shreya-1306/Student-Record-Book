@@ -18,6 +18,10 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+
+
+
 <link rel="stylesheet" type="text/css" href="faq.css"> 
   <script src="faq.js"></script>
 </head>
@@ -82,7 +86,14 @@ Licence URI: http://www.os-templates.com/template-terms
   <main class="hoc container clear"> 
     <!-- main body -->
     <!-- ################################################################################################ -->
-  
+
+
+    <!--Slide show started-->
+    <div class="w3-content w3-section" style=" max-width:500px;margin-left: 226px;" >
+  <img class="mySlides" src="slideshow/1.jpg" style="width:400%">
+  <img class="mySlides" src="slideshow/2.jpg" style="width:400%">
+  <img class="mySlides" src="slideshow/3.jpg" style="width:400%">
+</div>
     
 
     <!--  FAQs START -->
@@ -216,5 +227,23 @@ Licence URI: http://www.os-templates.com/template-terms
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script>
+
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 </body>
 </html>
