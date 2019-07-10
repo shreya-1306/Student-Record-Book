@@ -217,7 +217,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
     <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
 
-      <tr><th>ROLL NO</th><th>NAME</th><th>INSTITUTE/WEBSITE</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
+      <tr><th>ROLL NO</th><th>NAME</th><th>COURSE NAME</th><th>INSTITUTE/WEBSITE</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
 
 <?php
   while ($line = mysqli_fetch_array($results, MYSQLI_ASSOC)) {
@@ -226,6 +226,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
       
   echo "<tr><td > <span style='color:#000000;'>  ". $line['rollno']."
+  </td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['name_c']."
     </td><td>  <span style='color:#000000;'> ". $line['insti']."
     </td><td>  <span style='color:#000000;'> ". $line['start_date']." 

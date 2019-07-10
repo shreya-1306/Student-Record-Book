@@ -209,7 +209,8 @@ if ($result->num_rows > 0)
           <thead>
             <tr>
             <th>ROLL NO</th>
-            <th>NAME</th>
+			<th>NAME</th>
+            <th>WORKSHOP NAME</th>
             <th>CONDUCTED BY</th>
             <th>START&nbsp&nbspDATE</th>
             <th>END&nbsp&nbspDATE</th>
@@ -227,6 +228,7 @@ if ($result->num_rows > 0)
 
       
   echo "<tr><td > <span style='color:#000000;'>  ". $line['rollno']."
+  </td><td>  <span style='color:#000000;'> ". $line['name']."
       </td><td>  <span style='color:#000000;'> ". $line['namew']."
       </td><td>  <span style='color:#000000;'> ". $line['con_by']."
       </td><td>  <span style='color:#000000;'> ". $line['start_date']."

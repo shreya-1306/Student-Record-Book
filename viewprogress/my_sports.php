@@ -1,4 +1,4 @@
-n<!-- background image not seen -->
+<!-- background image not seen -->
 <?php
 session_start();
 require("../functions.php");
@@ -219,7 +219,7 @@ $total_pages=1;
 
     <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
 
-     <tr><th>ROLL NO</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
+     <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
 <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
@@ -227,6 +227,7 @@ $total_pages=1;
 
       
   echo "<tr><td > <span style='color:#000000;'>  ". $line['rollno']."
+   </td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['tour_name']."
     </td><td>  <span style='color:#000000;'> ". $line['place']."
     </td><td>  <span style='color:#000000;'> ". $line['position']."

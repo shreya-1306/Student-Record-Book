@@ -219,7 +219,7 @@ $total_pages=1;
 
     <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
 
-      <tr><th>ROLL NO</th><th>NAME</th><th>CONDUCTED BY</th><th>POSITION</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
+      <tr><th>ROLL NO</th><th>NAME</th><th>COMPETITION NAME</th><th>CONDUCTED BY</th><th>POSITION</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
 
 <?php
   while ($line = mysqli_fetch_array($results, MYSQLI_ASSOC)) {
@@ -228,6 +228,7 @@ $total_pages=1;
 
       
   echo "<tr><td > <span style='color:#000000;'>  ". $line['rollno']."
+  </td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
     </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
 
