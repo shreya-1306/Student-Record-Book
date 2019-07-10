@@ -45,7 +45,8 @@ Licence URI: http://www.os-templates.com/template-terms
           <li class="active"><a href="../../admin_index.php">Home</a></li>
           <li><a class="drop" href="#">Search By</a>
             <ul>
-              <li><a href="../../searchby/rollno.php">Roll No.</a></li>
+              <li><a href="../../searchby/rollno.php">Roll No</a></li>
+			  <li><a href="../../searchby/name.php">Name</a></li>
               
             </ul>
           </li>
@@ -132,7 +133,7 @@ if ($result->num_rows > 0)
 
   ?>
   <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
-       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
 
@@ -140,6 +141,7 @@ if ($result->num_rows > 0)
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+</td><td> <span style='color:#000000;'>  ". $line['name']."
 </td><td> <span style='color:#000000;'>  ". $line['tour_name']."
     </td><td>  <span style='color:#000000;'> ". $line['place']."
     </td><td>  <span style='color:#000000;'> ". $line['position']."
@@ -230,7 +232,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM sports";
 
   ?>
   <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
-       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
 
@@ -238,6 +240,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM sports";
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+</td><td> <span style='color:#000000;'>  ". $line['name']."
 </td><td> <span style='color:#000000;'>  ". $line['tour_name']."
     </td><td>  <span style='color:#000000;'> ". $line['place']."
     </td><td>  <span style='color:#000000;'> ". $line['position']."

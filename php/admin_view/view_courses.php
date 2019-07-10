@@ -45,8 +45,8 @@ Licence URI: http://www.os-templates.com/template-terms
           <li class="active"><a href="../../admin_index.php">Home</a></li>
           <li><a class="drop" href="#">Search By</a>
             <ul>
-              <li><a href="../../searchby/rollno.php">Roll No.</a></li>
-              
+              <li><a href="../../searchby/rollno.php">Roll No</a></li>
+                      <li><a href="../../searchby/name.php">Name</a></li>
             </ul>
           </li>
           <li><a class="drop" href="#">View</a>
@@ -130,7 +130,7 @@ if ($result->num_rows > 0)
   <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
 
        
-        <tr><th>ROLL NO</th><th>NAME</th><th>INSTITUTE/WEBSITE</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+        <tr><th>ROLL NO</th><th>NAME</th><th>COURSE NAME</th><th>INSTITUTE/WEBSITE</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
   <?php
 
@@ -139,6 +139,7 @@ while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+   </td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['name_c']."
     </td><td>  <span style='color:#000000;'> ". $line['insti']."
     </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
@@ -238,7 +239,7 @@ if ($result->num_rows > 0)
   <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
 
        
-        <tr><th>ROLL NO</th><th>NAME OF COURSE</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+        <tr><th>ROLL NO</th><th>NAME</th><th>COURSE NAME</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
   <?php
 
@@ -247,6 +248,7 @@ while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+   </td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['name_c']."
     </td><td>  <span style='color:#000000;'> ". $line['insti']."
     </td><td>  <span style='color:#000000;'> ". $line['start_date']." 

@@ -47,7 +47,8 @@ Licence URI: http://www.os-templates.com/template-terms
           <li class="active"><a href="../../admin_index.php">Home</a></li>
           <li><a class="drop" href="#">Search By</a>
             <ul>
-              <li><a href="../../searchby/rollno.php">Roll No.</a></li>
+              <li><a href="../../searchby/rollno.php">Roll No</a></li>
+			  <li><a href="../../searchby/name.php">Name</a></li>
               
             </ul>
           </li>
@@ -133,7 +134,7 @@ if ($result->num_rows > 0)
 
     <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="workshop">
 
-       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>NAME OF WORKSHOP</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspCERTIFICATE&nbsp&nbsp</th><th>&nbsp&nbspIMAGE&nbsp&nbsp</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF WORKSHOP</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspCERTIFICATE&nbsp&nbsp</th><th>&nbsp&nbspIMAGE&nbsp&nbsp</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -142,6 +143,7 @@ if ($result->num_rows > 0)
 
       
   echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+    </td><td>  <span style='color:#000000;'> ". $line['name']."
       </td><td>  <span style='color:#000000;'> ". $line['namew']."
       </td><td>  <span style='color:#000000;'> ". $line['con_by']."
       </td><td>  <span style='color:#000000;'> ". $line['start_date']."
@@ -253,7 +255,7 @@ if ($result->num_rows > 0)
 
     <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="workshop">
 
-       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>NAME OF WORKSHOP</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspCERTIFICATE&nbsp&nbsp</th><th>&nbsp&nbspIMAGE&nbsp&nbsp</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF WORKSHOP</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspCERTIFICATE&nbsp&nbsp</th><th>&nbsp&nbspIMAGE&nbsp&nbsp</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -262,6 +264,7 @@ if ($result->num_rows > 0)
 
       
   echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+   </td><td>  <span style='color:#000000;'> ". $line['name']."
       </td><td>  <span style='color:#000000;'> ". $line['namew']."
       </td><td>  <span style='color:#000000;'> ". $line['con_by']."
       </td><td>  <span style='color:#000000;'> ". $line['start_date']."

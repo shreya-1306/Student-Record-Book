@@ -45,8 +45,8 @@ Licence URI: http://www.os-templates.com/template-terms
           <li class="active"><a href="../../admin_index.php">Home</a></li>
           <li><a class="drop" href="#">Search By</a>
             <ul>
-              <li><a href="../../searchby/rollno.php">Roll No.</a></li>
-              
+              <li><a href="../../searchby/rollno.php">Roll No</a></li>
+               <li><a href="../../searchby/name.php">Name</a></li>
             </ul>
           </li>
           <li><a class="drop" href="#">View</a>
@@ -118,12 +118,13 @@ $total_pages_sql = "SELECT COUNT(*) FROM tpp";
   <table style="margin-top:40px;  margin-left: 12px;" border="3" solid white>
 
        
-       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspTITLE&nbsp&nbspOF&nbsp&nbspPAPER&nbsp&nbsp</th><th>&nbsp&nbspAUTHORS&nbsp&nbsp</th><th>&nbsp&nbspPRESENTED/PUBLISHED&nbsp&nbspAT&nbsp&nbsp</th><th>CERTIFICATE</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspTITLE&nbsp&nbspOF&nbsp&nbspPAPER&nbsp&nbsp</th><th>&nbsp&nbspAUTHORS&nbsp&nbsp</th><th>&nbsp&nbspPRESENTED/PUBLISHED&nbsp&nbspAT&nbsp&nbsp</th><th>CERTIFICATE</th></span></tr>
         <?php
 
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+  </td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['title']."
     </td><td>  <span style='color:#000000;'> ". $line['author']."
     </td><td>  <span style='color:#000000;'> ". $line['presented_at']." 

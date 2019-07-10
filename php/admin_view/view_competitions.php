@@ -46,6 +46,7 @@ Licence URI: http://www.os-templates.com/template-terms
           <li><a class="drop" href="#">Search By</a>
             <ul>
               <li><a href="../../searchby/rollno.php">Roll No.</a></li>
+			  <li><a href="../../searchby/name.php">Name</a></li>
               
             </ul>
           </li>
@@ -129,7 +130,7 @@ if ($result->num_rows > 0)
  ?>
 
  <table style="margin-top:40px;  margin-left: 153px; " border="3" solid white>
-     <tr><th>ROLL NO</th><th>NAME OF COMPETITION</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+     <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
        <?php
 
@@ -138,6 +139,7 @@ while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
  
    
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+ </td><td>  <span style='color:#000000;'> ". $line['name']."
    </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
    </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
    </td><td>  <span style='color:#000000;'> ". $line['position']."
@@ -234,7 +236,7 @@ if ($result->num_rows > 0)
  ?>
 
  <table style="margin-top:40px;  margin-left: 153px; " border="3" solid white>
-      <tr><th>ROLL NO</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+      <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
        <?php
 
@@ -243,6 +245,7 @@ while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
  
    
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+ </td><td>  <span style='color:#000000;'> ". $line['name']."
    </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
    </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
    </td><td>  <span style='color:#000000;'> ". $line['position']."
