@@ -117,6 +117,8 @@ Licence URI: http://www.os-templates.com/template-terms
   <form  onSubmit=" return validateForm()"  name="insertwork" action="php/ins_tpp.php" method="POST" enctype="multipart/form-data">
     <label for="rollno">Roll No:</label>
     <input type="text" id="rollno" name="rollno" value="<?php echo $usersData['rollno'];?>" readOnly>
+	 <label for="rollno">Name:</label>
+    <input type="text" id="name" name="name" value="<?php echo $usersData['name'];?>" readOnly>
 
     <label for="title">Title:</label>
    <input type="text" name="title" placeholder="Eg: A research on Machine Learning" required>
@@ -125,7 +127,7 @@ Licence URI: http://www.os-templates.com/template-terms
    <input type="text" name="author" placeholder="Eg: Robin Dsouza, Mtech. IITB" required>
 
     <label for="presented_at">Presented At:</label>
-    <textarea cols="30" rows="10" name="presented_at" placeholder="Eg: Oxford University" style="color:white" required></textarea>
+    <textarea cols="30" rows="10" name="presented_at" placeholder="Eg: Oxford University" style="color:black" required></textarea>
 
 
     <label for="paper">Attach Paper:</label>

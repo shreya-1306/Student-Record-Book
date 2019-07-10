@@ -117,6 +117,8 @@ Licence URI: http://www.os-templates.com/template-terms
   <form onSubmit=" return validateForm()"  name="insertwork" action="php/ins_sports.php" method="POST" enctype="multipart/form-data">
     <label for="rollno">Roll No:</label>
     <input type="text" id="rollno" name="rollno" value="<?php echo $usersData['rollno'];?>" readOnly>
+	 <label for="rollno">Name:</label>
+    <input type="text" id="name" name="name" value="<?php echo $usersData['name'];?>" readOnly>
 
     <label for="tour_name">Tournament Name:</label>
    <input type="text" name="tour_name" placeholder="Eg: Skream" required>

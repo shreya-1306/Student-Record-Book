@@ -117,12 +117,14 @@ Licence URI: http://www.os-templates.com/template-terms
   <form  onSubmit=" return validateForm()"  name="insertwork" action="php/ins_otheractivity.php" method="POST" enctype="multipart/form-data">
     <label for="rollno">Roll No:</label>
     <input type="text" id="rollno" name="rollno" value="<?php echo $usersData['rollno'];?>" readOnly>
+	 <label for="rollno">Name:</label>
+    <input type="text" id="name" name="name" value="<?php echo $usersData['name'];?>" readOnly>
 
     <label for="name_act">Activity Name:</label>
    <input type="text" name="name_act" placeholder="Eg: Volunteering" required>
 
     <label for="cond_by">Conducted By:</label>
-    <input type="text" id="cond_by" name="con_by" placeholder="Eg: KJSCE" required>
+    <input type="text" id="cond_by" name="cond_by" placeholder="Eg: KJSCE" required>
 
     <label for="start_date">Start Date:</label>
     <input type="date" id="start_date" name="start_date" required>
