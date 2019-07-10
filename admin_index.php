@@ -45,7 +45,8 @@ Licence URI: http://www.os-templates.com/template-terms
           <li class="active"><a href="admin_index.php">Home</a></li>
           <li><a class="drop" href="#">Search By</a>
             <ul>
-              <li><a href="searchby/rollno.php">Roll No.</a></li>
+              <li><a href="searchby/rollno.php">Roll No</a></li>
+			   <li><a href="searchby/name.php">Name</a></li>
               
             </ul>
           </li>
