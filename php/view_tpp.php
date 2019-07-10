@@ -147,12 +147,13 @@ if ($result->num_rows > 0)
 </div>
   <table border="3" solid white  >
 
-        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspTITLE&nbsp&nbsp</th><th>&nbsp&nbspAUTHOR&nbsp&nbsp</th><th>&nbsp&nbspPRESENTED&nbsp&nbspAT&nbsp&nbsp</th></span></tr>
+        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspTITLE&nbsp&nbsp</th><th>&nbsp&nbspAUTHOR&nbsp&nbsp</th><th>&nbsp&nbspPRESENTED&nbsp&nbspAT&nbsp&nbsp</th></span></tr>
         <?php
 
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+</td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['title']."
     </td><td>  <span style='color:#000000;'> ". $line['author']."
     </td><td>  <span style='color:#000000;'> ". $line['presented_at']." 

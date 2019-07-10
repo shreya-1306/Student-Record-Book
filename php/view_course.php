@@ -154,7 +154,7 @@ if ($result->num_rows > 0)
 
   <table style="margin-top:40px" border="3" solid white>
 
-        <tr><th>&nbsp&nbspROLL NO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspINSTITUTE/WEBSITE&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
+        <tr><th>&nbsp&nbspROLL NO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspCOURSE NAME&nbsp&nbsp</th><th>&nbsp&nbspINSTITUTE/WEBSITE&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 
   <?php
 
@@ -163,6 +163,7 @@ while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+</td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['name_c']."
     </td><td>  <span style='color:#000000;'> ". $line['insti']."
     </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
@@ -225,7 +226,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM course";
 
   <table style="margin-top:40px" border="3" solid white>
 
-        <tr><th>&nbsp&nbspROLL NO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspINSTITUTE/WEBSITE&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
+        <tr><th>&nbsp&nbspROLL NO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspCOURSE NAME&nbsp&nbsp</th><th>&nbsp&nbspINSTITUTE/WEBSITE&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 
   <?php
 
@@ -234,6 +235,7 @@ while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+</td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['name_c']."
     </td><td>  <span style='color:#000000;'> ". $line['insti']."
     </td><td>  <span style='color:#000000;'> ". $line['start_date']." 

@@ -78,7 +78,7 @@ else
    
   $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 
-     $stmt = $dbh->prepare("insert into workshop (rollno,namew,con_by,start_date,end_date,filename1,mime1,image,filename,mime,certi) values ($_POST[rollno], '$_POST[namew]',' $_POST[con_by]','$_POST[start_date]','$_POST[end_date]',?,?,?,?,?,?)") or die("Error");
+     $stmt = $dbh->prepare("insert into workshop (rollno,name,namew,con_by,start_date,end_date,filename1,mime1,image,filename,mime,certi) values ($_POST[rollno],'$_POST[name]', '$_POST[namew]',' $_POST[con_by]','$_POST[start_date]','$_POST[end_date]',?,?,?,?,?,?)") or die("Error");
 	$stmt->bindParam(1,$file1);
 	$stmt->bindParam(2,$type1);
 	$stmt->bindParam(3,$data1);

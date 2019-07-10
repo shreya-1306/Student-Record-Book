@@ -54,7 +54,7 @@ if ($result->num_rows > 0)
 else 
 { 
     
-$stmt = $dbh->prepare("insert into tpp (rollno,title,author,presented_at,filename,mime,paper) values ($_POST[rollno], '$_POST[title]',' $_POST[author]',' $_POST[presented_at]',?,?,?)");
+$stmt = $dbh->prepare("insert into tpp (rollno,name,title,author,presented_at,filename,mime,paper) values ($_POST[rollno], '$_POST[name]','$_POST[title]',' $_POST[author]',' $_POST[presented_at]',?,?,?)");
 	$stmt-> bindParam(1,$name);
 	$stmt->bindParam(2,$type);
 	$stmt->bindParam(3,$data);
