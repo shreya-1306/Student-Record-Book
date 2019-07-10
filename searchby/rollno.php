@@ -40,8 +40,8 @@ Licence URI: http://www.os-templates.com/template-terms
           <li class="active"><a href="../admin_index.php">Home</a></li>
           <li><a class="drop" href="#">Search By</a>
             <ul>
-              <li><a href="#">Roll No.</a></li>
-              
+              <li><a href="#">Roll No</a></li>
+              <li><a href="name.php">Name</a></li>
             </ul>
           </li>
           <li><a class="drop" href="#">View</a>
@@ -159,7 +159,7 @@ if ($result->num_rows > 0)
 
     WORKSHOPS ATTENDED: 
 
-       <tr><th>ROLL NO</th><th>NAME OF WORKSHOP</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
+       <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF WORKSHOP</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -168,6 +168,7 @@ if ($result->num_rows > 0)
 
       
   echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+    </td><td>  <span style='color:#000000;'> ". $line['name']."
       </td><td>  <span style='color:#000000;'> ". $line['namew']."
       </td><td>  <span style='color:#000000;'> ". $line['con_by']."
       </td><td>  <span style='color:#000000;'> ". $line['start_date']."
@@ -237,7 +238,7 @@ if ($result->num_rows > 0)
     <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
     COURSES COMPLETED: 
        
-        <tr><th>ROLL NO</th><th>NAME</th><th>INSTITUTE/WEBSITE</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
+        <tr><th>ROLL NO</th><th>NAME</th><th>COURSE NAME</th><th>INSTITUTE/WEBSITE</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 
   <?php
 
@@ -246,6 +247,7 @@ while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+  </td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['name_c']."
     </td><td>  <span style='color:#000000;'> ". $line['insti']."
     </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
@@ -309,7 +311,7 @@ if ($result->num_rows > 0)
    
   <table style="margin-top:40px; margin-left:54px;     max-width: 773px;" border="3" solid white>
   COMPETITIONS ATTENDED: 
-       <tr><th>ROLL NO</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
+       <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 
         <?php
 
@@ -318,6 +320,7 @@ while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
   
     
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+  </td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
     </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
     </td><td>  <span style='color:#000000;'> ". $line['position']."
@@ -379,7 +382,7 @@ if ($result->num_rows > 0)
 
    <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
    TOURNAMENTS ATTENDED: 
-        <tr><th>ROLL NO</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
+        <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 
         <?php
 
@@ -387,6 +390,7 @@ if ($result->num_rows > 0)
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+  </td><td>  <span style='color:#000000;'> ". $line['name']."
 </td><td> <span style='color:#000000;'>  ". $line['tour_name']."
     </td><td>  <span style='color:#000000;'> ". $line['place']."
     </td><td>  <span style='color:#000000;'> ". $line['position']."
@@ -448,12 +452,13 @@ if ($result->num_rows > 0)
   TPP :
 
        
-        <tr><th>ROLL NO</th><th>TITLE</th><th>AUTHOR</th><th>PRESENTED AT</th><th>PAPER</th></span></tr>
+        <tr><th>ROLL NO</th><th>NAME</th><th>TITLE</th><th>AUTHOR</th><th>PRESENTED AT</th><th>PAPER</th></span></tr>
         <?php
 
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+  </td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['title']."
     </td><td>  <span style='color:#000000;'> ". $line['author']."
     </td><td>  <span style='color:#000000;'> ". $line['presented_at']." 
@@ -519,13 +524,14 @@ if ($result->num_rows > 0)
     ?>
  <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
  OTHER ACTIVITIES
-         <tr><th>ROLL NO</th><th>NAME OF ACTIVITY</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
+         <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF ACTIVITY</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 
 
   <?php
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
 echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
+  </td><td>  <span style='color:#000000;'> ". $line['name']."
     </td><td>  <span style='color:#000000;'> ". $line['name_act']."
     </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
     </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
