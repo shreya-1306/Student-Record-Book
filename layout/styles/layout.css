@@ -24,7 +24,7 @@ File: Layout CSS
 --------------------------------------------------------------------------------------------------------------- */
 #header{}
 
-#header #logo{margin:30px 0 0 0;}
+#header #logo{margin:30px 0 0 -270px;}
 #header #logo h1{margin:0; padding:0; font-size:22px;}
 
 
@@ -265,7 +265,7 @@ td{border-width:0 1px;}
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{
-	background-image:url('../../images/demo/backgrounds/01.jpg');
+	background-image:url('../../images/3.jpg');
 	
 	background-size: 100% 100%;
     background-repeat: no-repeat;
