@@ -52,6 +52,21 @@ window.onclick = function(event) {
 
   <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
 
+<style>
+  footer{
+
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: black;
+color: white;
+#A2B70D
+text-align: center;
+height:max-content;
+}
+  </style>
+
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -72,7 +87,7 @@ window.onclick = function(event) {
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
-          <li class="active"><a href="../index.html">Home</a></li>
+          <li class="active"><a href="../index.php">Home</a></li>
         <!--   <li><a class="drop" href="#">Pages</a>
             <ul>
               <li><a href="pages/gallery.html">Gallery</a></li>
@@ -431,6 +446,15 @@ window.onclick = function(event) {
 <!-- table ends -->
       
   
+<footer class="page-footer font-small special-color-dark pt-4">
+
+<p style="font-size: 20px"> For any further queries Email us at admin@somaiya.edu </p>
+
+<a href="contact_before.php" style="font-size: 20px">Click here for general FAQs</a>
+<!--
+<div class="vl"></div>
+-->
+</footer>
  
 
 
