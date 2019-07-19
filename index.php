@@ -1,19 +1,15 @@
 <!--
   
-
   id01 is student login 
 id02 is admin login 
 id03 is forgot password-student
 id03 is forgot password-admin 
-
 ------------------------
 4 pages for before login 
-
 index.html
 null_analysis.php
 graphs/bef_login_graph.php
 contact_before.html
-
 -->
 <?php
 require_once "config.php";
@@ -30,21 +26,18 @@ window.onclick = function(event) {
         modal.style.display = "none"; 
     } 
 } 
-
 var modal2 = document.getElementById('id02'); 
 window.onclick = function(event) { 
     if (event.target == modal2) { 
         modal2.style.display = "none"; 
     } 
 } 
-
 var modal3 = document.getElementById('id03'); 
 window.onclick = function(event) { 
     if (event.target == modal3) { 
         modal3.style.display = "none"; 
     } 
 } 
-
 var modal4 = document.getElementById('id04'); 
 window.onclick = function(event) { 
     if (event.target == modal4) { 
@@ -59,6 +52,111 @@ window.onclick = function(event) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" type="text/css" href="layout/styles/login.css"> 
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color:white
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #000000;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+footer{
+
+ position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+   background-color: black;
+   color: white;
+   #A2B70D
+   text-align: center;
+   height:max-content;
+}
+</style>
 </head>
 <body id="top">
 
@@ -102,22 +200,64 @@ window.onclick = function(event) {
       <h2 style="font-size: 23px; margin-top:-90px" class="heading">Department of Computer Engineering</h2>
       <p style="font-size: 20px;">K. J.  Somaiya  College  Of  Engineering,  Vidyavihar  </p>
 <br>	
-  <footer><a class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Student Login</a></footer>
+ <a class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Student login with username</a>
   <!-- <button onClick ="window.location = '''" type="submit">Sign in with Google </button>  -->
-  <br>
-  <a class="btn" onclick="window.location = '<?php echo $loginURL ?>'" style="width:auto;">Sign in with Google</a>
+  <br><br>
+  <a class="btn" onclick="window.location = '<?php echo $loginURL ?>'" style="width:auto;">Student login with google</a>
   
 <br><br><br><br>
-      <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>  -->
-      <h2 style="font-size: 20px;" class="heading">Student Achievements</h2>
-   <!--<div class="w3-content w3-section" style=" margin-left: 47px;margin-top: 30px;" >-->
-  <img class="mySlides" src="slideshow/1.jpg" style=" margin-left: 35px;margin-top: 30px;" width="50" height="25" border="25">
-  <img class="mySlides" src="slideshow/2.jpg" style=" margin-left: 35px;margin-top: 30px;" width="50" height="30" border="25">
-  <img class="mySlides" src="slideshow/3.jpeg" style=" margin-left: 35px;margin-top: 30px;" width="50" height="30" border="25">
-  <img class="mySlides" src="slideshow/4.jpg" style=" margin-left: 35px;margin-top: 30px;" width="50" height="30" border="25">
-  <img class="mySlides" src="slideshow/5.jpeg" style=" margin-left: 35px;margin-top: 30px;" width="50" height="30" border="25">
-  <img class="mySlides" src="slideshow/6.jpeg" style=" margin-left: 35px;margin-top: 30px;" width="50" height="30" border="25">
-<!--</div> -->
+        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="slideshow/1.jpg" style="width:1100px ;height:400px;">
+  <div class="text">SIH 2019 WINNERS</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="slideshow/2.jpg" style="width:1100px ;height:400px;">
+  <div class="text">SIH 2019 WINNERS</div>
+</div>
+
+<div class="mySlides fade">
+
+  <img src="slideshow/3.jpeg" style="width:1100px ;height:400px;">
+  <div class="text">SIH 2019 WINNERS</div>
+</div>
+<div class="mySlides fade">
+
+  <img src="slideshow/4.jpg" style="width:1100px ;height:400px;">
+  <div class="text">E-SUMMIT I_HACK HACKATHON 2019 WINNERS</div>
+</div>
+<div class="mySlides fade">
+
+  <img src="slideshow/5.jpeg" style="width:1100px ;height:400px;">
+  <div class="text">BITCAMP 2019 WINNERS</div>
+</div>
+<div class="mySlides fade">
+
+  <img src="slideshow/6.jpeg" style="width:1100px ;height:400px;">
+  <div class="text">BITCAMP 2019 WINNERS</div>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+
    
   
 <div id="id01" class="modal"> 
@@ -252,6 +392,11 @@ window.onclick = function(event) {
 
 
 
+   <footer>
+<h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
+<a href="contact_before.html" style="font-size: 20px;">Click here for general FAQs</a>
+</footer>
+
       <!-- ################################################################################################ -->
    
   </section>
@@ -267,21 +412,31 @@ window.onclick = function(event) {
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
 <script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-var myIndex = 0;
-carousel();
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-function carousel() {
+function showSlides(n) {
   var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
   }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
 </script>
 </body>

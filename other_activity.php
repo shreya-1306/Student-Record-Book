@@ -29,7 +29,20 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<style>
+footer{
 
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   #A2B70D
+   text-align: center;
+   height:max-content;
+}
+</style>
 
 </head>
 <body id="top">
@@ -88,8 +101,8 @@ Licence URI: http://www.os-templates.com/template-terms
                   <li><a href="php/view_otheractivity.php">Other Activity</a></li>
                 </ul>
                 </li>
-              <li><a href="feedback_s.php">Contact Us</a></li>
-              <li><a href="contact_after.php">Help</a></li>
+              
+          
               <li><a href="changepass.php">Change Password</a></li>
               <li><a href="logout.php">Logout</a></li>
             </ul>
@@ -199,6 +212,13 @@ Licence URI: http://www.os-templates.com/template-terms
    
   </main>
     </div>
+	<center>
+ <footer>
+<h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
+<a href="feedback_s.php" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
+</footer>
+
+</center>
     <!-- ################################################################################################ -->
     <!-- / main body -->
     

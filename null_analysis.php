@@ -48,6 +48,22 @@ window.onclick = function(event) {
 <link rel="stylesheet" type="text/css" href="layout/styles/login.css"> 
 <link rel="stylesheet" type="text/css" href="analysisdesign.css"> 
 
+<style>
+  footer{
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  #A2B70D
+  text-align: center;
+  height:max-content;
+}
+  </style>
+
+
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -66,7 +82,7 @@ window.onclick = function(event) {
           </h1>        </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="index.php">Home</a></li>
         <!--   <li><a class="drop" href="#">Pages</a>
             <ul>
               <li><a href="pages/gallery.html">Gallery</a></li>
@@ -426,13 +442,18 @@ echo $ct;
  </div>
 
 
-
+   <footer>
+<h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
+<a href="contact_before.html" style="font-size: 20px;margin-top:-5px;">Click here for general FAQs</a>
+</footer>
 
       <!-- ################################################################################################ -->
    
   </section>
   <!-- ################################################################################################ -->
 </div>
+
+
 
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
