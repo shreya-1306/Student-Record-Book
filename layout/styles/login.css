@@ -51,7 +51,7 @@ button:hover {
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
- background-color: #008CBA;
+ background-color: #9F1C32;
   color: white;
 width: 150px;
 border-radius: 4px;
@@ -63,7 +63,7 @@ border-radius: 4px;
 .button1:hover {
   background-color: white; 
   color: black; 
-  border: 2px solid #008CBA;
+  border: 2px solid #9F1C32;
 }
   
 .imgcontainer { 
