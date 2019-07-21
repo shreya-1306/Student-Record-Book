@@ -30,19 +30,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <!-- <link rel="stylesheet" type="text/css" href="../analysisdesign.css">  -->
-<style>
-footer{
 
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: black;
-   color: white;
-   #A2B70D
-   text-align: center;
-   height:max-content;
-}
 
 </head>
 <body id="top">
@@ -102,8 +90,8 @@ footer{
                   <li><a href="view_otheractivity.php">Other Activity</a></li>
                 </ul>
                 </li>
-             
-             
+              <li><a href="../feedback_s.php">Contact Us</a></li>
+              <li><a href="../contact_after.php">Help</a></li>
               <li><a href="../changepass.php">Change Password</a></li>
               <li><a href="../logout.php">Logout</a></li>
             </ul>
@@ -157,7 +145,7 @@ if(isset($_POST['button'])) {
     $sd=$_POST['sdate'];
 
 $ed=$_POST['edate'];
-$sql = "select rollno,name_c,insti,start_date,end_date from course WHERE start_date>='$sd' AND end_date<='$ed'";
+$sql = "select rollno,name,name_c,insti,start_date,end_date from course WHERE start_date>='$sd' AND end_date<='$ed'";
 $result=mysqli_query($conn,$sql);
 if ($result->num_rows > 0)
 {  
@@ -215,7 +203,7 @@ $conn->close();
       }
 	 
       else{
-        $sql = "select rollno,name_c,insti,start_date,end_date from course";
+        $sql = "select rollno,name,name_c,insti,start_date,end_date from course";
       
 $result=mysqli_query($conn,$sql);
 if ($result->num_rows > 0)
@@ -232,7 +220,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM course";
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-        $sql = "SELECT rollno,name_c,insti,start_date,end_date FROM course order by rollno LIMIT $offset, $no_of_records_per_page";
+        $sql = "SELECT rollno,name,name_c,insti,start_date,end_date FROM course order by rollno LIMIT $offset, $no_of_records_per_page";
         $result = mysqli_query($conn,$sql);
   ?>
 
@@ -300,13 +288,6 @@ $conn->close();
    
   </main>
     </div>
-		<center>
- <footer>
-<h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
-<a href="../feedback_s.php" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
-</footer>
-
-</center>
     <!-- ################################################################################################ -->
     <!-- / main body -->
     

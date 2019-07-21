@@ -31,19 +31,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <!-- <link rel="stylesheet" type="text/css" href="../analysisdesign.css">  -->
 
-<style>
-footer{
 
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: black;
-   color: white;
-   #A2B70D
-   text-align: center;
-   height:max-content;
-}
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -102,8 +90,8 @@ footer{
                   <li><a href="view_otheractivity.php">Other Activity</a></li>
                 </ul>
                 </li>
-          
-            
+              <li><a href="../feedback_s.php">Contact Us</a></li>
+              <li><a href="../contact_after.php">Help</a></li>
               <li><a href="../changepass.php">Change Password</a></li>
               <li><a href="../logout.php">Logout</a></li>
             </ul>
@@ -157,7 +145,7 @@ if(isset($_POST['button'])) {
     $sd=$_POST['sdate'];
 
 $ed=$_POST['edate'];
-$sql = "select rollno,tour_name,place,position,start_date,end_date from sports WHERE start_date>='$sd' AND end_date<='$ed'";
+$sql = "select rollno,name,tour_name,place,position,start_date,end_date from sports WHERE start_date>='$sd' AND end_date<='$ed'";
 $result=mysqli_query($conn,$sql);
 if ($result->num_rows > 0)
 {  
@@ -216,7 +204,7 @@ $conn->close();
      
       }
       else{
-        $sql = "select rollno,tour_name,place,position,start_date,end_date from sports";
+        $sql = "select rollno,name,tour_name,place,position,start_date,end_date from sports";
       $result=mysqli_query($conn,$sql);
 if ($result->num_rows > 0)
 {  
@@ -299,13 +287,6 @@ $conn->close();
    
   </main>
     </div>
-		<center>
- <footer>
-<h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
-<a href="../feedback_s.php" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
-</footer>
-
-</center>
     <!-- ################################################################################################ -->
     <!-- / main body -->
     
