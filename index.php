@@ -168,8 +168,10 @@ background-image:url('images/demo/backgrounds/slider1.jpg');
 	background-size: 100% 100%;
     background-repeat: no-repeat;
 	background-attachment: fixed;
-	margin-bottom: 2000px;
+  margin-bottom: 2000px;
+  
 ">
+<div class="just" style="background-color: rgba(0, 0, 0, 0.45); height: 6000px;">
 
 <div class="bgded overlay" > 
   <!-- ################################################################################################ -->
@@ -450,5 +452,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+</div>
 </body>
 </html>

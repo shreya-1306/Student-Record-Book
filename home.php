@@ -18,6 +18,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<!-- <script src="layout/scripts/frontend.js"></script> -->
 <style>
 
 .box{
@@ -92,6 +93,7 @@ border-radius:7px;
 
 </style>
 </head>
+<!-- <canvas id="projector">Your browser does not support the Canvas element. </canvas> -->
 <body id="top">
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -289,6 +291,7 @@ $dir_path = "student_images/";
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
+
 <script>
 
 
@@ -323,4 +326,5 @@ for (j = 0; j < acc.length; j++) {
 }
 </script> 
 </body>
+
 </html>
