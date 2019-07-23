@@ -174,7 +174,7 @@ footer{
       <div id="logo" class="fl_left">
         <h1>
             <img   class ="logo2"  height="80" width="80" src="images/demo/logo2.png">   
-            <a href="index.html">Departmental Record Book</a>
+            <a href="index.php">Departmental Record Book</a>
             <img   class ="logo1"  height="80" width="80" src="images/demo/logo1.png"> 
           </h1>
 
@@ -183,7 +183,7 @@ footer{
       </div>
       <nav id="mainav" class="fl_right">
         <ul class="clear">
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="index.php">Home</a></li>
       
           <li><a class="drop" href="#">Analysis</a>
             <ul>
