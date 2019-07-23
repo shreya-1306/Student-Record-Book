@@ -62,14 +62,14 @@ $message="";
 	}
 	else
 	{
-		// echo "<script>window.location='../index.html';alert('Invalid User Name or Password !!')</script>";
+		// echo "<script>window.location='../index.php';alert('Invalid User Name or Password !!')</script>";
 		echo "<script>
 				swal({
 					title: 'Invalid!',
 					text: 'Incorrect Username or Password!',
 					icon: 'error',
 				  }).then(function() {
-					window.location = '../index.html'});
+					window.location = '../index.php'});
 		</script>";
 	}
 

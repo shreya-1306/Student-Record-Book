@@ -271,7 +271,8 @@ body{
 	*/
 	background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+	background-attachment: fixed;
+	margin-bottom: 2000px;
 
 	color:#CBCBCB; /*background-color:#191919;*/}
 a{color:#A2B70D;}

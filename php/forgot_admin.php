@@ -85,7 +85,7 @@ $mail->isHTML();
           text: 'Check inbox to get password',
           icon: 'success',
           }).then(function() {
-          window.location = '../index.html'});
+          window.location = '../index.php'});
     </script>";
     } catch(Exception $e){
         //Something went bad
@@ -96,7 +96,7 @@ $mail->isHTML();
           text: 'Try Again!',
           icon: 'error',
           }).then(function() {
-          window.location = '../index.html'});
+          window.location = '../index.php'});
     </script>";
     }
  

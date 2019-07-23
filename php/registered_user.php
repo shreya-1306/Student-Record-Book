@@ -64,7 +64,7 @@ $message="";
 					text: 'Incorrect Username or Password!',
 					icon: 'error',
 				  }).then(function() {
-					window.location = '../index.html'});
+					window.location = '../index.php'});
 		</script>";
 	}
 

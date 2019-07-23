@@ -50,6 +50,8 @@ $formcontent=" From: $name \n Phone: $phone\n Message: $message";
 					   Message: $message";
   //$mail->AddAddress($row["lusername"].'@somaiya.edu');
   $mail->AddAddress('shreya.varma@somaiya.edu');
+  $mail->AddAddress('aromal.nair@somaiya.edu');
+  $mail->AddAddress('priyanka.kalena@somaiya.edu');
  $mail->FromName = $_POST['name'];
 
 

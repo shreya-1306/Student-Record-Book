@@ -55,8 +55,11 @@ window.onclick = function(event) {
 <style>
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+.mySlides {display: none;
+  margin-top: 200px;}
+img {vertical-align: middle;
+
+}}
 
 /* Slideshow container */
 .slideshow-container {
@@ -158,7 +161,15 @@ footer{
 }
 </style>
 </head>
-<body id="top">
+<body id="top" style="
+background-image:url('images/demo/backgrounds/slider1.jpg');
+	/*background-color:#F3E8E7;
+	*/
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-bottom: 2000px;
+">
 
 <div class="bgded overlay" > 
   <!-- ################################################################################################ -->
@@ -197,8 +208,8 @@ footer{
   <section id="pageintro" class="hoc clear">
     <div> 
       <!-- ################################################################################################ -->
-      <h2 style="font-size: 23px; margin-top:-90px" class="heading">Department of Computer Engineering</h2>
-      <p style="font-size: 20px;">K. J.  Somaiya  College  Of  Engineering,  Vidyavihar  </p>
+      <h2 style="  font-size: 38px;margin-top: 26px;" class="heading">Department of Computer Engineering</h2>
+      <p style="font-size: 27px;">K. J.  Somaiya  College  Of  Engineering,  Vidyavihar  </p>
 <br>	
  <a class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Student login with username</a>
   <!-- <button onClick ="window.location = '''" type="submit">Sign in with Google </button>  -->

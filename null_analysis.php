@@ -6,7 +6,7 @@ id03 is forgot password-admin
 ------------------------
 4 pages for before login 
 
-index.html
+index.php
 null_analysis.php
 graphs/bef_login_graph.php
 contact_before.html
