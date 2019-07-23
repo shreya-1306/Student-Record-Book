@@ -19,11 +19,79 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 
+<style>
+
+.box{
+	background-color:white;
+  width: 65%;
+  
+  margin-top:-410px;
+  margin-left:100px;
+  padding: 10px;
+   height:410px;
+   position:fixed;
+
+  
+}
+
+footer{
+
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   #A2B70D
+   text-align: center;
+   height:max-content;
+}
+.accordion {
+ 
+  color: whites;
+  cursor: pointer;
+  padding: 5px;
+  width: 90%;
+margin-left:50px;
+height:50px;
+margin-top:15px;
+  text-align: left;
+  font-size: 20px;
+  transition: 0.4s;
+border-radius:7px;
+    background-color: #150e0e63;
+	
+}
+
+.accordion:hover {
+  background-color: grey; 
+}
+
+.panel {
+	margin-top:7px;
+	margin-left:50px;
+border-radius:7px;
+	
+
+	color:black;
+	width:90%;
+ height:80px;
+  display: none;
+  font-size:17px;
+  background-color: white;
+  overflow: hidden;
+}
+.accordion:after {
+  content: '\2B9F';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-right: 10px;
+}
 
 
 
-<link rel="stylesheet" type="text/css" href="faq.css"> 
-  <script src="faq.js"></script>
+</style>
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -69,7 +137,7 @@ Licence URI: http://www.os-templates.com/template-terms
           <li><a class="drop" href="#">Other</a>
             <ul>
              
-              <li><a href="feedback_a.php">Contact Us</a></li>
+             
               <li><a href="admin_index.php">Help</a></li>
               <li><a href="changepass_a.php">Change Password</a></li>
               <li><a href="logout.php">Logout</a></li>
@@ -86,169 +154,130 @@ Licence URI: http://www.os-templates.com/template-terms
 <div >
   <main class="hoc container clear"> 
     <!-- main body -->
-    <!-- ################################################################################################ -->
+   <div class="group excerpts">
+   
+      <article style="margin-left: -300px; margin-top:50px;width:400px;height:300px; background-color:#150e0e63;" class="one_third">
+        <div class="hgroup">
+         
+          
+        <br>
+        <div class="txtwrap">
+		       <h4> Name: <?php 
+  if(isset($_SESSION['username'])){
 
+ 	$usersData = getFacultyData(getFacultyID($_SESSION['username']));
+ 
+   
 
-    <!--Slide show started-->
-    <h2 style="font-size: 28px;margin-left: 492px;" class="heading">Student Achievements</h2>
-   <div class="w3-content w3-section" style=" max-width: 481px;margin-left: 432px;
-    <div class="w3-content w3-section" style=" max-width:500px;margin-left: 226px;" >
-  <img class="mySlides" src="slideshow/1.jpg" style="width:400%">
-  <img class="mySlides" src="slideshow/2.jpg" style="width:400%">
-  <img class="mySlides" src="slideshow/3.jpeg" style="width:400%">
-  <img class="mySlides" src="slideshow/4.jpg" style="width:400%">
-  <img class="mySlides" src="slideshow/5.jpeg" style="width:400%">
-  <img class="mySlides" src="slideshow/6.jpeg" style="width:400%">
-</div>
-    
+echo $usersData['Name']; 
+} ?>
+          </h4>
+		  <br>
+          <h4> Id No: <?php if(isset($_SESSION['username'])){
 
-    <!--  FAQs START -->
+ 	$usersData = getFacultyData(getFacultyID($_SESSION['username']));
+ 
+   
 
-    <fieldset>
+echo $usersData['ID']; 
+}?></h4>  
+		  <br>
+		  <h4>
+          Type:
+          <?php 
+             if(isset($_SESSION['username'])){
 
-    <div class="contact">
-  
+ 	$usersData = getFacultyData(getFacultyID($_SESSION['username']));
+ 
+   
 
-    <dl class="faq">
-        <h3>INSTRUCTIONS: </h3>
-  <dt>
-    <button aria-expanded="false" aria-controls="faq1_desc">
-      1.  How do I login for the first time?
-    </button>
-  </dt>
-  <dd>
-    <p id="faq1_desc" class="desc">
-      Ans : Click on First Time User/Forgot password and enter your Somaiya ID to get your initial password on your mail-id.After logging in you can 
-      change your password for your account.
-  </dd>
-  <dt>
-    <button aria-expanded="false" aria-controls="faq2_desc">
-      2. Can I view my progress or the activities done by me ?
-    </button>
-  </dt>
-  <dd>
-    <p id="faq2_desc" class="desc">
-      Ans : Yes,you can view your progress on clicking on VIEW MY PROGRESS button which will show your uploaded activities and 
-      details under various categories.You can also delete an entry in case you dont want the entry to be there.
-    </p>
-  </dd>
-  <dt>
-    <button aria-expanded="false" aria-controls="faq3_desc">
-      3. How do I add an activity?
-    </button>
-  </dt>
-  <dd>
-    <p id="faq3_desc" class="desc">
-     Ans : You can simply add an activity by clicking on ADD NEW ACTIVITY which will show various categories of activities
-     you can upload.Just click on any category,add details accordingly and press submit.
-     
-    </p>
-  </dd>
-  <dt>
-    <button aria-expanded="false" aria-controls="faq4_desc">
-      4. Do I need a proof for the  activity I upload?
-    </button>
-  </dt>
-  <dd>
-    <p id="faq4_desc" class="desc">
-    Ans : Yes definitely. You should upload some proof like a certificate or a Letter of Appreciation pertaining to the activity you upload.
-    It should be in doc or pdf format.Additional image can also be uploaded(if any).
-    </p>
-  </dd>
-  <dt>
-    <button aria-expanded="false" aria-controls="faq5_desc">
-      5. Is there any rule for the name of the files to be uploaded?
-    </button>
-  </dt>
-  <dd>
-    <p id="faq5_desc" class="desc">
-     Ans : For uniquely attributing each file to a user,the name of the file needs to be [SerialNumber_YourRollnumber].
-     More details regarding name of the files is provided in the add new activity bar while uploading the files.
-     
-    </p>
-  </dd>
-  <dt>
-  <button aria-expanded="false" aria-controls="faq6_desc">
-      6. What if I need to see my classmates uplaods?
-    </button>
-  </dt>
-   <dd>
-    <p id="faq6_desc" class="desc">
-     Ans : There is a menu of the left side of the page with the title "View". It displays various entries done by different users.
-    </p>
-  </dd>
-  <dt>
-    <button aria-expanded="false" aria-controls="faq7_desc">
-     7. Want to report a bug?
-    </button>
-  </dt>
-  <dd>
-    <p id="faq7_desc" class="desc">
-     Ans :  Shreya Varma    : shreya.varma@somaiya.edu <br>
-      Aromal Nair     : aromal.nair@somaiya.edu <br>
-      Priyanka Kalena : priyanka.kalena@somaiya.edu <br>
+			 echo $usersData['Type']; } ?>
+          </h4>
+        </div>
       
-      Feel free to email us for feedbacks :)
-    </p>
-  <p style="    font-size: 19px;
-    margin-left: 681px;
-    margin-top: 157px;">  Have any other queries? Ask us at : someid@somaiya.edu</p>
-  </dd>
-
-</dl>
-
-
-
-
-
+      </article>
+     
+    </div>
+	
+  <!--<div class="group excerpts">
+  -->
+	<article style="margin-left: 250px; margin-top:-320px;width:100%;height:410px ;" class="one_third">
+	<button class="accordion">1.  How do I login for the first time?</button>
+<div class="panel">
+  <p>  Click on First Time User/Forgot password and enter your Somaiya ID to get your initial password on your mail-id.After logging in you can 
+    change your password for your account.</p>
 </div>
 
-<fieldset>
-    <!--  FAQs END -->
+<button class="accordion">2. Can I view my progress or the activities done by me ?</button>
+<div class="panel">
+  <p>Yes,you can view your progress on clicking on VIEW MY PROGRESS button which will show your uploaded activities and 
+    details under various categories.You can also delete an entry in case you dont want the entry to be there.</p>
+</div>
+
+
+<button class="accordion"> 3. How do I add an activity?</button>
+<div class="panel">
+  <p> You can simply add an activity by clicking on ADD NEW ACTIVITY which will show various categories of activities
+   you can upload.Just click on any category,add details accordingly and press submit.</p>
+</div>
+
+
+<button class="accordion"> 4. Do I need a proof for the  activity I upload?</button>
+<div class="panel">
+  <p> Yes definitely. You should upload some proof like a certificate or a Letter of Appreciation pertaining to the activity you upload.
+  It should be in doc or pdf format.Additional image can also be uploaded(if any).</p>
+</div>
+
+<button class="accordion"> 5. Is there any rule for the name of the files to be uploaded?</button>
+<div class="panel">
+  <p> For uniquely attributing each file to a user,the name of the file needs to be [SerialNumber_YourRollnumber].
+   More details regarding name of the files is provided in the add new activity bar while uploading the files.</p>
+</div>
+
+<button class="accordion">   6. What if I need to see my classmates uplaods?</button>
+<div class="panel">
+  <p>  There is a menu of the left side of the page with the title "View". It displays various entries done by different users.</p>
+</div>
+
+
+</article>
+
     <!-- ################################################################################################ -->
     <!-- / main body -->
     
   </main>
 </div>
 
-</div><!--  background image tag -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+<center>
+ <footer>
+<h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
+<a href="feedback_a.php" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
+</footer>
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+</center>
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+</div>
 
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
 <script>
+var acc = document.getElementsByClassName("accordion");
+var j;
 
-
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+for (j = 0; j < acc.length; j++) {
+  acc[j].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
 }
 </script>
 </body>
