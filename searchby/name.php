@@ -19,9 +19,12 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <style>
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 81e5eb89a5ae0d45bcefa02711d4bd98b23e7f3c
 footer{
 
    position: fixed;
@@ -34,10 +37,13 @@ footer{
    text-align: center;
    height:max-content;
 }
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> 81e5eb89a5ae0d45bcefa02711d4bd98b23e7f3c
 </style>
 </head>
 <body id="top">
@@ -84,9 +90,15 @@ footer{
             <ul>
              
              
+<<<<<<< HEAD
+              <li><a href="../admin_index.php">Help</a></li>
+              <li><a href="../changepass_a.php">Change Password</a></li>
+              <li><a href="../logout.php">Logout</a></li>
+=======
               <li><a href="admin_index.php">Help</a></li>
               <li><a href="changepass_a.php">Change Password</a></li>
               <li><a href="logout.php">Logout</a></li>
+>>>>>>> 81e5eb89a5ae0d45bcefa02711d4bd98b23e7f3c
             </ul>
           </li>
          
