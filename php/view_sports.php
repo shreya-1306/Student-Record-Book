@@ -220,7 +220,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM sports";
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-        $sql = "SELECT rollno,tour_name,place,position,start_date,end_date from sports order by rollno LIMIT $offset, $no_of_records_per_page";
+        $sql = "SELECT rollno,name,tour_name,place,position,start_date,end_date from sports order by rollno LIMIT $offset, $no_of_records_per_page";
         $result = mysqli_query($conn,$sql);
 
   ?>

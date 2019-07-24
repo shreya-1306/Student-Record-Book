@@ -233,7 +233,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM competition";
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-        $sql = "SELECT rollno,name_comp,cond_by,position,start_date,end_date from competition order by rollno LIMIT $offset, $no_of_records_per_page";
+        $sql = "SELECT rollno,name,name_comp,cond_by,position,start_date,end_date from competition order by rollno LIMIT $offset, $no_of_records_per_page";
         $result = mysqli_query($conn,$sql);
   ?>
   <table style="margin-top:40px" border="3" solid white>
