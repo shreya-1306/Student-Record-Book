@@ -19,12 +19,20 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <style>
-<<<<<<< HEAD
-=======
 
+.box{
+	background-color:white;
+  width: 65%;
+  
+  margin-top:-410px;
+  margin-left:100px;
+  padding: 10px;
+   height:410px;
+   position:fixed;
 
+  
+}
 
->>>>>>> 81e5eb89a5ae0d45bcefa02711d4bd98b23e7f3c
 footer{
 
    position: fixed;
@@ -37,13 +45,51 @@ footer{
    text-align: center;
    height:max-content;
 }
-<<<<<<< HEAD
-=======
+.accordion {
+ 
+  color: whites;
+  cursor: pointer;
+  padding: 5px;
+  width: 90%;
+margin-left:50px;
+height:50px;
+margin-top:15px;
+  text-align: left;
+  font-size: 20px;
+  transition: 0.4s;
+border-radius:7px;
+    background-color: #150e0e63;
+	
+}
+
+.accordion:hover {
+  background-color: grey; 
+}
+
+.panel {
+	margin-top:7px;
+	margin-left:50px;
+border-radius:7px;
+	
+
+	color:black;
+	width:90%;
+ height:80px;
+  display: none;
+  font-size:17px;
+  background-color: white;
+  overflow: hidden;
+}
+.accordion:after {
+  content: '\2B9F';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-right: 10px;
+}
 
 
 
-
->>>>>>> 81e5eb89a5ae0d45bcefa02711d4bd98b23e7f3c
 </style>
 </head>
 <body id="top">
@@ -86,22 +132,15 @@ footer{
               <li><a href="../graphical.php">Graphical</a></li>
             </ul>
           </li>
-         <li><a class="drop" href="#">Other</a>
+          <li><a class="drop" href="#">Other</a>
             <ul>
              
-             
-<<<<<<< HEAD
+              
               <li><a href="../admin_index.php">Help</a></li>
               <li><a href="../changepass_a.php">Change Password</a></li>
               <li><a href="../logout.php">Logout</a></li>
-=======
-              <li><a href="admin_index.php">Help</a></li>
-              <li><a href="changepass_a.php">Change Password</a></li>
-              <li><a href="logout.php">Logout</a></li>
->>>>>>> 81e5eb89a5ae0d45bcefa02711d4bd98b23e7f3c
             </ul>
           </li>
-         
          
      
         </ul>
@@ -629,7 +668,7 @@ $conn->close();
 <center>
  <footer>
 <h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
-<a href="feedback_a.php" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
+<a href="../feedback_a.php" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
 </footer>
 
 </center>
