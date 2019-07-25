@@ -21,7 +21,20 @@ Licence URI: http://www.os-templates.com/template-terms
 <link rel="stylesheet" type="text/css" href="faq.css"> 
 <link rel="stylesheet" type="text/css" href="layout/styles/login.css"> 
 <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
- 
+  <style>
+footer{
+
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   #A2B70D
+   text-align: center;
+   height:max-content;
+}
+</style>
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -67,7 +80,7 @@ Licence URI: http://www.os-templates.com/template-terms
           <li><a class="drop" href="#">Other</a>
             <ul>
              
-              <li><a href="feedback_a.php">Contact Us</a></li>
+           
               <li><a href="admin_index.php">Help</a></li>
               <li><a href="changepass_a.php">Change Password</a></li>
               <li><a href="logout.php">Logout</a></li>
@@ -88,7 +101,7 @@ Licence URI: http://www.os-templates.com/template-terms
       <h6 class="heading">Feedback/Queries</h6>
 
 <!--       FORM STARTS -->
-<div class="insert_form">
+<div class="insert_form" style="margin-left:80px;margin-right:-80px">
   <form  action="mail_admin.php" method="POST" >
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" value=" <?php if(isset($_SESSION['username'])){$usersData = getFacultyData(getFacultyID($_SESSION['username']));echo $usersData['Name']; }?>" readOnly>
@@ -125,7 +138,13 @@ Licence URI: http://www.os-templates.com/template-terms
     <!--  FAQs END -->
     <!-- ################################################################################################ -->
     <!-- / main body -->
-    
+    <center>
+ <footer>
+<h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
+<a href="#" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
+</footer>
+
+</center>
   </main>
 </div>
 
