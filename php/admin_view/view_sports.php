@@ -23,20 +23,6 @@ Licence URI: http://www.os-templates.com/template-terms
     $('#sports ').DataTable();
 } );
 </script>
-<style>
-footer{
-
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: black;
-   color: white;
-   #A2B70D
-   text-align: center;
-   height:max-content;
-}
-</style>
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -83,13 +69,12 @@ footer{
           <li><a class="drop" href="#">Other</a>
             <ul>
              
-             
-              <li><a href="admin_index.php">Help</a></li>
-              <li><a href="changepass_a.php">Change Password</a></li>
-              <li><a href="logout.php">Logout</a></li>
+              <li><a href="../../feedback_a.php">Contact Us</a></li>
+              <li><a href="../../contact_after_admin.php">Help</a></li>
+              <li><a href="../../changepass_a.php">Change Password</a></li>
+              <li><a href="../../logout.php">Logout</a></li>
             </ul>
           </li>
-         
          
      
         </ul>
@@ -337,16 +322,9 @@ $conn->close();
     <!-- ################################################################################################ -->
     <!-- / main body -->
     
-  
-<center>
- <footer>
-<h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
-<a href="../../feedback_a.php" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
-</footer>
-
-</center>
-</main>
+  </main>
 </div>
+
 </div><!--  background image tag -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
