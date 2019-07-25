@@ -350,15 +350,16 @@ $conn->close();
     <!-- ################################################################################################ -->
     <!-- / main body -->
     
-  </main>
-</div>
+  
 <center>
  <footer>
 <h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
-<a href="feedback_a.php" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
+<a href="../../feedback_a.php" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
 </footer>
 
 </center>
+</main>
+</div>
 </div><!--  background image tag -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
