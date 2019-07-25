@@ -202,41 +202,57 @@ echo $usersData['ID'];
   <!--<div class="group excerpts">
   -->
 	<article style="margin-left: 250px; margin-top:-320px;width:100%;height:410px ;" class="one_third">
-	<button class="accordion">1.  How do I login for the first time?</button>
+	<button class="accordion">1.As an admin what privileges do I get?</button>
 <div class="panel">
-  <p>  Click on First Time User/Forgot password and enter your Somaiya ID to get your initial password on your mail-id.After logging in you can 
-    change your password for your account.</p>
+  <p>As the admin of the website you can delete entries
+made by students incase of  lack of proof,
+ search the activities done by a particular student 
+by their name or roll number, view all the activities done by 
+the students of KJSCE in a particular time frame etc.</p>
 </div>
 
-<button class="accordion">2. Can I view my progress or the activities done by me ?</button>
+<button class="accordion">2. How can I remove any entry?</button>
 <div class="panel">
-  <p>Yes,you can view your progress on clicking on VIEW MY PROGRESS button which will show your uploaded activities and 
-    details under various categories.You can also delete an entry in case you dont want the entry to be there.</p>
-</div>
-
-
-<button class="accordion"> 3. How do I add an activity?</button>
-<div class="panel">
-  <p> You can simply add an activity by clicking on ADD NEW ACTIVITY which will show various categories of activities
-   you can upload.Just click on any category,add details accordingly and press submit.</p>
+  <p>You can remove an entry from the table by pressing the delete option in the same 
+  row.</p>
 </div>
 
 
-<button class="accordion"> 4. Do I need a proof for the  activity I upload?</button>
+<button class="accordion"> How do I search for a student's details by their roll number 
+or name?</button>
 <div class="panel">
-  <p> Yes definitely. You should upload some proof like a certificate or a Letter of Appreciation pertaining to the activity you upload.
-  It should be in doc or pdf format.Additional image can also be uploaded(if any).</p>
+  <p> 
+You can search by roll number or name by going to search by option and clicking
+on name or roll number.Then just type in the roll number and the activity you want
+to search and  click submit.The result will be displayed below.
+
+</p>
 </div>
 
-<button class="accordion"> 5. Is there any rule for the name of the files to be uploaded?</button>
+
+<button class="accordion"> 4. How do I search  for activities done by the students in a particular time frame?
+</button>
 <div class="panel">
-  <p> For uniquely attributing each file to a user,the name of the file needs to be [SerialNumber_YourRollnumber].
-   More details regarding name of the files is provided in the add new activity bar while uploading the files.</p>
+  <p> You can do so by clicking View and then the activity you want to search .Then you can provide 
+the start date and the end date for the time frame desired and press submit.This will display 
+the activities performed in that time frame.
+
+</p>
 </div>
 
-<button class="accordion">   6. What if I need to see my classmates uplaods?</button>
+<button class="accordion"> 5.What kind of analysis is obtained from the data?</button>
 <div class="panel">
-  <p>  There is a menu of the left side of the page with the title "View". It displays various entries done by different users.</p>
+  <p>The Tabular analysis shows the number of students 
+ of a particular year doing a particular activity in the form of a compact 
+table.The Graphical analysis shows the same analysis in a graphical form;showing the
+number of students of particular year per activity.</p>
+</div>
+
+<button class="accordion">   6. What else can I do using my account?</button>
+<div class="panel">
+  <p>  You can change your password to whatever you desire,provide 
+feedback to us directly using the link provided on the footer of the 
+website or mail us at  admin @somaiya.edu.</p>
 </div>
 
 
