@@ -2,7 +2,80 @@
 <?php
 session_start();
 require("../../functions.php");
- 
+ if (isset($_GET['deloa'])) {
+    $filename=$_GET['deloa'];
+    $sql="delete from other where filename='$filename'";
+    if (mysqli_query($conn, $sql)) {
+      // echo "Record deleted successfully";
+  } else {
+      echo "Error deleting record: " . mysqli_error($conn);
+  }
+  }
+  
+  
+  
+    if (isset($_GET['delcomp'])) {
+    $filename=$_GET['delcomp'];
+    $sql="delete from competition where filename='$filename'";
+    if (mysqli_query($conn, $sql)) {
+      // echo "Record deleted successfully";
+  } else {
+      echo "Error deleting record: " . mysqli_error($conn);
+  }
+  }
+  
+  
+  
+   if (isset($_GET['delsports'])) {
+    $filename=$_GET['delsports'];
+    $sql="delete from sports where filename='$filename'";
+    if (mysqli_query($conn, $sql)) {
+      // echo "Record deleted successfully";
+  } else {
+      echo "Error deleting record: " . mysqli_error($conn);
+  }
+  
+  }
+  
+   if (isset($_GET['deltpp'])) {
+    $filename=$_GET['deltpp'];
+    $sql="delete from tpp where filename='$filename'";
+    if (mysqli_query($conn, $sql)) {
+      // echo "Record deleted successfully";
+  } else {
+      echo "Error deleting record: " . mysqli_error($conn);
+  }
+  
+  }
+  
+  
+  
+   if (isset($_GET['delcourse'])) {
+    $filename=$_GET['delcourse'];
+    $sql="delete from course where filename='$filename'";
+    if (mysqli_query($conn, $sql)) {
+      // echo "Record deleted successfully";
+  } else {
+      echo "Error deleting record: " . mysqli_error($conn);
+  }
+  
+  
+  }
+  
+  
+   if (isset($_GET['delws'])) {
+   // echo "Hi";
+    $filename=$_GET['delws'];
+    $sql="delete from workshop where filename='$filename'";
+    echo "$filename";
+    if (mysqli_query($conn, $sql)) {
+      // echo "Record deleted successfully";
+  } else {
+      echo "Error deleting record: " . mysqli_error($conn);
+  }
+  }
+  
+
 ?>
 <!DOCTYPE html>
 <!--
@@ -23,6 +96,20 @@ Licence URI: http://www.os-templates.com/template-terms
     $('#sports ').DataTable();
 } );
 </script>
+<style>
+footer{
+
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   #A2B70D
+   text-align: center;
+   height:max-content;
+}
+</style>
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -69,12 +156,13 @@ Licence URI: http://www.os-templates.com/template-terms
           <li><a class="drop" href="#">Other</a>
             <ul>
              
-              <li><a href="../../feedback_a.php">Contact Us</a></li>
-              <li><a href="../../contact_after_admin.php">Help</a></li>
-              <li><a href="../../changepass_a.php">Change Password</a></li>
-              <li><a href="../../logout.php">Logout</a></li>
+             
+              <li><a href="admin_index.php">Help</a></li>
+              <li><a href="changepass_a.php">Change Password</a></li>
+              <li><a href="logout.php">Logout</a></li>
             </ul>
           </li>
+         
          
      
         </ul>
@@ -133,7 +221,7 @@ if ($result->num_rows > 0)
 
   ?>
   <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
-       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
 
         <?php
 
@@ -183,9 +271,32 @@ echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
  <?php 
       }
     } 
-echo "</td></tr>";
-}
+ echo "";
+	 
+      for($a =2;$a <count($files);$a++){
 
+        if($fn1==$files[$a])
+        {
+
+
+        ?>
+
+       
+
+        <p>
+          <a style='color:#000000;' href="../../uploads/opt_sports/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+        </p>
+
+        <?php 
+      }
+
+
+      }
+echo "<a href='view_sports.php?delsports=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
+
+
+   }   
+     
 ?>
  <br><br>
 
@@ -232,7 +343,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM sports";
 
   ?>
   <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
-       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
 
         <?php
 
@@ -282,9 +393,32 @@ echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
  <?php 
       }
 	  } 
-echo "</td></tr>";
-}
+ echo "";
+	 
+      for($a =2;$a <count($files);$a++){
 
+        if($fn1==$files[$a])
+        {
+
+
+        ?>
+
+       
+
+        <p>
+          <a style='color:#000000;' href="../../uploads/opt_sports/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+        </p>
+
+        <?php 
+      }
+
+
+      }
+echo "<a href='view_sports.php?delsports=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
+
+
+   }   
+     
 ?>
  <br><br>
  
@@ -322,9 +456,16 @@ $conn->close();
     <!-- ################################################################################################ -->
     <!-- / main body -->
     
-  </main>
-</div>
+  
+<center>
+ <footer>
+<h3 style="margin-top:5px;"> For any further queries Email us at admin@somaiya.edu</h3>
+<a href="../../feedback_a.php" style="font-size: 20px;margin-top:-5px;">Click here for feedback / queries </a>
+</footer>
 
+</center>
+</main>
+</div>
 </div><!--  background image tag -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
