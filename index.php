@@ -203,8 +203,8 @@ footer{
   <section id="pageintro" class="hoc clear">
     <div> 
       <!-- ################################################################################################ -->
-      <h2 style="font-size: 25px; margin-top:-90px" class="heading">Department of Computer Engineering</h2>
-      <p style="font-size: 23px;">K. J.  Somaiya  College  Of  Engineering,  Vidyavihar  </p>
+      <h2 style="font-size: 30px; margin-top: 144px;" class="heading">Department of Computer Engineering</h2>
+      <p style=" font-size: 26px; ">K. J.  Somaiya  College  Of  Engineering,  Vidyavihar  </p>
 <br>	
  <a class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Student login with username</a>
   <!-- <button onClick ="window.location = '''" type="submit">Sign in with Google </button>  -->
@@ -216,7 +216,7 @@ footer{
 
 <div class="mySlides fade">
   
-  <img src="slideshow/1.jpg" style="width:1100px ;height:400px;">
+  <img src="slideshow/1.jpg" style="width:1100px ;height:400px;     margin-top: 74px;">
   <div class="text">SIH 2019 WINNERS</div>
 </div>
 

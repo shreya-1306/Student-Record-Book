@@ -266,7 +266,7 @@ td{border-width:0 1px;}
 --------------------------------------------------------------------------------------------------------------- */
 body{
 
-	background-image:url('../../images/demo/backgrounds/grey.jpg');
+	background-image:url('../../images/demo/backgrounds/01.jpg');
 	/*background-color:#F3E8E7;
 	*/
 	background-size: 100% 100%;
@@ -274,7 +274,7 @@ body{
 	background-attachment: fixed;
 	margin-bottom: 2000px;
 
-	color:#CBCBCB; /*background-color:#191919;*/}
+	color:#ffffff /*background-color:#191919;*/}
 a{color:#A2B70D;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
