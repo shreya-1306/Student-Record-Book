@@ -142,7 +142,7 @@ footer{
 	<label for="position">Position:</label>
 	
     
-	<select>
+	<select  name="position">
   <option value="Participant" name="position">Participant</option>
   <option value="First" name="position">First</option>
   <option value="Second" name="position">Second</option>
@@ -186,8 +186,8 @@ footer{
       <!-- <h1>John Doe</h1> 
       <p>Architect & Engineer</p> 
       <p>We love that guy</p> -->
-      <p>Note : The certificate file name should be saved as srno_rollno. eg: Your first workshop certificate filename will be 1_<?php 
-  if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['rollno']; } ?>, Second workshop certificate filename will be 2_<?php if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['rollno']; } ?>.</p>
+      <p>Note : The certificate file name should be saved as srno_rollno. eg: Your first sports certificate filename will be 1_<?php 
+  if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['rollno']; } ?>, Second sports certificate filename will be 2_<?php if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['rollno']; } ?>.</p>
     </div>
   </div>
 </div>    
@@ -296,7 +296,7 @@ function validateForm() {
   
   var a=0,b=0,c=0,d=0;
   //Checking if start date less than end date 
-  if ((s<e))  {
+  if ((s<=e))  {
     a=1;
   }
   //Checking if file names are equal if image not equal to null

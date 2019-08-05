@@ -159,7 +159,7 @@ footer{
              
               <li><a href="../../admin_index.php">Help</a></li>
               <li><a href="changepass_a.php">Change Password</a></li>
-              <li><a href="logout.php">Logout</a></li>
+              <li><a href="../../logout.php">Logout</a></li>
             </ul>
           </li>
          
@@ -221,7 +221,7 @@ if ($result->num_rows > 0)
 
   ?>
   <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
-       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
 
         <?php
 
@@ -257,7 +257,7 @@ echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
     }
     echo "</td><td>";
  $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/sports");
+      $files= scandir("../../uploads/opt_sports");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -266,32 +266,13 @@ echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
 
         ?>
  <p>
-          <a style='color:#000000;' href="../../uploads/sports/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+          <a style='color:#000000;' href="../../uploads/opt_sports/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
  <?php 
       }
     } 
- echo "";
+ echo "</td><td>";
 	 
-      for($a =2;$a <count($files);$a++){
-
-        if($fn1==$files[$a])
-        {
-
-
-        ?>
-
-       
-
-        <p>
-          <a style='color:#000000;' href="../../uploads/opt_sports/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-        </p>
-
-        <?php 
-      }
-
-
-      }
 echo "<a href='view_sports.php?delsports=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
 
@@ -343,7 +324,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM sports";
 
   ?>
   <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
-       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
+       <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
 
         <?php
 
@@ -379,7 +360,7 @@ echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
 	  }
     echo "</td><td>";
  $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/sports");
+      $files= scandir("../../uploads/opt_sports");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -388,32 +369,14 @@ echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
 
         ?>
  <p>
-          <a style='color:#000000;' href="../../uploads/sports/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+          <a style='color:#000000;' href="../../uploads/opt_sports/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
  <?php 
       }
 	  } 
- echo "";
+ echo "</td><td>";
 	 
-      for($a =2;$a <count($files);$a++){
-
-        if($fn1==$files[$a])
-        {
-
-
-        ?>
-
-       
-
-        <p>
-          <a style='color:#000000;' href="../../uploads/opt_sports/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-        </p>
-
-        <?php 
-      }
-
-
-      }
+   
 echo "<a href='view_sports.php?delsports=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
 

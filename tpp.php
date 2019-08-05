@@ -143,7 +143,7 @@ footer{
     <textarea cols="30" rows="10" name="presented_at" placeholder="Eg: Oxford University" style="color:black" required></textarea>
 
 
-    <label for="paper">Attach Paper:</label>
+    <label for="paper">Attach Certificate:</label>
     <input id="certi" type="file" name="paper" required > 
 
   
@@ -173,13 +173,13 @@ footer{
       <!-- <h1>John Doe</h1> 
       <p>Architect & Engineer</p> 
       <p>We love that guy</p> -->
-      <p>Note : The certificate file name should be saved as srno_rollno. eg: Your first workshop certificate filename will be 1_<?php 
-  if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['rollno']; } ?>, Second workshop certificate filename will be 2_<?php if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['rollno']; } ?>.</p>
+      <p>Note : The certificate file name should be saved as srno_rollno. eg: Your first tpp certificate filename will be 1_<?php 
+  if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['rollno']; } ?>, Second tpp certificate filename will be 2_<?php if(isset($_SESSION['username'])){ $usersData = getUsersData(getId($_SESSION['username'])); echo $usersData['rollno']; } ?>.</p>
     </div>
   </div>
 </div>    
     
-<div class="flip-card" 	style="padding-bottom: 200px;     margin-bottom: -88px;">
+<!-- <div class="flip-card" 	style="padding-bottom: 200px;     margin-bottom: -88px;">
   <div class="flip-card-inner">
     <div class="flip-card-front">
     <h4> #2 Image name </h4>
@@ -190,13 +190,13 @@ footer{
    </p>
     </div>
   </div>
-</div>
+</div> -->
 
 
 <div class="flip-card" 	style="padding-bottom: 200px;">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-    <h4> #3 Accepted Format </h4>
+    <h4> #2 Accepted Format </h4>
     </div>
     <div class="flip-card-back">
     <p>Certificate should be an image or a PDF.Images should be in png or jpg format.</p>
@@ -283,7 +283,7 @@ function validateForm() {
   
   var a=0,b=0,c=0,d=0;
   //Checking if start date less than end date 
-  if ((s<e))  {
+  if ((s<=e))  {
     a=1;
   }
   //Checking if file names are equal if image not equal to null

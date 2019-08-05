@@ -288,7 +288,7 @@ function validateForm() {
   
   var a=0,b=0,c=0,d=0;
   //Checking if start date less than end date 
-  if ((s<e))  {
+  if ((s<=e))  {
     a=1;
   }
   //Checking if file names are equal if image not equal to null

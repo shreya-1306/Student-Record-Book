@@ -257,7 +257,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
     }
     echo "</td><td>";
  $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/other_activity");
+      $files= scandir("../../uploads/opt_other_activity");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -266,32 +266,14 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
 
         ?>
  <p>
-          <a style='color:#000000;' href="../../uploads/other_activity/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+          <a style='color:#000000;' href="../../uploads/opt_other_activity/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
  <?php 
       }
     } 
  echo "</td><td>";
 	  
-      for($a =2;$a <count($files);$a++){
 
-        if($fn1==$files[$a])
-        {
-
-
-        ?>
-
-       
-
-        <p>
-          <a style='color:#000000;' href="../../uploads/opt_other_activity/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-        </p>
-
-        <?php 
-      }
-
-
-      }
 echo "<a href='view_otheractivity.php?deloa=$fn'  onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
    } 
@@ -385,7 +367,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
 	  }
     echo "</td><td>";
  $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/other_activity");
+      $files= scandir("../../uploads/opt_other_activity");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -394,32 +376,13 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
 
         ?>
  <p>
-          <a style='color:#000000;' href="../../uploads/other_activity/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+          <a style='color:#000000;' href="../../uploads/opt_other_activity/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
  <?php 
       }
 	  } 
  echo "</td><td>";
-	
-      for($a =2;$a <count($files);$a++){
 
-        if($fn1==$files[$a])
-        {
-
-
-        ?>
-
-       
-
-        <p>
-          <a style='color:#000000;' href="../../uploads/opt_other_activity/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-        </p>
-
-        <?php 
-      }
-
-
-      }
 echo "<a href='view_otheractivity.php?deloa=$fn'  onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
    } 

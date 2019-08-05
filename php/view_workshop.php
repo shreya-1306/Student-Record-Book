@@ -158,7 +158,7 @@ if(isset($_POST['button'])) {
     $sd=$_POST['sdate'];
 
 $ed=$_POST['edate'];
-$sql = "select rollno,namew,con_by,start_date,end_date from workshop WHERE start_date>='$sd' AND end_date<='$ed'";
+$sql = "select rollno,name,namew,con_by,start_date,end_date from workshop WHERE start_date>='$sd' AND end_date<='$ed'";
 $result=mysqli_query($conn,$sql);
 if ($result->num_rows > 0)
 {  
@@ -225,7 +225,7 @@ $conn->close();
      
       }
       else{
-        $sql = "select rollno,namew,con_by,start_date,end_date from workshop";
+        $sql = "select rollno,name,namew,con_by,start_date,end_date from workshop";
       
 
 $result=mysqli_query($conn,$sql);

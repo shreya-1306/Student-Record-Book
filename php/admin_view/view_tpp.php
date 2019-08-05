@@ -240,27 +240,9 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
       }
 
 
-      }
+      } 
 
-      for($a =2;$a <count($files);$a++){
-
-        if($fn==$files[$a])
-        {
-
-
-        ?>
-
-       
-
-        <p>
-          <a style='color:#000000;' href="../../uploads/tpp/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-        </p>
-
-        <?php 
-      }
-
-
-      }
+ 
 echo "</td><td><a href='view_tpp.php?deltpp=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
    } 

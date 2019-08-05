@@ -260,23 +260,10 @@ if ($result->num_rows > 0)
         <?php 
       }
     }
-    echo "</td><td>";
- $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/opt_workshop");
-      for($a =2;$a <count($files);$a++){
-
-        if($fn1==$files[$a])
-        {
-
-
-        ?>
- <p>
-          <a style='color:#000000;' href="../../uploads/workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>;
-        </p>
- <?php 
-      }
-    } 
+ 
 echo "</td><td>";
+$fn1 =$line['filename1'];
+      $files= scandir("../../uploads/opt_workshop");
 	 
       for($a =2;$a <count($files);$a++){
 
@@ -297,7 +284,7 @@ echo "</td><td>";
 
 
       }
-echo "<a href='view_workshop.php?delws=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
+echo "</td><td><a href='view_workshop.php?delws=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
 }
 
@@ -400,23 +387,10 @@ if ($result->num_rows > 0)
         <?php 
       }
     }
-    echo "</td><td>";
- $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/workshop");
-      for($a =2;$a <count($files);$a++){
-
-        if($fn1==$files[$a])
-        {
-
-
-        ?>
- <p>
-          <a style='color:#000000;' href="../../uploads/workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-        </p>
- <?php 
-      }
-    } 
+ 
 echo "</td><td>";
+$fn1 =$line['filename1'];
+$files= scandir("../../uploads/opt_workshop");
 	  
       for($a =2;$a <count($files);$a++){
 
@@ -437,7 +411,7 @@ echo "</td><td>";
 
 
       }
-echo "<a href='view_workshop.php?delws=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
+echo "</td><td><a href='view_workshop.php?delws=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\" ><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 }
 
   

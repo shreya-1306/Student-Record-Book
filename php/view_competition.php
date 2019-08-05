@@ -129,7 +129,7 @@ footer{
 
 <!--       TABLE STARTS -->
 
-<form action="view_competitions.php" method="POST">
+<form action="view_competition.php" method="POST">
 <div class="fieldset1">
   <center>
   

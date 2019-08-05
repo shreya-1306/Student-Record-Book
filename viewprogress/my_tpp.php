@@ -232,7 +232,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <table style="margin-top:40px; margin-left: -152px;border-radius:4em;" border="3" solid white>
 
 
-     <tr><th>ROLL NO</th><th>NAME</th><th>TITLE</th><th>&nbsp&nbspAUTHOR&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbspPRESENTED&nbsp&nbspAT&nbsp&nbsp&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbspPAPER&nbsp&nbsp&nbsp&nbsp</th><th style="column-width:20px;">DELETE</th></span></tr>
+     <tr><th>ROLL NO</th><th>NAME</th><th>TITLE</th><th>&nbsp&nbspAUTHOR&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbspPRESENTED&nbsp&nbspAT&nbsp&nbsp&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbspCERTIFICATE&nbsp&nbsp&nbsp&nbsp</th><th style="column-width:20px;">DELETE</th></span></tr>
 
 <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {

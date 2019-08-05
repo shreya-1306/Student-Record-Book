@@ -258,25 +258,11 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
         <?php 
    }
     }
-    echo "</td><td>";
- $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/courses");
-      for($a =2;$a <count($files);$a++){
-
-        if($fn1==$files[$a])
-        {
-
-
-        ?>
- <p>
-          <a style='color:#000000;' href="../../uploads/courses/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-        </p>
- <?php 
-      }
-    } 
+ 
   echo "</td><td>";
 	  
-   
+  $fn1 =$line['filename1'];
+  $files= scandir("../../uploads/opt_courses");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -296,7 +282,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
 
 
       }
-echo "<a href='view_courses.php?delcourse=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\"><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
+echo "</td><td><a href='view_courses.php?delcourse=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\"><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
    }  
   
@@ -388,23 +374,10 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
         <?php 
    }
 	  }
-    echo "</td><td>";
- $fn1 =$line['filename1'];
-      $files= scandir("../../uploads/courses");
-      for($a =2;$a <count($files);$a++){
-
-        if($fn1==$files[$a])
-        {
-
-
-        ?>
- <p>
-          <a style='color:#000000;' href="../../uploads/courses/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-        </p>
- <?php 
-      }
-	  } 
+ 
   echo "</td><td>";
+  $fn1 =$line['filename1'];
+  $files= scandir("../../uploads/opt_courses");
 
       for($a =2;$a <count($files);$a++){
 
@@ -425,7 +398,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
 
 
       }
-echo "<a href='view_courses.php?delcourse=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\"><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
+echo "</td><td><a href='view_courses.php?delcourse=$fn' onClick=\"return confirm('Are you sure you want to delete this ?');\"><button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
    }  
   

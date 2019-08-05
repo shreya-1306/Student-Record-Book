@@ -156,7 +156,7 @@ if ($result->num_rows > 0)
  ?>
 
  <table style="margin-top:40px;  margin-left: 153px; " border="3" solid white>
-     <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
+     <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>RANK</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
 
        <?php
 
@@ -191,22 +191,9 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
     }
    }
    echo "</td><td>";
-$fn1 =$line['filename1'];
-     $files= scandir("../../uploads/competition");
-     for($a =2;$a <count($files);$a++){
 
-       if($fn1==$files[$a])
-       {
-
-
-       ?>
-<p>
-         <a style='color:#000000;' href="../../uploads/competition/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-       </p>
-<?php 
-     }
-   } 
-
+   $fn1 =$line['filename1'];
+   $files= scandir("../../uploads/opt_competition");
       for($a =2;$a <count($files);$a++){
 
         if($fn1==$files[$a])
@@ -226,7 +213,7 @@ $fn1 =$line['filename1'];
 
 
       }
-echo "<a href='view_competitions.php?delcomp=$fn'
+echo "</td><td><a href='view_competitions.php?delcomp=$fn'
  onClick=\"return confirm('Are you sure you want to delete this ?');\">
  <button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
@@ -319,21 +306,8 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
    }
    echo "</td><td>";
 $fn1 =$line['filename1'];
-     $files= scandir("../../uploads/competition");
-     for($a =2;$a <count($files);$a++){
-
-       if($fn1==$files[$a])
-       {
-
-
-       ?>
-<p>
-         <a style='color:#000000;' href="../../uploads/competition/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
-       </p>
-<?php 
-     }
-   } 
-echo "</td><td>";
+     $files= scandir("../../uploads/opt_competition");
+  
 
       for($a =2;$a <count($files);$a++){
 
@@ -354,7 +328,7 @@ echo "</td><td>";
 
 
       }
-echo "<a href='view_competitions.php?delcomp=$fn'
+echo "</td><td><a href='view_competitions.php?delcomp=$fn'
  onClick=\"return confirm('Are you sure you want to delete this ?');\">
  <button type='submit' name='delete' class='del-btn'><i class='fa fa-trash'></i></button></a></td></tr>";
 
