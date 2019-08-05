@@ -46,8 +46,8 @@ if ($conn->connect_error) {
   $result1 = mysqli_fetch_assoc($result1);
 
   $result1 = implode(',', $result1);
-   echo $result1;
-  echo $hold_pwd;
+  //  echo $result1;
+  // echo $hold_pwd;
 	// $result = "insert into login_info (lusername,lpassword) values (,'$_POST[cpwd]')";
  // $result = "UPDATE admin_login SET Password='$_POST[cpwd]' WHERE Username='$_SESSION[username]'; ";
 
@@ -81,6 +81,7 @@ if ($conn->connect_error) {
     </script>";
     }
   }
+  else
   {
     echo "<script>
     swal({
