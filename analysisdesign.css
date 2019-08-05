@@ -12,7 +12,7 @@ table{
 }
 table th{
     
-        border: 2px solid;
+        border: 1px solid black; 
     /* padding: 5px; */
     /* align-items: flex-start; */
     /* align-content: flex-start; */
@@ -29,7 +29,7 @@ table th{
 }
 table td{
 
-border: 1px solid white;
+border: 1px solid black;
 
 padding-left: 5px;
 color:black;

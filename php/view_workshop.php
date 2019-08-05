@@ -90,7 +90,7 @@ Licence URI: http://www.os-templates.com/template-terms
                 </ul>
                 </li>
               <li><a href="../feedback_s.php">Contact Us</a></li>
-              <li><a href="../contact_after.php">Help</a></li>
+              <!-- <li><a href="../contact_after.php">Help</a></li> -->
               <li><a href="../changepass.php">Change Password</a></li>
               <li><a href="../logout.php">Logout</a></li>
             </ul>

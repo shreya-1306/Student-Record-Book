@@ -188,18 +188,17 @@ window.onclick = function(event) {
 
 <table>
     <tr>
-      <th style="color:white;">Categories      </th>
-      <th style="color:white;">First Year</th>
-      <th style="color:white;"> Second Year</th>
-         
-      <th style="color:white;">Third Year</th>
-      <th style="color:white;">Fourth Year</th>
+      <th style="color: #a2b706; border : 1px solid black;">Categories      </th>
+      <th style="color: #a2b706; border : 1px solid black;">First Year</th>
+      <th style="color: #a2b706; border : 1px solid black;"> Second Year</th>
+      <th style="color: #a2b706; border : 1px solid black;">Third Year</th>
+      <th style="color: #a2b706; border : 1px solid black;">Fourth Year</th>
     </tr>
     
     <tr>
     
     
-      <th style="color:white;">Workshops</th>
+      <th style="color: #a2b706;  border : 1px solid black;">Workshops</th>
       <td>
          <?php 
   
@@ -234,7 +233,7 @@ echo $ct;
 </td>
     </tr>
     <tr>
-      <th style="color:white;">Courses</th>
+      <th style="color: #a2b706;  border : 1px solid black;">Courses</th>
       <td>
          <?php 
  
@@ -269,7 +268,7 @@ echo $ct;
     
 
   <tr>
-      <th style="color:white;">TPP</th>
+      <th style="color: #a2b706;  border : 1px solid black;">TPP</th>
       
       <td>
          <?php 
@@ -306,7 +305,7 @@ echo $ct;
 
 </tr>
   <tr>
-      <th style="color:white;">Sports</th>
+      <th style="color: #a2b706;  border : 1px solid black;">Sports</th>
       <td>
          <?php 
   
@@ -338,7 +337,7 @@ echo $ct;
 
 </tr>
   <tr>
-      <th style="color:white;">Competitions</th>
+      <th style="color: #a2b706;  border : 1px solid black;">Competitions</th>
       <td>
          <?php 
   
@@ -372,7 +371,7 @@ echo $ct;
 
 
   <tr>
-      <th style="color:white;">Other Activities</th>
+      <th style="color: #a2b706;  border : 1px solid black;">Other Activities</th>
             <td>
          <?php 
   

@@ -224,11 +224,11 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 /* Tables
 --------------------------------------------------------------------------------------------------------------- */
-table, th, td{ border-collapse:collapse; vertical-align:top; margin:50px 0 0 -75px; max-width:350px;}
+table, th, td{ border-collapse:collapse; vertical-align:top; margin:50px 0 0 -75px; }
 table, th{table-layout:auto;}
 table{width:100%; margin-bottom:15px;}
 th, td{padding:5px 5px; }
-td{border-width:0 1px;}
+td{border: 1px solid black;}
 
 
 /* Gallery
@@ -346,7 +346,8 @@ input:focus, textarea:focus, *:required:focus{border-color:#A2B70D;}
 /* Tables + Comments */
 table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#000000;}
 #comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#000000;}
-th{color:#DD5; background-color:#9F1C32;}
+th{color:#a2b70d;; background-color:#9F1C32; column-width: 809px;      border: 1px solid black;}
+/* me added this */
 tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]
 {color:#000000; border-color: 000000; BACKGROUND-COLOR: #FFFFFF;}
 tr:nth-child(even), #comments li:nth-child(even){color:#000000; background-color:#FFFFFF;}
@@ -507,12 +508,12 @@ input[type=text],input[type=date],input[type=password], select, textarea {
   }
   
   .flip-card-front {
-	background-color: #bbb;
+	background-color:rgba(187, 201, 204, 0.93);
 	color: black;
   }
   
   .flip-card-back {
-	background-color: #2980b9;
+	background-color: #041d1f8f;
 	color: white;
 	transform: rotateY(180deg);
   }

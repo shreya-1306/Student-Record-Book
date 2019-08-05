@@ -168,7 +168,7 @@ footer{
 
 
     <div class="flip-card-main">
-<div class="flip-card" 	style="padding-bottom: 200px;">
+<div class="flip-card" 	style="padding-bottom: 200px;     margin-bottom: -88px;">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <!-- <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;"> -->
@@ -184,7 +184,7 @@ footer{
   </div>
 </div>    
     
-<div class="flip-card" 	style="padding-bottom: 200px;">
+<div class="flip-card" 	style="padding-bottom: 200px;     margin-bottom: -88px;">
   <div class="flip-card-inner">
     <div class="flip-card-front">
     <h4> #2 Image name </h4>

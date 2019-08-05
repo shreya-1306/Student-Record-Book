@@ -450,7 +450,7 @@ height:max-content;
 
 <p style="font-size: 20px"> For any further queries Email us at admin@somaiya.edu </p>
 
-<a href="contact_before.php" style="font-size: 20px">Click here for general FAQs</a>
+<a href="../contact_before.html" style="font-size: 20px">Click here for general FAQs</a>
 <!--
 <div class="vl"></div>
 -->

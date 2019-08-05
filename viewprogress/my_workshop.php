@@ -220,7 +220,7 @@ if ($result->num_rows > 0)
 
 
       <div class="scrollable">
-        <table>
+        <table style="border: 3px solid black;">
           <thead>
             <tr>
             <th>ROLL NO</th>
