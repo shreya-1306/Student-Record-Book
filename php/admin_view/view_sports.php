@@ -157,7 +157,7 @@ footer{
             <ul>
              
              
-              <li><a href="admin_index.php">Help</a></li>
+              <li><a href="../../admin_index.php">Help</a></li>
               <li><a href="changepass_a.php">Change Password</a></li>
               <li><a href="logout.php">Logout</a></li>
             </ul>
