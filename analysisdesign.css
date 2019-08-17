@@ -6,9 +6,10 @@
 
 }
 table{
-	background-color: white;
-	margin-left:100px;
-	width:200px;
+	    background-color: white;
+    margin-left: 100px;
+    width: 200px;
+    MARGIN-TOP: -33px;
 }
 table th{
     

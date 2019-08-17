@@ -53,10 +53,10 @@ footer{
   padding: 5px;
   width: 90%;
 margin-left:50px;
-height:50px;
+height: 42px;
 margin-top:15px;
   text-align: left;
-  font-size: 20px;
+  font-size: 16px;
   transition: 0.4s;
 border-radius:7px;
     background-color: #150e0e63;
@@ -75,9 +75,9 @@ border-radius:7px;
 
 	color:black;
 	width:90%;
- height:80px;
-  display: none;
-  font-size:17px;
+  height: 86px;
+    display: none;
+    font-size: 13px;
   background-color: white;
   overflow: hidden;
 }
@@ -156,7 +156,12 @@ border-radius:7px;
     <!-- main body -->
    <div class="group excerpts">
    
-      <article style="margin-left: -139px; margin-top: 1px;width: 400px;height: 300px;background-color: #150e0e63;" class="one_third">
+      <article style="    margin-left: -139px;
+    margin-top: 1px;
+    width: 321px;
+    height: 256px;
+    background-color: #150e0e63;
+" class="one_third">
         <div class="hgroup">
          
           
@@ -201,7 +206,10 @@ echo $usersData['ID'];
 	
   <!--<div class="group excerpts">
   -->
-	<article style="margin-left: 250px; margin-top:-320px;width:100%;height:410px ;" class="one_third">
+	<article style="    margin-left: 250px;
+    margin-top: -278px;
+    width: 81%;
+    height: 453px;" class="one_third">
 	<button class="accordion">1.As an admin what privileges do I get?</button>
 <div class="panel">
   <p>As the admin of the website you can delete entries

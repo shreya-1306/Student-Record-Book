@@ -203,7 +203,7 @@ footer{
   <section id="pageintro" class="hoc clear">
     <div> 
       <!-- ################################################################################################ -->
-      <h2 style="font-size: 30px; margin-top: 144px;" class="heading">Department of Computer Engineering</h2>
+      <h2 style="font-size: 30px;     margin-top: 19px;" class="heading">Department of Computer Engineering</h2>
       <p style=" font-size: 26px; ">K. J.  Somaiya  College  Of  Engineering,  Vidyavihar  </p>
 <br>	
  <a class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Student login with username</a>
@@ -222,28 +222,28 @@ footer{
 
 <div class="mySlides fade">
   
-  <img src="slideshow/2.jpg" style="width:1100px ;height:400px;">
+  <img src="slideshow/2.jpg" style="width:1100px ;height:400px;   margin-top: 74px;">
   <div class="text">SIH 2019 WINNERS</div>
 </div>
 
 <div class="mySlides fade">
 
-  <img src="slideshow/3.jpeg" style="width:1100px ;height:400px;">
+  <img src="slideshow/3.jpeg" style="width:1100px ;height:400px;   margin-top: 74px;">
   <div class="text">SIH 2019 WINNERS</div>
 </div>
 <div class="mySlides fade">
 
-  <img src="slideshow/4.jpg" style="width:1100px ;height:400px;">
+  <img src="slideshow/4.jpg" style="width:1100px ;height:400px;   margin-top: 74px;">
   <div class="text">E-SUMMIT I_HACK HACKATHON 2019 WINNERS</div>
 </div>
 <div class="mySlides fade">
 
-  <img src="slideshow/5.jpeg" style="width:1100px ;height:400px;">
+  <img src="slideshow/5.jpeg" style="width:1100px ;height:400px;   margin-top: 74px;">
   <div class="text">BITCAMP 2019 WINNERS</div>
 </div>
 <div class="mySlides fade">
 
-  <img src="slideshow/6.jpeg" style="width:1100px ;height:400px;">
+  <img src="slideshow/6.jpeg" style="width:1100px ;height:400px;   margin-top: 74px;">
   <div class="text">BITCAMP 2019 WINNERS</div>
 </div>
 
