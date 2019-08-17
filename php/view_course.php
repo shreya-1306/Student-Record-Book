@@ -135,7 +135,7 @@ footer{
   
   
    
-<span style="color: white; font-size: 30px;">COURSES</span><br><br>
+<span style="color: white;     font-size: 24px;">COURSES</span><br><br>
  <font color="white">Search By Date : From</font><input type="date" name="sdate" placeholder="Search.."><br>
   
  <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input type="date" name="edate" placeholder="Search..">

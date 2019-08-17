@@ -156,7 +156,7 @@ if ($result->num_rows > 0)
 
   <center>
   <div class="fieldset1" style="margin-left: 10px;">
-<span style="color: white; font-size: 30px;">TPP</span><br><br>
+<span style="color: white;     font-size: 24px;">TPP</span><br><br>
 </div>
   <table style=" width: 192%;" >
 

@@ -48,17 +48,17 @@ footer{
 }
 .accordion {
  
-  color: whites;
+  color: white;
   cursor: pointer;
-  padding: 5px;
-  width: 90%;
-margin-left:50px;
-height:50px;
-margin-top:15px;
-  text-align: left;
-  font-size: 20px;
-  transition: 0.4s;
-border-radius:7px;
+    padding: 5px;
+    width: 89%;
+    margin-left: 50px;
+    height: 46px;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 7px;
     background-color: #150e0e63;
 	
 }
@@ -77,7 +77,7 @@ border-radius:7px;
 	width:90%;
  height:80px;
   display: none;
-  font-size:17px;
+  font-size: 14px;
   background-color: white;
   overflow: hidden;
 }
@@ -174,7 +174,12 @@ border-radius:7px;
     </div>
     <div class="group excerpts">
    
-      <article style="margin-left: -142px; margin-top: -94px;width:400px;height:410px; background-color:#150e0e63;" class="one_third">
+      <article style="     margin-left: -139px;
+      margin-top: -72px;
+
+    width: 354px;
+    height: 402px;
+    background-color: #150e0e63;" class="one_third">
         <div class="hgroup">
          
           <br><br>
@@ -218,42 +223,52 @@ $dir_path = "student_images/";
 	
   <!--<div class="group excerpts">
   -->
-	<article style="margin-left: 250px; margin-top:-410px;width:100%;height:410px ;" class="one_third">
-	<button class="accordion">1.  How do I login for the first time?</button>
+	<article style=" margin-left: 250px;
+        margin-top: -425px;
+    width: 81%;
+    height: 453px;"class="one_third">
+	<button class="accordion">1.  How do I set a password after logging in for the first time?</button>
 <div class="panel">
-  <p>  Click on First Time User/Forgot password and enter your Somaiya ID to get your initial password on your mail-id.After logging in you can 
-    change your password for your account.</p>
+  <p>  Click on 'OTHER' and 'CHANGE PASSWORD' after that. Enter the current password email-ed to you and set a new password 
+  that has to be minimum 8 characters.</p>
 </div>
 
 <button class="accordion">2. Can I view my progress or the activities done by me ?</button>
 <div class="panel">
-  <p>Yes,you can view your progress on clicking on VIEW MY PROGRESS button which will show your uploaded activities and 
-    details under various categories.You can also delete an entry in case you dont want the entry to be there.</p>
+  <p>You can view your progress on clicking the VIEW PROGRESS button which will show your uploaded activities and 
+    details under various categories.</p>
 </div>
 
 
 <button class="accordion"> 3. How do I add an activity?</button>
 <div class="panel">
-  <p> You can simply add an activity by clicking on ADD NEW ACTIVITY which will show various categories of activities
-   you can upload.Just click on any category,add details accordingly and press submit.</p>
+  <p> You can simply add an activity by clicking on ADD ACTIVITY which will show various categories of activities
+   you can add.Click on suitable category,add details in form accordingly and press submit.It is compulsory to add certificate and 
+   and image of event can be optionally added.</p>
+</div>
+<button class="accordion"> 4. How do I delete an erroneous activity?</button>
+<div class="panel">
+  <p> Click on VIEW PROGRESS and go to the category in which you want to delete an entry. Click on the delete button
+  in the row of activity.</p>
 </div>
 
 
-<button class="accordion"> 4. Do I need a proof for the  activity I upload?</button>
+<button class="accordion"> 5. Do I need a proof for the activity I upload?</button>
 <div class="panel">
-  <p> Yes definitely. You should upload some proof like a certificate or a Letter of Appreciation pertaining to the activity you upload.
-  It should be in doc or pdf format.Additional image can also be uploaded(if any).</p>
+  <p> Yes definitely. You need to upload some proof like a certificate or a Letter of Appreciation pertaining to the activity you add.
+  It should be in image or pdf format.Additional image of event can also be uploaded(if any).</p>
 </div>
 
-<button class="accordion"> 5. Is there any rule for the name of the files to be uploaded?</button>
+<button class="accordion"> 6. Is there any rule for the name of the files to be uploaded?</button>
 <div class="panel">
-  <p> For uniquely attributing each file to a user,the name of the file needs to be [SerialNumber_YourRollnumber].
-   More details regarding name of the files is provided in the add new activity bar while uploading the files.</p>
+  <p> For uniquely attributing each file to a user,the name of the file needs to be 'SerialNumber_YourRollnumber'.
+   More details regarding name of the files is provided in the notes in add activity section.If certificate files are wrongly named
+  they might get misplaced and your entry will not be considered.</p>
 </div>
 
-<button class="accordion">   6. What if I need to see my classmates uplaods?</button>
+<button class="accordion"> 7.Can I view other students' activities?</button>
 <div class="panel">
-  <p>  There is a menu of the left side of the page with the title "View". It displays various entries done by different users.</p>
+  <p> Go to 'VIEW' option under 'OTHER'. It displays various entries done by all students.</p>
 </div>
 
 
