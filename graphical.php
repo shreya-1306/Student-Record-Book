@@ -99,7 +99,7 @@ footer{
   <main class="hoc container clear">
 <center>
   
-    <h3 style="margin-top:100px;">Graphical Analysis</h3>
+    <h3 style="margin-top:38px; font-size: 22px;">GRAPHICAL ANALYSIS</h3>
    <div class="box1">
 
 

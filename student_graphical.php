@@ -124,7 +124,7 @@ footer{
 <div  >
   <main class="hoc container clear"> 
 <center>
-<h3 style="margin-top:100px;">Graphical Analysis</h3>
+<h3 style="    margin-top: 2px;">GRAPHICAL ANALYSIS</h3>
 <div class="box1">
 
 

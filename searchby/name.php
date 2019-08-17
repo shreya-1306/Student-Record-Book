@@ -161,7 +161,7 @@ border-radius:7px;
 
   
    
-<span>Search by Name</span><br><br>
+<span style="font-size : 22px;">SEARCH BY NAME</span><br><br>
  <font color="white">Enter Name : </font><input  style="width: 700px;" type="text" name="name" required ><br>
  <div class="search_by_rollno">
   
@@ -227,7 +227,7 @@ if ($result->num_rows > 0)
 
     
 
-    <table style="margin-top:40px; margin-left:54px;     max-width: 773px;" border="3" solid white>
+    <table >
 
     WORKSHOPS ATTENDED: 
 
@@ -308,7 +308,7 @@ if ($result->num_rows > 0)
 
     ?>
 
-    <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
+    <table>
     COURSES COMPLETED: 
        
         <tr><th>ROLL NO</th><th>NAME</th><th>COURSE NAME</th><th>INSTITUTE/WEBSITE</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
@@ -383,7 +383,7 @@ if ($result->num_rows > 0)
     ?>
 
    
-  <table style="margin-top:40px; margin-left:54px;     max-width: 773px;" border="3" solid white>
+  <table >
   COMPETITIONS ATTENDED: 
        <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 
@@ -455,7 +455,7 @@ if ($result->num_rows > 0)
 
     ?>
 
-   <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
+   <table >
    TOURNAMENTS ATTENDED: 
         <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 
@@ -524,7 +524,7 @@ if ($result->num_rows > 0)
 {  
 
     ?>
-  <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
+  <table >
   TPP :
 
        
@@ -599,7 +599,7 @@ if ($result->num_rows > 0)
 {  
 
     ?>
- <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
+ <table >
  OTHER ACTIVITIES
          <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF ACTIVITY</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 

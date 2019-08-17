@@ -185,7 +185,7 @@ footer{
   
   
    
-<span style="color: white; font-size: 30px;">Sports</span><br><br>
+<span style="color: white; font-size: 22px;">SPORTS</span><br><br>
  <font color="white">Search By Date : From</font><input style="width: 700px;"   type="date" name="sdate" placeholder="Search.."><br>
   
  <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input  style="width: 700px;"  type="date" name="edate" placeholder="Search..">
@@ -220,7 +220,7 @@ if ($result->num_rows > 0)
 
 
   ?>
-  <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
+  <table >
        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
 
         <?php
@@ -249,7 +249,7 @@ echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
         ?>
 
         <p>
-          <a href="../../uploads/sports/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/sports/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+          <a href="../../uploads/sports/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a><a href="../../uploads/sports/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 
@@ -323,7 +323,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM sports";
         $result = mysqli_query($conn,$sql);
 
   ?>
-  <table style="margin-top:40px;  margin-left: 153px;" border="3" solid white>
+  <table >
        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF EVENT/TOURNAMENT</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
 
         <?php
@@ -352,7 +352,7 @@ echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
         ?>
 
         <p>
-          <a href="../../uploads/sports/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/sports/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+          <a href="../../uploads/sports/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a><a href="../../uploads/sports/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 

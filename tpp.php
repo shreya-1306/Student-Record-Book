@@ -123,7 +123,7 @@ footer{
     <!-- main body -->
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
-      <h6 class="heading">Enter TPP Details</h6>
+      <h6 class="heading">ENTER TPP DETAILS</h6>
 
 <!--       FORM STARTS -->
 <div class="insert_form">

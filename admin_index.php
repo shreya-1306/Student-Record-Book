@@ -156,7 +156,7 @@ border-radius:7px;
     <!-- main body -->
    <div class="group excerpts">
    
-      <article style="margin-left: -300px; margin-top:50px;width:400px;height:300px; background-color:#150e0e63;" class="one_third">
+      <article style="margin-left: -139px; margin-top: 1px;width: 400px;height: 300px;background-color: #150e0e63;" class="one_third">
         <div class="hgroup">
          
           

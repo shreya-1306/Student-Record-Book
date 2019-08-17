@@ -135,7 +135,7 @@ footer{
   
   
    
-<span style="color: white; font-size: 30px;">Workshops</span><br><br>
+<span style="color: white; font-size: 30px;">WORKSHOPS</span><br><br>
  <font color="white">Search By Date : From</font><input type="date" name="sdate" placeholder="Search.."><br>
   
  <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input type="date" name="edate" placeholder="Search..">
@@ -166,7 +166,7 @@ if ($result->num_rows > 0)
 
     ?>
 
-    <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
+    <table style=" width: 192%;" >
 
         <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspWORKSHOP&nbsp&nbsp</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 
@@ -248,7 +248,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM workshop";
 
     ?>
 
-    <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
+    <table style=" width: 192%;">
 
         <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspWORKSHOP&nbsp&nbsp</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 

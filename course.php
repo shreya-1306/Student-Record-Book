@@ -125,7 +125,7 @@ footer{
     <!-- main body -->
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
-      <h6 class="heading">Enter Course Details</h6>
+      <h6 class="heading">ENTER COURSE DETAILS</h6>
 
 <!--       FORM STARTS -->
 <div class="insert_form">

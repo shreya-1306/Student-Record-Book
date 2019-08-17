@@ -124,7 +124,7 @@ footer{
     <!-- main body -->
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
-      <h6 class="heading">Enter Competition Details</h6>
+      <h6 class="heading">ENTER COMPETITION DETAILS</h6>
 
 <!--       FORM STARTS -->
 <div class="insert_form">

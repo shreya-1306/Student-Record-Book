@@ -207,7 +207,7 @@ Licence URI: http://www.os-templates.com/template-terms
      
 
 <!--       TABLE STARTS -->
-<h1>Workshops attended</h1>
+<h1>WORKSHOPS ATTENDED</h1>
 </div>
 <?PHP
 

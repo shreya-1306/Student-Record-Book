@@ -188,7 +188,7 @@ footer{
   
   
    
-<span style="color: white; font-size: 30px;">Workshops</span><br><br>
+<span style="color: white; font-size: 22px;">WORKSHOP</span><br><br>
  <font color="white">Search By Date : From</font><input style="width: 700px;"   type="date" name="sdate" placeholder="Search.."><br>
   
  <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input style="width: 700px;"   type="date" name="edate" placeholder="Search..">
@@ -221,7 +221,7 @@ if ($result->num_rows > 0)
   
     ?>
 
-    <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="workshop">
+    <table id="workshop">
 
        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF WORKSHOP</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspCERTIFICATE&nbsp&nbsp</th><th>&nbsp&nbspIMAGE&nbsp&nbsp</th><th>&nbsp&nbspDELETE&nbsp&nbsp</th></tr>
 
@@ -348,7 +348,7 @@ if ($result->num_rows > 0)
   
     ?>
 
-    <table style="margin-top:40px; margin-left: 153px;" border="3" solid white id="workshop">
+    <table id="workshop">
 
        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>NAME OF WORKSHOP</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspCERTIFICATE&nbsp&nbsp</th><th>&nbsp&nbspIMAGE&nbsp&nbsp</th><th>&nbsp&nbspDELETE&nbsp&nbsp</th></tr>
 
@@ -381,7 +381,7 @@ if ($result->num_rows > 0)
        
 
         <p>
-          <a href="../../uploads/workshop/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/workshop/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+          <a href="../../uploads/workshop/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a><a href="../../uploads/workshop/<?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 

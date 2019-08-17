@@ -207,7 +207,7 @@ Licence URI: http://www.os-templates.com/template-terms
      
 
 <!--       TABLE STARTS -->
-<h1>Sports Played</h1>
+<h1>SPORTS PLAYED</h1>
  </div>
 <?php
 $pageno=1;
@@ -232,7 +232,7 @@ $total_pages=1;
 //         $result = mysqli_query($conn,$sql);
   ?>
 
-    <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
+    <table style="border: 3px solid black;" >
 
      <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
 <?php

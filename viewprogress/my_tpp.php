@@ -207,7 +207,7 @@ Licence URI: http://www.os-templates.com/template-terms
 
 <!--       TABLE STARTS -->
 
-      <h1 style="margin-left:100px;">Technical  Papers  Presented</h1>
+      <h1 style="margin-left:100px;">TECHNICAL PAPERS PRESENTED</h1>
  </div>
 <?php
   $sql = "select * from tpp where rollno=$rn";
@@ -229,7 +229,7 @@ Licence URI: http://www.os-templates.com/template-terms
 //         $sql = "SELECT * FROM tpp where rollno= $rn LIMIT $offset, $no_of_records_per_page";
 //         $result = mysqli_query($conn,$sql);
   ?>
-<table style="margin-top:40px; margin-left: -152px;border-radius:4em;" border="3" solid white>
+<table  style="border: 3px solid black;" >
 
 
      <tr><th>ROLL NO</th><th>NAME</th><th>TITLE</th><th>&nbsp&nbspAUTHOR&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbspPRESENTED&nbsp&nbspAT&nbsp&nbsp&nbsp&nbsp</th><th>&nbsp&nbsp&nbsp&nbspCERTIFICATE&nbsp&nbsp&nbsp&nbsp</th><th style="column-width:20px;">DELETE</th></span></tr>

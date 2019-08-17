@@ -158,7 +158,7 @@ if ($result->num_rows > 0)
   <div class="fieldset1" style="margin-left: 10px;">
 <span style="color: white; font-size: 30px;">TPP</span><br><br>
 </div>
-  <table border="3" solid white  >
+  <table style=" width: 192%;" >
 
         <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspTITLE&nbsp&nbsp</th><th>&nbsp&nbspAUTHOR&nbsp&nbsp</th><th>&nbsp&nbspPRESENTED&nbsp&nbspAT&nbsp&nbsp</th></span></tr>
         <?php

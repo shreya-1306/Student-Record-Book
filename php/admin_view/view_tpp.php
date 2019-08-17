@@ -180,6 +180,7 @@ footer{
     
 
     <!--  TABLE START -->
+  <br><br>
     
 <?php 
         $sql = "select * from tpp";
@@ -205,7 +206,8 @@ $total_pages_sql = "SELECT COUNT(*) FROM tpp";
   ?>
     <center>
       <div class="fieldset1" style="margin-left: -2px;">
-  <table style="margin-top:40px;  margin-left: 12px;" border="3" solid white>
+  <table >
+  <CENTRE><span style="color: white; font-size: 22px;">TPP</span></CENTRE>
 
        
        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspTITLE&nbsp&nbspOF&nbsp&nbspPAPER&nbsp&nbsp</th><th>&nbsp&nbspAUTHORS&nbsp&nbsp</th><th>&nbsp&nbspPRESENTED/PUBLISHED&nbsp&nbspAT&nbsp&nbsp</th><th>CERTIFICATE</th><th>DELETE</th></tr>
@@ -233,7 +235,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
        
 
         <p>
-           <a href="../../uploads/tpp/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a>&nbsp; &nbsp;&nbsp;<a href="../../uploads/tp?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
+           <a href="../../uploads/tpp/<?php echo $files[$a]?>" target="_blank" style='color:#000000;' ><?php echo $files[$a] ?> </a><a href="../../uploads/tp?php echo $files[$a] ?>" download><i class="fa fa-download"></i></a>
         </p>
 
         <?php 

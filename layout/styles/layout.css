@@ -235,7 +235,10 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 --------------------------------------------------------------------------------------------------------------- */
 table, th, td{ border-collapse:collapse; vertical-align:top; margin:50px 0 0 -75px; }
 table, th{table-layout:auto;}
-table{width:100%; margin-bottom:15px;}
+table{     width: 135%;
+    margin-bottom: 15px;
+    margin-left: -166px;
+	border: 3px solid black;}
 th, td{padding:5px 5px; }
 td{border: 1px solid black;}
 
@@ -517,14 +520,14 @@ input[type=text],input[type=date],input[type=password], select, textarea {
   }
   
   .flip-card-front {
-	background-color:rgba(187, 201, 204, 0.93);
-	color: black;
+	background-color: rgb(255, 255, 255);
+    color: #000000;
   }
   
   .flip-card-back {
-	background-color: #041d1f8f;
 	color: white;
-	transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background-color: #00000082;
   }
   .del-btn{
 	color:#ffffff;
@@ -574,7 +577,7 @@ input[type=text],input[type=date],input[type=password], select, textarea {
     border: none;
     line-height: normal;
     vertical-align: middle;
-    margin-left: -64px;
+	margin-left: 124px;
     
 }
 

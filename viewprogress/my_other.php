@@ -207,7 +207,7 @@ Licence URI: http://www.os-templates.com/template-terms
      
 
 <!--       TABLE STARTS -->
-<h1>Other Activities</h1>
+<h1>OTHER ACTIVITIES</h1>
  </div>
 <?php
   $sql = "select * from other where rollno=$rn";
@@ -230,7 +230,7 @@ Licence URI: http://www.os-templates.com/template-terms
 //         $results = mysqli_query($conn,$sql);
   ?>
 
-    <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
+    <table style="border: 3px solid black;">
 
       <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF ACTIVITY</th><th>INSTITUTE/WEBSITE</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
 

@@ -123,7 +123,7 @@ footer{
     <!-- main body -->
     <!-- ################################################################################################ -->
     <div class="sectiontitle">
-      <h6 class="heading">Enter Other Activities Details</h6>
+      <h6 class="heading">ENTER OTHER ACTIVITY DETAILS</h6>
 
 <!--       FORM STARTS -->
 <div class="insert_form">

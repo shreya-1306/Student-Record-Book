@@ -137,7 +137,7 @@ footer{
   <main class="hoc container clear">
 
 <div class="sectiontitle">
-      <h6 class="heading">Change Password</h6>
+      <h6 class="heading">CHANGE PASSWORD</h6>
 
       
     <div class="insert_form">

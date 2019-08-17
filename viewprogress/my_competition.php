@@ -207,7 +207,7 @@ height:max-content;
      
 
 <!--       TABLE STARTS -->
-<h1>Competitions  </h1>
+<h1>COMPETITIONS</h1>
  </div>
 <?php
 $pageno=1;
@@ -232,7 +232,7 @@ $total_pages=1;
 //         $results = mysqli_query($conn,$sql);
   ?>
 
-    <table style="margin-top:40px; margin-left: 20px" border="3" solid white>
+    <table style="border: 3px solid black;">
 
       <tr><th>ROLL NO</th><th>NAME</th><th>COMPETITION NAME</th><th>CONDUCTED BY</th><th>POSITION</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
 

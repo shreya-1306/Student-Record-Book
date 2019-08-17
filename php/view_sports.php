@@ -135,7 +135,7 @@ footer{
   
   
    
-<span style="color: white; font-size: 30px;">Sports</span><br><br>
+<span style="color: white; font-size: 30px;">SPORTS</span><br><br>
  <font color="white">Search By Date : From</font><input type="date" name="sdate" placeholder="Search.."><br>
   
  <font color="white">Search By Date : To&nbsp&nbsp&nbsp&nbsp&nbsp</font><input type="date" name="edate" placeholder="Search..">
@@ -165,7 +165,7 @@ if ($result->num_rows > 0)
 
 
   ?>
-  <table style="margin-top:40px" border="3" solid white>
+  <table style=" width: 192%;" >
         <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspTOURNAMENT&nbsp&nbsp</th><th>&nbsp&nbspPLACE&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 
         <?php
@@ -237,7 +237,7 @@ $total_pages_sql = "SELECT COUNT(*) FROM sports";
         $result = mysqli_query($conn,$sql);
 
   ?>
-  <table style="margin-top:40px" border="3" solid white>
+  <table style=" width: 192%;">
         <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspTOURNAMENT&nbsp&nbsp</th><th>&nbsp&nbspPLACE&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 
         <?php

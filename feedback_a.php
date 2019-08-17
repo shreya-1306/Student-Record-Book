@@ -98,7 +98,7 @@ footer{
   <main class="hoc container clear">
 
 <div class="sectiontitle">
-      <h6 class="heading">Feedback/Queries</h6>
+      <h6 class="heading">FEEDBACK/QUERIES</h6>
 
 <!--       FORM STARTS -->
 <div class="insert_form" style="margin-left:80px;margin-right:-80px">

@@ -133,7 +133,7 @@ footer{
 
 <!-- <font color="white" align="center" style="margin-left:220px" size="75px" > Overall </font> -->
 <center>
-<h2 style=" margin-top: -30px; font-size: 30px; padding-bottom: 26px;" >Tabular Analysis</h2>
+<h2 style=" margin-top: -30px; font-size: 22px; padding-bottom: 26px;" >TABULAR ANALYSIS</h2>
 
 </center>
   

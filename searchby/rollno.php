@@ -162,7 +162,7 @@ border-radius:7px;
 
   
    
-<span>Search by Roll No.</span><br><br>
+<span style="font-size : 22px">SEARCH BY ROLL NUMBER</span><br><br>
  <font color="white">Enter Roll no. : </font><input  style="width: 700px;" type="text" name="rollno" required ><br>
  <div class="search_by_rollno">
   
@@ -228,7 +228,7 @@ if ($result->num_rows > 0)
 
     
 
-    <table style="margin-top:40px; margin-left:54px;     max-width: 773px;" border="3" solid white>
+    <table>
 
     WORKSHOPS ATTENDED: 
 
@@ -262,7 +262,7 @@ if ($result->num_rows > 0)
        
 
         <p>
-          <a style='color:#000000;' href="../../uploads/workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
+          <a style='color:#000000;' href="../uploads/workshop/<?php echo $files[$a] ?>"><?php echo $files[$a] ?></a>
         </p>
 
         <?php 
@@ -308,7 +308,7 @@ if ($result->num_rows > 0)
 
     ?>
 
-    <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
+    <table >
     COURSES COMPLETED: 
        
         <tr><th>ROLL NO</th><th>NAME</th><th>COURSE NAME</th><th>INSTITUTE/WEBSITE</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
@@ -382,7 +382,7 @@ if ($result->num_rows > 0)
     ?>
 
    
-  <table style="margin-top:40px; margin-left:54px;     max-width: 773px;" border="3" solid white>
+  <table >
   COMPETITIONS ATTENDED: 
        <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 
@@ -453,7 +453,7 @@ if ($result->num_rows > 0)
 
     ?>
 
-   <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
+   <table >
    TOURNAMENTS ATTENDED: 
         <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 
@@ -521,11 +521,11 @@ if ($result->num_rows > 0)
 {  
 
     ?>
-  <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
+  <table >
   TPP :
 
        
-        <tr><th>ROLL NO</th><th>NAME</th><th>TITLE</th><th>AUTHOR</th><th>PRESENTED AT</th><th>PAPER</th></span></tr>
+        <tr><th>ROLL NO</th><th>NAME</th><th>TITLE</th><th>AUTHOR</th><th>PRESENTED AT</th><th>CERTIFICATE</th></span></tr>
         <?php
 
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -595,7 +595,7 @@ if ($result->num_rows > 0)
 {  
 
     ?>
- <table style="margin-top:40px;  margin-left:54px;     max-width: 773px;" border="3" solid white>
+ <table >
  OTHER ACTIVITIES
          <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF ACTIVITY</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
 

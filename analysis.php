@@ -20,6 +20,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" type="text/css" href="faq.css"> 
 <link rel="stylesheet" type="text/css" href="layout/styles/login.css"> 
+<link rel="stylesheet" type="text/css" href="analysisdesign.css"> 
 <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
  <style>
 footer{
@@ -109,7 +110,7 @@ footer{
 
 <!-- <font color="white" align="center" style="margin-left:220px" size="75px" > Overall </font> -->
 <center>
-<h2 style=" margin-top: 20px; font-size: 30px; padding-bottom: 26px;" >Tabular Analysis</h2>
+<h2 style=" margin-top: 20px; font-size: 22px; padding-bottom: 26px;" >TABULAR ANALYSIS</h2>
 
 </center>
   
