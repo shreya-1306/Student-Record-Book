@@ -106,7 +106,7 @@ footer{
 
 
 
-<table style="background-color: transparent; border-color: transparent;">
+<table style="background-color: transparent; border-color: transparent;    width: 104%;margin-left: -10px;    margin-top: -45px;">
   <tr style="background-color: transparent; border-color: transparent;">
 <td style="border-color: transparent;"> <button type="button"  id="clickws"    onclick="ws()" class="button1">Workshop</button></td>
     <td style="border-color: transparent;"><button type="button" id="clicktpp"    onclick="tppf()"class="button1">TPP</button></td>
