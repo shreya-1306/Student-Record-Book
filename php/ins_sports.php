@@ -103,7 +103,7 @@ if($stmt->execute()){
 	else
 	{
 	//	print_r($stmt->errorInfo());
-		echo "<script>window.location='../sports.php';alert('Some error try again')</script>";
+		//echo "<script>window.location='../sports.php';alert('Some error try again')</script>";
 		echo "<script>
 	swal({
 	  title: 'Error',
