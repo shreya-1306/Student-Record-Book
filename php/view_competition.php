@@ -160,7 +160,7 @@ if(isset($_POST['button'])) {
     $sd=$_POST['sdate'];
 
 $ed=$_POST['edate'];
-$sql = "select rollno,name,name_comp,cond_by,position,start_date,end_date from competition WHERE start_date>='$sd' AND end_date<='$ed'";
+$sql = "select rollno,name,name_comp,cond_by,position,level,start_date,end_date from competition WHERE start_date>='$sd' AND end_date<='$ed'";
 
 $result=mysqli_query($conn,$sql);
 if ($result->num_rows > 0)
@@ -168,7 +168,7 @@ if ($result->num_rows > 0)
 
   ?>
   <table style=" width: 192%;">
-        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspCOMPETITION&nbsp&nbsp</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
+        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspCOMPETITION&nbsp&nbsp</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspLEVEL&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 
         <?php
 
@@ -181,6 +181,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
     </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
     </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
     </td><td>  <span style='color:#000000;'> ". $line['position']."
+    </td><td>  <span style='color:#000000;'> ". $line['level']."
     </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
     </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
      </td></tr>";
@@ -228,7 +229,7 @@ $conn->close();
      
       }
       else{
-        $sql = "select rollno,name,name_comp,cond_by,position,start_date,end_date from competition";
+        $sql = "select rollno,name,name_comp,cond_by,position,level,start_date,end_date from competition";
       
 
 $result=mysqli_query($conn,$sql);
@@ -246,11 +247,11 @@ $total_pages_sql = "SELECT COUNT(*) FROM competition";
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-        $sql = "SELECT rollno,name,name_comp,cond_by,position,start_date,end_date from competition order by rollno LIMIT $offset, $no_of_records_per_page";
+        $sql = "SELECT rollno,name,name_comp,cond_by,position,level,start_date,end_date from competition order by rollno LIMIT $offset, $no_of_records_per_page";
         $result = mysqli_query($conn,$sql);
   ?>
   <table style=" width: 192%;">
-        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspCOMPETITION&nbsp&nbsp</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
+        <tr><th>&nbsp&nbspROLL&nbsp&nbspNO&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbsp</th><th>&nbsp&nbspNAME&nbsp&nbspOF&nbsp&nbspCOMPETITION&nbsp&nbsp</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>&nbsp&nbspRANK&nbsp&nbsp</th><th>&nbsp&nbspLEVEL&nbsp&nbsp</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th></span></tr>
 
         <?php
 
@@ -263,6 +264,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
     </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
     </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
     </td><td>  <span style='color:#000000;'> ". $line['position']."
+    </td><td>  <span style='color:#000000;'> ". $line['level']."
     </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
     </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
      </td></tr>";

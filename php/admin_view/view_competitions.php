@@ -97,7 +97,7 @@ footer{
              
               <li><a href="../../admin_index.php">Help</a></li>
               <li><a href="changepass_a.php">Change Password</a></li>
-              <li><a href="logout.php">Logout</a></li>
+              <li><a href="../../logout.php">Logout</a></li>
             </ul>
           </li>
          
@@ -156,7 +156,7 @@ if ($result->num_rows > 0)
  ?>
 
  <table >
-     <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>RANK</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
+     <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>&nbsp&nbspCONDUCTED&nbsp&nbspBY&nbsp&nbsp</th><th>RANK</th><th>LEVEL</th><th>&nbsp&nbspSTART&nbsp&nbspDATE&nbsp&nbsp</th><th>&nbsp&nbspEND&nbsp&nbspDATE&nbsp&nbsp</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
 
        <?php
 
@@ -169,6 +169,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
    </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
    </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
    </td><td>  <span style='color:#000000;'> ". $line['position']."
+   </td><td>  <span style='color:#000000;'> ". $line['level']."
    </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
    </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
     </td><td>";
@@ -270,7 +271,7 @@ if ($result->num_rows > 0)
  ?>
 
  <TABLE>
-      <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
+      <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>LEVEL</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th><th>DELETE</th></tr>
 
        <?php
 
@@ -283,6 +284,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
    </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
    </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
    </td><td>  <span style='color:#000000;'> ". $line['position']."
+   </td><td>  <span style='color:#000000;'> ". $line['level']."
    </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
    </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
     </td><td>";

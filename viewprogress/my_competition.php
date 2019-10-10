@@ -234,7 +234,7 @@ $total_pages=1;
 
     <table style="border: 3px solid black;">
 
-      <tr><th>ROLL NO</th><th>NAME</th><th>COMPETITION NAME</th><th>CONDUCTED BY</th><th>POSITION</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
+      <tr><th>ROLL NO</th><th>NAME</th><th>COMPETITION NAME</th><th>CONDUCTED BY</th><th>POSITION</th><th>LEVEL</th><th>START&nbsp&nbspDATE</th><th>END&nbsp&nbspDATE</th><th>CERTIFICATE</th><th>OPTIONAL IMAGE</th><th>DELETE</th></span></tr>
 
 <?php
   while ($line = mysqli_fetch_array($results, MYSQLI_ASSOC)) {
@@ -248,6 +248,8 @@ $total_pages=1;
     </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
 
      </td><td>  <span style='color:#000000;'> ". $line['position']."
+     
+     </td><td>  <span style='color:#000000;'> ". $line['level']."
 
 
 

@@ -149,7 +149,16 @@ footer{
   <option value="Second" name="position">Second</option>
   <option value="Third" name="position">Third</option>
 </select>
+  
+<label for="level">Level:</label>
 	
+    
+	<select  name="level">
+  <option value="Local" name="level">Local</option>
+  <option value="State" name="level">State</option>
+  <option value="National" name="level">National</option>
+  <option value="International" name="level">International</option>
+</select>
     <label for="start_date">Start Date:</label>
     <input type="date" id="start_date" name="start_date" required>
 

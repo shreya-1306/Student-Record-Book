@@ -75,7 +75,7 @@ else
     
   $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 	    
-$stmt = $dbh->prepare("insert into competition (rollno,name,name_comp,cond_by,position,start_date,end_date,filename1,mime1,image,filename,mime,certi) values ($_POST[rollno],'$_POST[name]', '$_POST[name_comp]',' $_POST[cond_by]',' $_POST[position]','$_POST[start_date]','$_POST[end_date]',?,?,?,?,?,?)");
+$stmt = $dbh->prepare("insert into competition (rollno,name,name_comp,cond_by,position,level,start_date,end_date,filename1,mime1,image,filename,mime,certi) values ($_POST[rollno],'$_POST[name]', '$_POST[name_comp]',' $_POST[cond_by]',' $_POST[position]',' $_POST[level]','$_POST[start_date]','$_POST[end_date]',?,?,?,?,?,?)");
 	$stmt->bindParam(1,$file1);
 	$stmt->bindParam(2,$type1);
 	$stmt->bindParam(3,$data1);

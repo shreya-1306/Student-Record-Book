@@ -232,7 +232,7 @@ if ($result->num_rows > 0)
 
     WORKSHOPS ATTENDED: 
 
-       <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF WORKSHOP</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
+       <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF WORKSHOP</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
   while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -270,8 +270,31 @@ if ($result->num_rows > 0)
 
 
       }
-echo "</td></tr>";
+echo "</td><td>";
 
+
+$fn1 =$line['filename1'];
+$files1= scandir("../uploads/opt_workshop");
+for($a =2;$a <count($files1);$a++){
+
+  if($fn1==$files1[$a])
+  {
+
+
+  ?>
+
+ 
+
+  <p>
+    <a style='color:#000000;' href="../uploads/opt_workshop/<?php echo $files1[$a] ?>"><?php echo $files1[$a] ?></a>
+  </p>
+
+  <?php 
+}
+
+
+}
+echo "</td></tr>";
      
          
      
@@ -311,7 +334,7 @@ if ($result->num_rows > 0)
     <table >
     COURSES COMPLETED: 
        
-        <tr><th>ROLL NO</th><th>NAME</th><th>COURSE NAME</th><th>INSTITUTE/WEBSITE</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
+        <tr><th>ROLL NO</th><th>NAME</th><th>COURSE NAME</th><th>INSTITUTE/WEBSITE</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
   <?php
 
@@ -348,7 +371,31 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
       }
 
 
-         echo "</td></tr>";
+      echo "</td><td>";
+
+
+      $fn1 =$line['filename1'];
+      $files1= scandir("../uploads/opt_courses");
+      for($a =2;$a <count($files1);$a++){
+      
+        if($fn1==$files1[$a])
+        {
+      
+      
+        ?>
+      
+       
+      
+        <p>
+          <a style='color:#000000;' href="../uploads/opt_courses/<?php echo $files1[$a] ?>"><?php echo $files1[$a] ?></a>
+        </p>
+      
+        <?php 
+      }
+      
+      
+      }
+      echo "</td></tr>";
  
 
 }
@@ -384,7 +431,7 @@ if ($result->num_rows > 0)
    
   <table >
   COMPETITIONS ATTENDED: 
-       <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
+       <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF COMPETITION</th><th>CONDUCTED BY</th><th>RANK</th><th>LEVEL</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
 
@@ -397,6 +444,7 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
     </td><td>  <span style='color:#000000;'> ". $line['name_comp']."
     </td><td>  <span style='color:#000000;'> ". $line['cond_by']."
     </td><td>  <span style='color:#000000;'> ". $line['position']."
+    </td><td>  <span style='color:#000000;'> ". $line['level']."
     </td><td>  <span style='color:#000000;'> ". $line['start_date']." 
     </td><td>  <span style='color:#000000;'> ". $line['end_date']." 
      </td><td>";
@@ -419,7 +467,33 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
       }
       }
 
-         echo "</td></tr>";
+
+
+      echo "</td><td>";
+
+
+      $fn1 =$line['filename1'];
+      $files1= scandir("../uploads/opt_competition");
+      for($a =2;$a <count($files1);$a++){
+      
+        if($fn1==$files1[$a])
+        {
+      
+      
+        ?>
+      
+       
+      
+        <p>
+          <a style='color:#000000;' href="../uploads/opt_competition/<?php echo $files1[$a] ?>"><?php echo $files1[$a] ?></a>
+        </p>
+      
+        <?php 
+      }
+      
+      
+      }
+      echo "</td></tr>";
  
 }
 
@@ -455,7 +529,7 @@ if ($result->num_rows > 0)
 
    <table >
    TOURNAMENTS ATTENDED: 
-        <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
+        <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF TOURNAMENT</th><th>PLACE</th><th>RANK</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
         <?php
 
@@ -489,7 +563,32 @@ echo  "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
         <?php 
       }
       }
-echo "</td></tr>";
+
+      echo "</td><td>";
+
+
+      $fn1 =$line['filename1'];
+      $files1= scandir("../uploads/opt_sports");
+      for($a =2;$a <count($files1);$a++){
+      
+        if($fn1==$files1[$a])
+        {
+      
+      
+        ?>
+      
+       
+      
+        <p>
+          <a style='color:#000000;' href="../uploads/opt_sports/<?php echo $files1[$a] ?>"><?php echo $files1[$a] ?></a>
+        </p>
+      
+        <?php 
+      }
+      
+      
+      }
+      echo "</td></tr>";
 }
 
 ?>
@@ -597,7 +696,7 @@ if ($result->num_rows > 0)
     ?>
  <table >
  OTHER ACTIVITIES
-         <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF ACTIVITY</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th></span></tr>
+         <tr><th>ROLL NO</th><th>NAME</th><th>NAME OF ACTIVITY</th><th>CONDUCTED BY</th><th>START DATE</th><th>END DATE</th><th>CERTIFICATE</th><th>IMAGE</th></span></tr>
 
 
   <?php
@@ -629,7 +728,32 @@ echo "<tr><td> <span style='color:#000000;'>  ". $line['rollno']."
         <?php 
       }
       }
-echo "</td></tr>";
+
+      echo "</td><td>";
+
+
+      $fn1 =$line['filename1'];
+      $files1= scandir("../uploads/opt_other_activity");
+      for($a =2;$a <count($files1);$a++){
+      
+        if($fn1==$files1[$a])
+        {
+      
+      
+        ?>
+      
+       
+      
+        <p>
+          <a style='color:#000000;' href="../uploads/opt_other_activity/<?php echo $files1[$a] ?>"><?php echo $files1[$a] ?></a>
+        </p>
+      
+        <?php 
+      }
+      
+      
+      }
+      echo "</td></tr>";
 
 }
 
