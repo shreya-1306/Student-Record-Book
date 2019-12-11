@@ -71,6 +71,7 @@ footer{
               <li><a href="competition.php">Competition</a></li>
               <li><a href="sports.php">Sports</a></li>
               <li><a href="other_activity.php">Other Activity</a></li>
+              
             </ul>
           </li>
           <li><a class="drop" href="#">View Progress</a>
